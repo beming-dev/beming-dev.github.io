@@ -1,0 +1,15 @@
+.navigation {
+  top: 0;
+  left: 0;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  .profile {
+    display: flex;
+  }
+
+  .contact {
+    display: flex;
+  }
+}
