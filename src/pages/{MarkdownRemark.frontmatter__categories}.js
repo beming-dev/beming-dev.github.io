@@ -3,7 +3,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 
 export default function BlogPostTemplate({ data }) {
-  return <Layout></Layout>
+  return <Layout>hello</Layout>
 }
 
 export const pageQuery = graphql`
