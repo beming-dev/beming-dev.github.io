@@ -10,6 +10,17 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `limelight`,
+          `Noto+Sans+KR\:100,300,400,400i,500,700`, // you can also specify font weights and styles
+          `Roboto\:100,300,500,700`,
+        ],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
