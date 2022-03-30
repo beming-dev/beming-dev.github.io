@@ -25,12 +25,12 @@ export default function Navigation() {
         <div className="profile">
           <span>beming-dev blog</span>
         </div>
-        <ul className="category">
+        <div className="category">
           cate:
           {data.allMarkdownRemark.group.map(category => (
             <li key={category.fieldValue}>{category.fieldValue}</li>
           ))}
-        </ul>
+        </div>
         <div className="contact"></div>
         <span className="copyright">© copyright 2022</span>
       </div>

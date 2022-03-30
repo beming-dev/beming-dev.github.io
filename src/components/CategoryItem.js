@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "./CategoryItem.scss"
 
-const CategoryItem = ({ info }) => {
+const CategoryItem = ({ info, categoryPage }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "imag.jpg" }) {
@@ -17,7 +17,6 @@ const CategoryItem = ({ info }) => {
       }
     }
   `)
-  console.log(data)
   return (
     <div className="category-item">
       <span>{info.date}</span>

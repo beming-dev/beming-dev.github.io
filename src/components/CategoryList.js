@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import CategoryItem from "./CategoryItem"
 import "./CategoryList.scss"
 
@@ -27,10 +27,14 @@ const CategoryList = ({ category }) => {
 
   return (
     <div className="category-list">
-      <span>{category}</span>
-      {edges.map((edge, i) => (
-        <CategoryItem key={i} info={edge.node.frontmatter} />
-      ))}
+      <span className="name">
+        <Link to={`/${category}`}>{category}</Link>
+      </span>
+      <div className="items">
+        {edges.map((edge, i) => (
+          <CategoryItem key={i} info={edge.node.frontmatter} />
+        ))}
+      </div>
     </div>
   )
 }

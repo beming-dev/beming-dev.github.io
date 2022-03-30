@@ -1,4 +1,13 @@
 .category-list {
   display: flex;
   align-items: center;
+
+  .name {
+    width: 100px;
+  }
+  .items {
+    display: flex;
+    overflow: hidden;
+    width: calc(100vw - 350px);
+  }
 }

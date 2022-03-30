@@ -1,9 +1,22 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
-
-export default function BlogPostTemplate({ data }) {
-  return <Layout>hello</Layout>
+import CategoryItem from "../components/CategoryItem"
+export default function BlogPostTemplate({ data, params }) {
+  let posts = data.allMarkdownRemark.edges.filter(
+    edge => edge.node.frontmatter.categories === params.frontmatter__categories
+  )
+  return (
+    <Layout>
+      {posts.map((post, i) => (
+        <CategoryItem
+          key={i}
+          info={post.node.frontmatter}
+          categoryPage={true}
+        />
+      ))}
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -13,10 +26,17 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___categories) {
-        fieldValue
-        totalCount
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          frontmatter {
+            thumbnail
+            categories
+            date
+            slug
+            title
+          }
+        }
       }
     }
   }
