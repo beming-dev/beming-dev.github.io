@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import "./CategoryItem.scss"
 
 const CategoryItem = ({ info, categoryPage }) => {
@@ -23,11 +23,13 @@ const CategoryItem = ({ info, categoryPage }) => {
         categoryPage ? "category-page-item category-item" : "category-item"
       }
     >
-      <span className="date">{info.date}</span>
-      <div className="img-box">
-        <Img fixed={data.file.childImageSharp.fixed} alt="as" />
-      </div>
-      <span className="title">{info.title}</span>
+      <Link to={`${info.slug}`}>
+        <span className="date">{info.date}</span>
+        <div className="img-box">
+          <Img fixed={data.file.childImageSharp.fixed} alt="as" />
+        </div>
+        <span className="title">{info.title}</span>
+      </Link>
     </div>
   )
 }
