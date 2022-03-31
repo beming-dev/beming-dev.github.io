@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, useStaticQuery } from "gatsby"
+import { StaticQuery, graphql, useStaticQuery, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "./Navigation.scss"
 export default function Navigation() {
@@ -21,14 +21,18 @@ export default function Navigation() {
   return (
     <div className="navigation">
       <div className="content">
-        <h2 className="logo">Beming-dev</h2>
+        <h2 className="logo">
+          <Link to="/">Beming-dev</Link>
+        </h2>
         <div className="profile">
           <span>beming-dev blog</span>
         </div>
         <div className="category">
           cate:
           {data.allMarkdownRemark.group.map(category => (
-            <li key={category.fieldValue}>{category.fieldValue}</li>
+            <li key={category.fieldValue}>
+              <Link to={`/${category.fieldValue}`}>{category.fieldValue}</Link>
+            </li>
           ))}
         </div>
         <div className="contact"></div>

@@ -1,11 +1,56 @@
 .category-item {
+  width: 170px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
   margin: 0px 10px;
 
-  img {
+  .date {
+    font-size: 15px;
+  }
+  .title {
+    font-size: 18px;
+  }
+
+  .img-box {
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+
+    .gatsby-image-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 라인수 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.category-page-item {
+  width: 221px;
+  height: 260px;
+
+  .date {
+    font-size: 18px;
+  }
+  .title {
+    font-size: 21px;
+  }
+  .img-box {
+    min-width: 160px;
+    min-height: 160px;
     border-radius: 10px;
   }
 }

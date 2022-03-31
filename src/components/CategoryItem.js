@@ -18,10 +18,16 @@ const CategoryItem = ({ info, categoryPage }) => {
     }
   `)
   return (
-    <div className="category-item">
-      <span>{info.date}</span>
-      <Img fixed={data.file.childImageSharp.fixed} alt="as" />
-      <span>{info.title}</span>
+    <div
+      className={
+        categoryPage ? "category-page-item category-item" : "category-item"
+      }
+    >
+      <span className="date">{info.date}</span>
+      <div className="img-box">
+        <Img fixed={data.file.childImageSharp.fixed} alt="as" />
+      </div>
+      <span className="title">{info.title}</span>
     </div>
   )
 }

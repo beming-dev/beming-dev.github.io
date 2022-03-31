@@ -1,0 +1,16 @@
+.category-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  .category-title {
+    margin-bottom: 50px;
+  }
+  .category-item-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

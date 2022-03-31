@@ -54,7 +54,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
-  text-decoration: none;
+  text-decoration: underline;
   color: black;
 }
 a:active,
@@ -598,6 +598,11 @@ pre tt:after {
   .content {
     display: flex;
     position: relative;
+
+    main {
+      flex: 1;
+      flex-wrap: nowrap;
+    }
   }
 }
 
