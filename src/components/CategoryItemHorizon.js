@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import "./CategoryItemHorizon.scss"
 
 const CategoryItemHorizon = ({ info }) => {
@@ -8,24 +8,11 @@ const CategoryItemHorizon = ({ info }) => {
   let html = info.html
   html = html.replace(/<\/?[^>]+(>|$)/g, "")
 
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "imag.jpg" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fluid(maxWidth: 125, maxHeight: 125) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   return (
     <div className="category-item-horizon">
       <Link to={`${meta.slug}`}>
         <div className="img-box">
-          <Img fluid={data.file.childImageSharp.fluid} alt="as" />
+          <img src={`/${meta.thumbnail}`} />
         </div>
         <div className="right">
           <span className="date">{meta.date}</span>

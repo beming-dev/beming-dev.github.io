@@ -4,19 +4,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import "./CategoryItem.scss"
 
 const CategoryItem = ({ info, categoryPage }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "imag.jpg" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 125, height: 125) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <div
       className={
@@ -26,7 +13,7 @@ const CategoryItem = ({ info, categoryPage }) => {
       <Link to={`${info.slug}`}>
         <span className="date">{info.date}</span>
         <div className="img-box">
-          <Img fixed={data.file.childImageSharp.fixed} alt="as" />
+          <img src={`/${info.thumbnail}`} />
         </div>
         <span className="title">{info.title}</span>
       </Link>

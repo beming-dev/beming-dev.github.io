@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "./footer.scss"
 const Footer = () => {
@@ -36,14 +36,14 @@ const Footer = () => {
           <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
         </div>
         <div className="img-wrapper">
-          <Link to="https://github.com/beming-dev">
+          <a href="https://github.com/beming-dev">
             <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
-          </Link>
+          </a>
         </div>
         <div className="img-wrapper">
-          <Link to="https://github.com/beming-dev">
+          <a href="https://github.com/beming-dev">
             <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
-          </Link>
+          </a>
         </div>
       </div>
       <span className="copyright">© copyright 2022</span>

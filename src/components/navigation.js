@@ -56,14 +56,14 @@ export default function Navigation() {
               <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
             </div>
             <div className="img-wrapper">
-              <Link to="https://github.com/beming-dev">
+              <a href="https://github.com/beming-dev">
                 <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
-              </Link>
+              </a>
             </div>
             <div className="img-wrapper">
-              <Link to="https://github.com/beming-dev">
+              <a href="https://github.com/beming-dev">
                 <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
