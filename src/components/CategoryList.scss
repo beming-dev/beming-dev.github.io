@@ -1,4 +1,6 @@
 .category-list {
+  max-width: 100%;
+  margin-right: 20px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -8,8 +10,25 @@
     width: 100px;
   }
   .items {
+    overflow-y: hidden;
+    overflow-x: scroll;
     display: flex;
-    overflow: hidden;
-    width: calc(100vw - 350px);
+    width: 100%;
+  }
+  .items::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-list {
+    flex-direction: column;
+    margin-bottom: 50px;
+
+    .name {
+      width: auto;
+      min-width: 0px;
+      margin-bottom: 10px;
+    }
   }
 }

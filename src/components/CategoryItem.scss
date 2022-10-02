@@ -61,3 +61,25 @@
     border-radius: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .category-item {
+    width: 120px;
+    height: auto;
+    a {
+      .date {
+        font-size: 13px;
+      }
+      .img-box {
+        margin: 5px 0;
+        width: 90px;
+        height: 90px;
+      }
+
+      .title {
+        font-size: 15px;
+        max-width: 100%;
+      }
+    }
+  }
+}

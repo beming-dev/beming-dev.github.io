@@ -12,6 +12,8 @@ import "./layout.scss"
 import "./global.scss"
 
 import Navigation from "./Navigation"
+import MobileNav from "./MobileNav"
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,8 +29,10 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <div className="content">
+        <MobileNav />
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </div>
     </div>
   )

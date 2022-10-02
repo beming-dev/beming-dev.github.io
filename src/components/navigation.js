@@ -47,14 +47,23 @@ export default function Navigation() {
             <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} />
           </div>
           <div className="contacts">
-            <div className="img-wrapper">
+            <div
+              className="img-wrapper"
+              onClick={() => {
+                window.open("mailto:mingfordev@gmail.com")
+              }}
+            >
               <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
             </div>
             <div className="img-wrapper">
-              <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
+              <Link to="https://github.com/beming-dev">
+                <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
+              </Link>
             </div>
             <div className="img-wrapper">
-              <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
+              <Link to="https://github.com/beming-dev">
+                <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
+              </Link>
             </div>
           </div>
         </div>
