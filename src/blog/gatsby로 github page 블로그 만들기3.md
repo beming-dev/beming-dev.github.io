@@ -1,7 +1,7 @@
 ---
 thumbnail: gatsby.jpg
 slug: "/blog/gatsby03"
-date: "2022-10-02"
+date: "2022-09-30"
 title: "gatsby로 블로그 만들기 03"
 categories: "blog"
 typora-copy-images-to: ..\images
