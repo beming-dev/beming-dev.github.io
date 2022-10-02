@@ -1,10 +1,28 @@
 import React from "react"
-import { StaticQuery, graphql, useStaticQuery, Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import "./Navigation.scss"
+import Img from "gatsby-image"
+
 export default function Navigation() {
   const data = useStaticQuery(graphql`
     query {
+      allFile(
+        filter: {
+          extension: { regex: "/" }
+          relativeDirectory: { eq: "navigation" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid(maxWidth: 200, maxHeight: 200) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
       site {
         siteMetadata {
           title
@@ -25,17 +43,28 @@ export default function Navigation() {
           <Link to="/">Beming-dev</Link>
         </h2>
         <div className="profile">
-          <span>beming-dev blog</span>
+          <div className="profile-img-wrapper">
+            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} />
+          </div>
+          <div className="contacts">
+            <div className="img-wrapper">
+              <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
+            </div>
+            <div className="img-wrapper">
+              <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
+            </div>
+            <div className="img-wrapper">
+              <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
+            </div>
+          </div>
         </div>
         <div className="category">
-          cate:
           {data.allMarkdownRemark.group.map(category => (
             <li key={category.fieldValue}>
               <Link to={`/${category.fieldValue}`}>{category.fieldValue}</Link>
             </li>
           ))}
         </div>
-        <div className="contact"></div>
         <span className="copyright">© copyright 2022</span>
       </div>
     </div>

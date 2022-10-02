@@ -8,8 +8,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 import "./layout.scss"
+import "./global.scss"
 
 import Navigation from "./Navigation"
 
@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="layout">
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="content">
         <Navigation />
         <main>{children}</main>
