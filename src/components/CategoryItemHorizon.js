@@ -6,6 +6,8 @@ import "./CategoryItemHorizon.scss"
 const CategoryItemHorizon = ({ info }) => {
   let meta = info.frontmatter
   let html = info.html
+  html = html.replace(/<\/?[^>]+(>|$)/g, "")
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "imag.jpg" }) {
