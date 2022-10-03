@@ -10,9 +10,12 @@ export default function BlogPostTemplate({ data: { markdownRemark } }) {
     <Layout>
       <Seo title={frontmatter.title} />
       <div className="post-page">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+        <h1 className="title">{frontmatter.title}</h1>
+        <h2 className="date">{frontmatter.date}</h2>
+        <span
+          className="post-body"
+          dangerouslySetInnerHTML={{ __html: html }}
+        ></span>
       </div>
     </Layout>
   )
