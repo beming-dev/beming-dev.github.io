@@ -17,3 +17,15 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 960px) {
+  .category-page {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .category-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

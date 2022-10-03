@@ -72,8 +72,8 @@
       }
 
       .right {
-        width: 82%;
-        min-width: 82%;
+        width: calc(82% + 20px);
+        min-width: calc(82% + 20px);
         left: -70px;
         padding-left: 70px;
         height: 100px;
