@@ -2,16 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  height: 100%;
   flex-wrap: wrap;
+  margin: 0 10%;
   margin-top: 50px;
   .category-title {
     margin-bottom: 50px;
-    font-size: 25px;
+    font-size: 35px;
   }
   .category-item-box {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 960px) {
+  .category-page {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .category-page {
+    width: 90%;
+    margin: 0 auto;
   }
 }

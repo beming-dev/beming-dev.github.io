@@ -1,24 +1,21 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
-import CategoryItem from "../components/CategoryItem"
 import "./categories.scss"
+import CategoryItemHorizon from "../components/CategoryItemHorizon"
 
 export default function BlogPostTemplate({ data, params }) {
   let posts = data.allMarkdownRemark.edges.filter(
     edge => edge.node.frontmatter.categories === params.frontmatter__categories
   )
+
   return (
     <Layout>
       <div className="category-page">
         <span className="category-title">{params.frontmatter__categories}</span>
         <div className="category-item-box">
           {posts.map((post, i) => (
-            <CategoryItem
-              key={i}
-              info={post.node.frontmatter}
-              categoryPage={true}
-            />
+            <CategoryItemHorizon key={i} info={post.node} />
           ))}
         </div>
       </div>
@@ -36,6 +33,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
+          html
           frontmatter {
             thumbnail
             categories
