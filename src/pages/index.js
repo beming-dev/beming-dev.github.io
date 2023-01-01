@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import CategoryList from "../components/CategoryList"
 import Layout from "../components/layout"
@@ -8,6 +9,12 @@ import "./style.scss"
 
 const IndexPage = ({ data }) => (
   <Layout>
+    <Helmet>
+      <meta
+        name="google-site-verification"
+        content="3IsW427y9ifgDvg2qMuZiSL9WStHw0YN-C57cwpHjrE"
+      />
+    </Helmet>
     <Seo title="Home" />
     <div className="main">
       {data.allMarkdownRemark.group.map((category, i) => (
