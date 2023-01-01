@@ -11,6 +11,14 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://beming-dev.github.io/",
+        sitemap: "https://beming-dev.github.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
