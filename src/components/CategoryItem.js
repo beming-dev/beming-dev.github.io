@@ -1,6 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import "./CategoryItem.scss"
 
 const CategoryItem = ({ info, categoryPage }) => {
@@ -13,7 +12,7 @@ const CategoryItem = ({ info, categoryPage }) => {
       <Link to={`${info.slug}`}>
         <span className="date">{info.date}</span>
         <div className="img-box">
-          <img src={`/${info.thumbnail}`} />
+          <img src={`/${info.thumbnail}`} alt="thumbnail" />
         </div>
         <span className="title">{info.title}</span>
       </Link>
