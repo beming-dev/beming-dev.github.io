@@ -3,7 +3,7 @@ module.exports = {
     title: `Beming-dev Blog`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://beming-dev.github.io`,
   },
   plugins: [
     "gatsby-plugin-advanced-sitemap",
