@@ -1,5 +1,5 @@
 ---
-thumbnail: gatsby.jpg
+thumbnail: univting.png
 slug: "/blog/univting/charkra"
 date: "2023-01-02"
 title: "유니브팅 - Charkra UI"
