@@ -14,8 +14,11 @@ const IndexPage = ({ data }) => (
         name="google-site-verification"
         content="3IsW427y9ifgDvg2qMuZiSL9WStHw0YN-C57cwpHjrE"
       />
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4911380706120456"
-     crossorigin="anonymous"></script>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4911380706120456"
+        crossorigin="anonymous"
+      ></script>
     </Helmet>
     <Seo title="Home" />
     <div className="main">
@@ -34,7 +37,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___categories) {
+      group(field: { frontmatter: { categories: SELECT } }) {
         fieldValue
         totalCount
       }

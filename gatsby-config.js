@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: `https://beming-dev.github.io`,
   },
   plugins: [
-    "gatsby-plugin-advanced-sitemap",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,

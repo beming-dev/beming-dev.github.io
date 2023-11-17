@@ -6,7 +6,7 @@ import "./CategoryList.scss"
 const CategoryList = ({ category }) => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             frontmatter {

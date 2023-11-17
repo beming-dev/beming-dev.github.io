@@ -6,7 +6,7 @@ import CategoryItemHorizon from "../components/CategoryItemHorizon"
 
 export default function BlogPostTemplate({ data, params }) {
   let posts = data.allMarkdownRemark.edges.filter(
-    edge => edge.node.frontmatter.categories === params.frontmatter__categories
+    edge => edge.node.frontmatter.categories === params.frontmatter__categories,
   )
 
   return (
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           html

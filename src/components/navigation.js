@@ -29,7 +29,7 @@ export default function Navigation() {
         }
       }
       allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___categories) {
+        group(field: { frontmatter: { categories: SELECT } }) {
           fieldValue
           totalCount
         }
