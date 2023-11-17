@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 import CategoryList from "../components/CategoryList"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import "./style.scss"
+import "../styles/style.scss"
 
 const IndexPage = ({ data }) => (
   <Layout>

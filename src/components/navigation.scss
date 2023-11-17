@@ -1,12 +1,8 @@
 .navigation {
   transition-duration: 1s;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 280px;
   height: 100vh;
   //grey
-  background-color: #a7a7a7;
   padding: 0 10px;
 
   .content {
@@ -51,7 +47,6 @@
 //src/component/layout.scss
 @media (max-width: 960px) {
   .navigation {
-    position: fixed;
-    left: -300px;
+    display:none;
   }
 }

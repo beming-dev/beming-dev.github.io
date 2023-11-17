@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import "./post.scss"
+import "../styles/post.scss"
 
 export default function BlogPostTemplate({ data: { markdownRemark } }) {
   const { frontmatter, html } = markdownRemark

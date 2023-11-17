@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
-import "./categories.scss"
+import "../styles/categories.scss"
 import CategoryItemHorizon from "../components/CategoryItemHorizon"
 
 export default function BlogPostTemplate({ data, params }) {

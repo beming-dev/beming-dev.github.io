@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import "./layout.scss"
-import "./global.scss"
+import "../styles/global.scss"
 
 import Navigation from "./Navigation"
 import MobileNav from "./MobileNav"
@@ -14,8 +14,8 @@ const Layout = ({ children }) => {
         <MobileNav />
         <Navigation />
         <main>{children}</main>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

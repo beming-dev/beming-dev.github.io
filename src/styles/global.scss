@@ -591,8 +591,21 @@ pre tt:after {
   content: "";
 }
 
+main {
+  padding: 0 30px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+
+    main {
+      padding: 0 10px;
+    }
   }
 }
