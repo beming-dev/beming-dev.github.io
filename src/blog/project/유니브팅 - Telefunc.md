@@ -1,7 +1,7 @@
 ---
 thumbnail: univting.png
 slug: "/blog/univting/telefunc"
-date: "2023-01-02"
+date: "2023-01-04"
 title: "유니브팅 - Telefunc"
 categories: "project"
 typora-copy-images-to: ..\images
