@@ -3,7 +3,8 @@
   width: 280px;
   height: 100vh;
   //grey
-  padding: 0 10px;
+  padding: 0 15px;
+  box-sizing: border-box;
 
   .content {
     width: 100%;
@@ -47,6 +48,6 @@
 //src/component/layout.scss
 @media (max-width: 960px) {
   .navigation {
-    display:none;
+    display: none;
   }
 }

@@ -1,7 +1,7 @@
 .post-page {
   width: 90%;
   margin: 0px auto;
-  margin-top: 50px;
+  margin-top: 100px;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -17,5 +17,6 @@
   }
   .post-body {
     width: 100%;
+    margin: 50px 0;
   }
 }

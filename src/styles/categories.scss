@@ -1,12 +1,12 @@
 .category-page {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  height: 100%;
   flex-wrap: wrap;
-  margin: 0 10%;
   margin-top: 50px;
+
   .category-title {
     margin-bottom: 50px;
     font-size: 35px;
@@ -14,7 +14,9 @@
   .category-item-box {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

@@ -7,10 +7,10 @@
     flex-direction: row;
 
     main {
-      display:flex;
-      align-items:center;
+      flex: 1;
+      display: flex;
+      align-items: center;
       transition-duration: 1s;
-      overflow-x: hidden;
       box-sizing: border-box;
     }
   }

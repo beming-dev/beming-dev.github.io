@@ -22,9 +22,7 @@ const IndexPage = ({ data }) => (
     </Helmet>
     <Seo title="Home" />
     <div className="main">
-      {data.allMarkdownRemark.group.map((category, i) => (
-        <CategoryList key={i} category={category.fieldValue} />
-      ))}
+        <CategoryList />
     </div>
   </Layout>
 )
@@ -34,12 +32,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(limit: 2000) {
-      group(field: { frontmatter: { categories: SELECT } }) {
-        fieldValue
-        totalCount
       }
     }
   }
