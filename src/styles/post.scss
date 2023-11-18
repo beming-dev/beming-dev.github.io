@@ -1,22 +1,25 @@
-.post-page {
-  width: 90%;
-  margin: 0px auto;
-  margin-top: 100px;
-  max-width: 1000px;
+.post-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  .post-page {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 100px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .title {
-    text-align: center;
-    width: 100%;
-  }
-  .date {
-    text-align: center;
-    width: 100%;
-  }
-  .post-body {
-    width: 100%;
-    margin: 50px 0;
+    .title {
+      text-align: center;
+      width: 100%;
+    }
+    .date {
+      text-align: center;
+      width: 100%;
+    }
+    .post-body {
+      width: 100%;
+      margin: 50px 0;
+    }
   }
 }
