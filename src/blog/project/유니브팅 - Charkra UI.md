@@ -1,6 +1,6 @@
 ---
 thumbnail: univting.png
-slug: "/blog/univting/Chakra"
+slug: "/blog/univting/chakra"
 date: "2023-01-03"
 title: "유니브팅 - Chakra UI"
 categories: "project"

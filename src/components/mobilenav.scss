@@ -7,7 +7,6 @@
   align-items: center;
   //grey
   z-index: 10;
-
   transition-duration: 1s;
 
   .logo {
@@ -27,6 +26,7 @@
     overflow-x: scroll;
     li {
       margin: 0 20px;
+      list-style: none;
     }
   }
 }
