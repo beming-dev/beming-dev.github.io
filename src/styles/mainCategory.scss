@@ -9,10 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
     .item {
       width: 30%;
-      padding: 10% 10%;
+      margin: 10% 10%;
       display: flex;
       flex-direction: column;
       justify-content: center;
