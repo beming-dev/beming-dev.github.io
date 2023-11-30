@@ -5,6 +5,7 @@ import MobileNav from "../components/MobileNav"
 import Navigation from "../components/Navigation"
 import Layout from "../components/Layout"
 import folder from "../images/folder.png"
+import Seo from "../components/seo"
 
 export default function MainCategory({ pageResources }) {
   const {
@@ -49,6 +50,7 @@ export default function MainCategory({ pageResources }) {
 
   return (
     <Layout sub={subCategoryList}>
+      <Seo title={mainCategory} />
       <div className="main-category">
         <div className="container">
           {[...subCategoryList].map((name, i) => (

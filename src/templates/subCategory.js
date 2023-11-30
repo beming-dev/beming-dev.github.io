@@ -4,6 +4,7 @@ import * as React from "react"
 import "../styles/categories.scss"
 import CategoryItemHorizon from "../components/CategoryItemHorizon"
 import Layout from "../components/Layout"
+import Seo from "../components/seo"
 
 export default function SubCategory({ pageResources }) {
   const {
@@ -62,6 +63,7 @@ export default function SubCategory({ pageResources }) {
 
   return (
     <Layout sub={subCategoryList}>
+      <Seo title={subCategory} />
       <div className="category-page">
         {/* <span className="category-title">{params.frontmatter__categories}</span> */}
         <div className="category-item-box">

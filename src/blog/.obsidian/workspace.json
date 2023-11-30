@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "stock/지표.md",
+                "file": "Project/exchange/Becoming the next successful online startup.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "stock/지표.md",
+                "file": "Project/exchange/Becoming the next successful online startup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "stock/지표.md",
+                "file": "Project/exchange/Becoming the next successful online startup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "stock/지표.md"
+                "file": "Project/exchange/Becoming the next successful online startup.md"
               }
             }
           }
@@ -148,21 +148,31 @@
   },
   "active": "e991d2a79ee74f19",
   "lastOpenFiles": [
+    "Area/book/레버리지 독후감.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기5.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기4.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기3.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기.md",
+    "Area/algorithm/[완전탐색] 시계 맞추기.md",
+    "Area/algorithm/[분할정복] 울타리 잘라내기.md",
+    "Archive/project/유니브팅 - Telefunc.md",
+    "Archive/project/유니브팅 - Charkra UI.md",
+    "Archive/project/유니브팅 - 유저 플로우 설계.md",
+    "Archive/project/유니브팅 - 와이어 프레임 설계.md",
+    "stock/지표.md",
+    "Project",
+    "Archive",
+    "Resource",
+    "Area",
     "stock/주식 티커.md",
     "stock/투자.md",
-    "stock/지표.md",
     "stock/채권.md",
     "stock/용어.md",
-    "algorithm/[분할정복] 울타리 잘라내기.md",
     "시간복잡도.md",
-    "exchange/Our Becoming the next successful online startup.md",
-    "exchange/Becoming the next successful online startup.md",
-    "exchange",
-    "algorithm/[완전탐색] 시계 맞추기.md",
-    "project/유니브팅 - 와이어 프레임 설계.md",
-    "algorithm",
-    "book/레버리지 독후감.md",
-    "blog-making/gatsby로 github page 블로그 만들기2.md",
-    "blog-making/gatsby로 github page 블로그 만들기.md"
+    "Project/exchange/Our Becoming the next successful online startup.md",
+    "Project/exchange/Becoming the next successful online startup.md",
+    "Project/exchange",
+    "Area/algorithm"
   ]
 }
