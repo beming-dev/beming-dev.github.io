@@ -5,14 +5,40 @@ import "../styles/categories.scss"
 import CategoryItemHorizon from "../components/CategoryItemHorizon"
 import Layout from "../components/Layout"
 
-export default function SubCategory({ data, pageResources }) {
+export default function SubCategory({ pageResources }) {
   const {
     json: {
       pageContext: { subCategory, mainCategory },
     },
   } = pageResources
 
-  console.log(data, subCategory, mainCategory)
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            html
+            frontmatter {
+              thumbnail
+              categories {
+                mainCategory
+                subCategory
+              }
+              date
+              slug
+              title
+            }
+          }
+        }
+      }
+    }
+  `)
+
   let posts = data.allMarkdownRemark.edges.filter(
     edge =>
       edge.node.frontmatter.categories &&
@@ -22,8 +48,20 @@ export default function SubCategory({ data, pageResources }) {
         mainCategory.toLowerCase(),
   )
 
+  const filteredEdges = data.allMarkdownRemark.edges.filter(
+    edge =>
+      edge.node.frontmatter.categories &&
+      edge.node.frontmatter.categories[0].mainCategory.toLowerCase() ===
+        mainCategory.toLowerCase(),
+  )
+
+  const subCategoryList = new Set()
+  filteredEdges.map((edge, i) => {
+    subCategoryList.add(edge.node.frontmatter.categories[0].subCategory)
+  })
+
   return (
-    <Layout>
+    <Layout sub={subCategoryList}>
       <div className="category-page">
         {/* <span className="category-title">{params.frontmatter__categories}</span> */}
         <div className="category-item-box">
@@ -35,30 +73,3 @@ export default function SubCategory({ data, pageResources }) {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
-      edges {
-        node {
-          html
-          frontmatter {
-            thumbnail
-            categories {
-              mainCategory
-              subCategory
-            }
-            date
-            slug
-            title
-          }
-        }
-      }
-    }
-  }
-`

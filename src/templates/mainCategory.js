@@ -3,6 +3,7 @@ import * as React from "react"
 import "../styles/mainCategory.scss"
 import MobileNav from "../components/MobileNav"
 import Navigation from "../components/Navigation"
+import Layout from "../components/Layout"
 
 export default function MainCategory({ pageResources }) {
   const {
@@ -11,7 +12,6 @@ export default function MainCategory({ pageResources }) {
     },
   } = pageResources
 
-  console.log(mainCategory)
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -47,17 +47,17 @@ export default function MainCategory({ pageResources }) {
   })
 
   return (
-    <div className="main-category">
-      <MobileNav />
-      <Navigation />
-      <div className="container">
-        {[...subCategoryList].map((name, i) => (
-          <a href={`/subCategory/${name}`} className="item" key={i}>
-            <img src="/folder.png" className="folder-img" />
-            <span>{name}</span>
-          </a>
-        ))}
+    <Layout sub={subCategoryList}>
+      <div className="main-category">
+        <div className="container">
+          {[...subCategoryList].map((name, i) => (
+            <a href={`/subCategory/${name}`} className="item" key={i}>
+              <img src="/folder.png" className="folder-img" />
+              <span>{name}</span>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }

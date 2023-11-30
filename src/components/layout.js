@@ -7,12 +7,13 @@ import Navigation from "./Navigation"
 import MobileNav from "./MobileNav"
 import Footer from "./Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, sub }) => {
+  console.log(22, sub)
   return (
     <div className="layout">
       <div className="content">
-        <MobileNav />
-        <Navigation />
+        <MobileNav sub={sub} />
+        <Navigation sub={sub} />
         <main>{children}</main>
       </div>
       <Footer />

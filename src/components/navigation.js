@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import "./Navigation.scss"
 import Img from "gatsby-image"
 
-export default function Navigation() {
+export default function Navigation({ sub }) {
   const data = useStaticQuery(graphql`
     query {
       allFile(
@@ -71,13 +71,23 @@ export default function Navigation() {
           </div>
         </div>
         <div className="category">
-          {data.allMarkdownRemark.group.map(category => (
-            <li key={category.fieldValue}>
-              <Link to={`/mainCategory/${category.fieldValue.toLowerCase()}`}>
-                {category.fieldValue}
-              </Link>
-            </li>
-          ))}
+          {sub
+            ? [...sub].map((category, i) => (
+                <li key={i}>
+                  <Link to={`/subCategory/${category.toLowerCase()}`}>
+                    {category}
+                  </Link>
+                </li>
+              ))
+            : data.allMarkdownRemark.group.map(category => (
+                <li key={category.fieldValue}>
+                  <Link
+                    to={`/mainCategory/${category.fieldValue.toLowerCase()}`}
+                  >
+                    {category.fieldValue}
+                  </Link>
+                </li>
+              ))}
         </div>
         <span className="copyright">© copyright 2022</span>
       </div>
