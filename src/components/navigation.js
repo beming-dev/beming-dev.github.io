@@ -29,7 +29,9 @@ export default function Navigation() {
         }
       }
       allMarkdownRemark(limit: 2000) {
-        group(field: { frontmatter: { categories: SELECT } }) {
+        group(
+          field: { frontmatter: { categories: { mainCategory: SELECT } } }
+        ) {
           fieldValue
           totalCount
         }
@@ -71,7 +73,9 @@ export default function Navigation() {
         <div className="category">
           {data.allMarkdownRemark.group.map(category => (
             <li key={category.fieldValue}>
-              <Link to={`/${category.fieldValue}`}>{category.fieldValue}</Link>
+              <Link to={`/mainCategory/${category.fieldValue.toLowerCase()}`}>
+                {category.fieldValue}
+              </Link>
             </li>
           ))}
         </div>

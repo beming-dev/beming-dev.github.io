@@ -11,7 +11,9 @@ const CategoryList = () => {
           node {
             frontmatter {
               thumbnail
-              categories
+              categories {
+                subCategory
+              }
               date
               slug
               title

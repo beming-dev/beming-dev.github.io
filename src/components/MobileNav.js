@@ -6,7 +6,9 @@ const MobileNav = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(limit: 2000) {
-        group(field: { frontmatter: { categories: SELECT } }) {
+        group(
+          field: { frontmatter: { categories: { mainCategory: SELECT } } }
+        ) {
           fieldValue
           totalCount
         }
@@ -21,7 +23,9 @@ const MobileNav = () => {
       <div className="categories">
         {data.allMarkdownRemark.group.map(category => (
           <li key={category.fieldValue}>
-            <Link to={`/${category.fieldValue}`}>{category.fieldValue}</Link>
+            <Link to={`/mainCategory/${category.fieldValue.toLowerCase()}`}>
+              {category.fieldValue}
+            </Link>
           </li>
         ))}
       </div>

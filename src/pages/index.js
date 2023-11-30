@@ -2,8 +2,8 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import CategoryList from "../components/CategoryList"
-import Layout from "../components/layout"
+import CCategoryList from "../components/CCategoryList"
+import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import "../styles/style.scss"
 
@@ -22,7 +22,8 @@ const IndexPage = ({ data }) => (
     </Helmet>
     <Seo title="Home" />
     <div className="main">
-        <CategoryList />
+      {/* <CategoryList /> */}
+      <CCategoryList />
     </div>
   </Layout>
 )

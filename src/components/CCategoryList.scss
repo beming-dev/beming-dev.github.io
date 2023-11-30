@@ -1,0 +1,33 @@
+.template {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .category-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .category-item {
+      width: 30%;
+      margin: 10% 10%;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration-line: none;
+
+      .name {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-decoration-line: underline;
+      }
+      .explain {
+        font-size: 0.8em;
+      }
+    }
+  }
+}

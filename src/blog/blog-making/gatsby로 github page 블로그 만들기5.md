@@ -3,7 +3,9 @@ thumbnail: gatsby.jpg
 slug: "/blog/gatsby05"
 date: "2022-10-02"
 title: "gatsby로 블로그 만들기 05"
-categories: "blog"
+categories:
+  - mainCategory: "Area"
+    subCategory: "blog"
 typora-copy-images-to: ..\images
 typora-root-url: ..\images
 ---

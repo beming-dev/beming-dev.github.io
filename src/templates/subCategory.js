@@ -1,18 +1,31 @@
-import { graphql } from "gatsby"
+import "../styles/subCategory.scss"
+import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
-import Layout from "../components/layout"
 import "../styles/categories.scss"
 import CategoryItemHorizon from "../components/CategoryItemHorizon"
+import Layout from "../components/Layout"
 
-export default function BlogPostTemplate({ data, params }) {
+export default function SubCategory({ data, pageResources }) {
+  const {
+    json: {
+      pageContext: { subCategory, mainCategory },
+    },
+  } = pageResources
+
+  console.log(data, subCategory, mainCategory)
   let posts = data.allMarkdownRemark.edges.filter(
-    edge => edge.node.frontmatter.categories === params.frontmatter__categories,
+    edge =>
+      edge.node.frontmatter.categories &&
+      edge.node.frontmatter.categories[0].subCategory.toLowerCase() ===
+        subCategory.toLowerCase() &&
+      edge.node.frontmatter.categories[0].mainCategory.toLowerCase() ===
+        mainCategory.toLowerCase(),
   )
 
   return (
     <Layout>
       <div className="category-page">
-        <span className="category-title">{params.frontmatter__categories}</span>
+        {/* <span className="category-title">{params.frontmatter__categories}</span> */}
         <div className="category-item-box">
           {posts.map((post, i) => (
             <CategoryItemHorizon key={i} info={post.node} />
@@ -36,7 +49,10 @@ export const pageQuery = graphql`
           html
           frontmatter {
             thumbnail
-            categories
+            categories {
+              mainCategory
+              subCategory
+            }
             date
             slug
             title
