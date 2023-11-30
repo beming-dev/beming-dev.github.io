@@ -5,7 +5,7 @@ date: "2023-01-03"
 title: "유니브팅 - Chakra UI"
 categories:
   - mainCategory: "Archive"
-    subCategory: "project"
+    subCategory: "univting"
 typora-copy-images-to: ..\images
 typora-root-url: ..\images
 ---
