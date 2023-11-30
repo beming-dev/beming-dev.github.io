@@ -4,6 +4,7 @@ import "../styles/mainCategory.scss"
 import MobileNav from "../components/MobileNav"
 import Navigation from "../components/Navigation"
 import Layout from "../components/Layout"
+import folder from "../images/folder.png"
 
 export default function MainCategory({ pageResources }) {
   const {
@@ -52,7 +53,7 @@ export default function MainCategory({ pageResources }) {
         <div className="container">
           {[...subCategoryList].map((name, i) => (
             <a href={`/subCategory/${name}`} className="item" key={i}>
-              <img src="/folder.png" className="folder-img" />
+              <img src={folder} className="folder-img" />
               <span>{name}</span>
             </a>
           ))}
