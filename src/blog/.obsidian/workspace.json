@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/exchange/Becoming the next successful online startup.md",
+                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project/exchange/Becoming the next successful online startup.md",
+                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project/exchange/Becoming the next successful online startup.md",
+                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project/exchange/Becoming the next successful online startup.md"
+                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "e991d2a79ee74f19",
   "lastOpenFiles": [
+    "Area/algorithm/[분할정복] 울타리 잘라내기.md",
+    "Project/exchange/Becoming the next successful online startup.md",
     "Area/book/레버리지 독후감.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기5.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기4.md",
@@ -155,7 +157,6 @@
     "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기.md",
     "Area/algorithm/[완전탐색] 시계 맞추기.md",
-    "Area/algorithm/[분할정복] 울타리 잘라내기.md",
     "Archive/project/유니브팅 - Telefunc.md",
     "Archive/project/유니브팅 - Charkra UI.md",
     "Archive/project/유니브팅 - 유저 플로우 설계.md",
@@ -171,7 +172,6 @@
     "stock/용어.md",
     "시간복잡도.md",
     "Project/exchange/Our Becoming the next successful online startup.md",
-    "Project/exchange/Becoming the next successful online startup.md",
     "Project/exchange",
     "Area/algorithm"
   ]

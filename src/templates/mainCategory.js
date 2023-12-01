@@ -35,7 +35,6 @@ export default function MainCategory({ pageResources }) {
     allMarkdownRemark: { edges },
   } = data
 
-  edges.filter(() => true)
   const filteredEdges = edges.filter(
     edge =>
       edge.node.frontmatter.categories &&
