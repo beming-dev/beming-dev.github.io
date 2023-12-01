@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://beming-dev.github.io/sitemap.xml
+Host: https://beming-dev.github.io
