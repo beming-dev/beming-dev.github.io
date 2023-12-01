@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import "./CCategoryList.scss"
 
@@ -40,14 +40,14 @@ const CCategoryList = () => {
     <div className="template">
       <div className="category-box">
         {PARA.map((category, i) => (
-          <a
-            href={`/mainCategory/${category.name.toLowerCase()}`}
+          <Link
+            to={`/mainCategory/${category.name.toLowerCase()}`}
             className="category-item"
             key={i}
           >
             <span className="name">{category.name}</span>
             <span className="explain">{category.explain}</span>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
