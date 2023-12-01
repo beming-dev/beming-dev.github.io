@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
 import "../styles/mainCategory.scss"
 import MobileNav from "../components/MobileNav"
@@ -53,10 +53,10 @@ export default function MainCategory({ pageResources }) {
       <div className="main-category">
         <div className="container">
           {[...subCategoryList].map((name, i) => (
-            <a href={`/subCategory/${name}`} className="item" key={i}>
+            <Link to={`/subCategory/${name}`} className="item" key={i}>
               <img src={folder} className="folder-img" />
               <span>{name}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
