@@ -1,11 +1,11 @@
 ---
 thumbnail: bookreport.jpg
 slug: "/blog/exchange/becoming01"
-date: "2021-12-28"
+date: "2023-11-20"
 title: "Becoming the next successful online startup"
 categories:
   - mainCategory: "Project"
-    subCategory: "bookreport"
+    subCategory: "exchange"
 typora-copy-images-to: ..\images
 typora-root-url: ..\images
 ---
