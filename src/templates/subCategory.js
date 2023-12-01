@@ -40,6 +40,7 @@ export default function SubCategory({ pageResources }) {
     }
   `)
 
+  console.log(1, subCategory)
   let posts = data.allMarkdownRemark.edges.filter(
     edge =>
       edge.node.frontmatter.categories &&

@@ -16,7 +16,6 @@ const MobileNav = ({ sub }) => {
     }
   `)
 
-  console.log(sub)
   return (
     <div className="mobile-nav">
       <span className="logo">

@@ -6,7 +6,6 @@ import "../styles/post.scss"
 
 export default function BlogPostTemplate({ data: { markdownRemark } }) {
   const { frontmatter, html, tableOfContents } = markdownRemark
-  console.log(tableOfContents)
   return (
     <Layout>
       <Seo title={frontmatter.title} />

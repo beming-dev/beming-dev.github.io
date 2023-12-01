@@ -8,7 +8,6 @@ import MobileNav from "./MobileNav"
 import Footer from "./Footer"
 
 const Layout = ({ children, sub }) => {
-  console.log(22, sub)
   return (
     <div className="layout">
       <div className="content">
