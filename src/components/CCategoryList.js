@@ -1,21 +1,8 @@
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 import "./CCategoryList.scss"
 
 const CCategoryList = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(limit: 2000) {
-        group(
-          field: { frontmatter: { categories: { mainCategory: SELECT } } }
-        ) {
-          fieldValue
-          totalCount
-        }
-      }
-    }
-  `)
-
   const PARA = [
     {
       name: "Project",

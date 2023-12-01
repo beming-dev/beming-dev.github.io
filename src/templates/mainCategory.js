@@ -1,8 +1,6 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
 import "../styles/mainCategory.scss"
-import MobileNav from "../components/MobileNav"
-import Navigation from "../components/Navigation"
 import Layout from "../components/Layout"
 import folder from "../images/folder.png"
 import Seo from "../components/seo"
@@ -54,7 +52,7 @@ export default function MainCategory({ pageResources }) {
         <div className="container">
           {[...subCategoryList].map((name, i) => (
             <Link to={`/subCategory/${name}`} className="item" key={i}>
-              <img src={folder} className="folder-img" />
+              <img src={folder} alt="folder" className="folder-img" />
               <span>{name}</span>
             </Link>
           ))}
