@@ -1,6 +1,6 @@
 ---
 thumbnail: bookreport.jpg
-slug: "/blog/exchange/becoming02"
+slug: "/blog/becoming02"
 date: "2023-11-25"
 title: "Our Becoming the next successful online startup"
 categories:
