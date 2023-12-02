@@ -36,7 +36,6 @@ exports.createPages = async ({ actions, graphql }) => {
         context: {
           mainCategory: categories[0].mainCategory,
         },
-        defer: true,
       })
       createPage({
         path: `/subCategory/${categories[0].subCategory.toLowerCase()}`,
@@ -45,7 +44,6 @@ exports.createPages = async ({ actions, graphql }) => {
           mainCategory: categories[0].mainCategory,
           subCategory: categories[0].subCategory,
         },
-        defer: true,
       })
     }
   })
