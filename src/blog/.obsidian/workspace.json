@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "bf5c7f5ec23159f1",
+        "id": "c7847843c5463a27",
         "type": "tabs",
         "children": [
           {
-            "id": "e991d2a79ee74f19",
+            "id": "8839ff849cd4cb46",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
+                "file": "Area/stock/채권.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4c29ebf010082678",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Area/algorithm/동적계획 - 와일드카드.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
+                "file": "Area/algorithm/동적계획 - 와일드카드.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md",
+                "file": "Area/algorithm/동적계획 - 와일드카드.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Area/algorithm/[완전탐색] 시계 맞추기.md"
+                "file": "Area/algorithm/동적계획 - 와일드카드.md"
               }
             }
           }
@@ -146,9 +159,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e991d2a79ee74f19",
+  "active": "4c29ebf010082678",
   "lastOpenFiles": [
-    "Area/algorithm/[분할정복] 울타리 잘라내기.md",
+    "images/Pasted image 20231203210910.png",
+    "Area/algorithm/분할정복 - 울타리 잘라내기.md",
+    "Area/algorithm/동적계획 - 와일드카드.md",
+    "Area/algorithm/완전탐색 - 시계 맞추기.md",
+    "Area/bookreport/레버리지 독후감.md",
+    "Project/cs/컴퓨터 내부의 언어 체계.md",
+    "Area/stock/채권.md",
+    "Project/cs",
+    "images/다운로드.jpeg",
+    "images/다운로드 1.jpeg",
+    "images/다운로드 2.jpeg",
+    "Area/stock/지표.md",
+    "Area/stock/주식 티커.md",
+    "Area/stock/용어.md",
+    "Area/stock/배당.md",
+    "Area/stock/투자.md",
+    "images",
+    "다운로드.jpeg",
+    "Pasted image 20231202161929.png",
+    "Pasted image 20231202161731.png",
     "Project/exchange/Becoming the next successful online startup.md",
     "Area/book/레버리지 독후감.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기5.md",
@@ -156,7 +188,6 @@
     "Area/blog-making/gatsby로 github page 블로그 만들기3.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기.md",
-    "Area/algorithm/[완전탐색] 시계 맞추기.md",
     "Archive/project/유니브팅 - Telefunc.md",
     "Archive/project/유니브팅 - Charkra UI.md",
     "Archive/project/유니브팅 - 유저 플로우 설계.md",
@@ -168,10 +199,6 @@
     "Area",
     "stock/주식 티커.md",
     "stock/투자.md",
-    "stock/채권.md",
-    "stock/용어.md",
-    "시간복잡도.md",
-    "Project/exchange/Our Becoming the next successful online startup.md",
     "Project/exchange",
     "Area/algorithm"
   ]
