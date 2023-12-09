@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/algorithm/동적계획 - LIS.md",
+                "file": "Area/algorithm/동적 계획 - Quantization.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Area/algorithm/동적계획 - LIS.md",
+                "file": "Area/algorithm/동적 계획 - Quantization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Area/algorithm/동적계획 - LIS.md",
+                "file": "Area/algorithm/동적 계획 - Quantization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Area/algorithm/동적계획 - LIS.md"
+                "file": "Area/algorithm/동적 계획 - Quantization.md"
               }
             }
           }
@@ -148,32 +148,33 @@
   },
   "active": "6b7f3fbbdf09642d",
   "lastOpenFiles": [
+    "Area/algorithm/동적계획 - 와일드카드.md",
+    "Area/algorithm/동적 계획 - Quantization.md",
+    "images/Pasted image 20231209224957.png",
+    "Project/cs/전자 회로의 조합 논리.md",
+    "images/Pasted image 20231209123232.png",
+    "images/Pasted image 20231209123006.png",
+    "images/Pasted image 20231209122740.png",
+    "images/Pasted image 20231209122201.png",
+    "images/Pasted image 20231209121629.png",
+    "images/Pasted image 20231209115510.png",
+    "images/Pasted image 20231209113942.png",
+    "Project/cs/컴퓨터 내부의 언어 체계.md",
+    "Area/algorithm/동적계획 - LIS.md",
     "Area/algorithm/분할정복 - 울타리 잘라내기.md",
     "Area/algorithm/완전탐색 - 시계 맞추기.md",
     "Area/algorithm/동적계획 - 원주율 외우기.md",
-    "Area/algorithm/동적계획 - 와일드카드.md",
     "images/Pasted image 20231208215531.png",
-    "Project/cs/전자 회로의 조합 논리.md",
     "images/Pasted image 20231207094517.png",
-    "Project/cs/컴퓨터 내부의 언어 체계.md",
     "Area/stock/채권.md",
-    "images/Pasted image 20231207094239.png",
-    "Area/algorithm/동적계획 - LIS.md",
-    "images/Pasted image 20231203210910.png",
     "Area/bookreport/레버리지 독후감.md",
     "Project/cs",
-    "images/다운로드.jpeg",
-    "images/다운로드 1.jpeg",
-    "images/다운로드 2.jpeg",
     "Area/stock/지표.md",
     "Area/stock/주식 티커.md",
     "Area/stock/용어.md",
     "Area/stock/배당.md",
     "Area/stock/투자.md",
     "images",
-    "다운로드.jpeg",
-    "Pasted image 20231202161929.png",
-    "Pasted image 20231202161731.png",
     "Project/exchange/Becoming the next successful online startup.md",
     "Area/book/레버리지 독후감.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기5.md",
@@ -184,7 +185,6 @@
     "Archive/project/유니브팅 - Telefunc.md",
     "Archive/project/유니브팅 - Charkra UI.md",
     "Archive/project/유니브팅 - 유저 플로우 설계.md",
-    "Archive/project/유니브팅 - 와이어 프레임 설계.md",
     "Project",
     "Archive",
     "Resource",

@@ -1,5 +1,5 @@
 ---
-thumbnail: univting.png
+thumbnail: default.jpg
 slug: "/blog/algorithm/lis"
 date: "2023-11-27"
 title: "[동적계획] LIS"
