@@ -1,6 +1,6 @@
 .category-item-horizon {
   width: 90%;
-  margin-bottom: 50px;
+  margin: 50px 0;
   a {
     text-decoration: none;
     display: flex;
@@ -10,10 +10,16 @@
       height: 125px;
       min-width: 125px;
       min-height: 125px;
-      border-radius: 50%;
       margin-right: 20px;
       overflow: hidden;
       z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-bottom: 0 !important;
+      }
     }
     .right {
       width: calc(100% - 62.5px);
@@ -22,7 +28,6 @@
       position: relative;
       left: -82.5px;
       //grey
-      border: 1px solid grey;
       display: flex;
       flex-direction: column;
       justify-content: center;
