@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/Layout";
+import Para from "../components/PARA";
 
 const pageStyles = {
   color: "#232129",
@@ -11,7 +12,9 @@ const pageStyles = {
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <main style={pageStyles}></main>
+      <main style={pageStyles}>
+        <Para />
+      </main>
     </Layout>
   );
 };
