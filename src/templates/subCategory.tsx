@@ -6,9 +6,12 @@ import CategoryItemHorizon from "../components/CategoryItemHorizon";
 export default function SubCategory({ pageResources }: any) {
   const {
     json: {
-      pageContext: { subCategory, mainCategory },
-    },
-  } = pageResources;
+      pageContext: {
+        subCategory = "default sub",
+        mainCategory = "default main",
+      } = {},
+    } = {},
+  } = pageResources || {};
 
   const data = useStaticQuery(graphql`
     query {

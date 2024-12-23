@@ -4,11 +4,8 @@ import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function MainCategory({ pageResources }: any) {
-  const {
-    json: {
-      pageContext: { mainCategory },
-    },
-  } = pageResources;
+  const mainCategory =
+    pageResources?.json?.pageContext?.mainCategory || "default main";
 
   const data = useStaticQuery(graphql`
     query {

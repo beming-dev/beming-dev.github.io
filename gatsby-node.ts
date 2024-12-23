@@ -1,15 +1,12 @@
 const path = require(`path`);
 
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
+exports.onCreatePage = async ({ page, actions }: any) => {
+  const { createPage } = actions;
 
-  // 404 페이지를 클라이언트 라우팅 처리 페이지로 설정
-  if (page.path.match(/^\/404\/$/)) {
-    deletePage(page);
-    createPage({
-      ...page,
-      matchPath: `/*`,
-    });
+  // 모든 경로를 처리하도록 matchPath 설정
+  if (page.path === `/404/`) {
+    page.matchPath = `/*`;
+    createPage(page);
   }
 };
 
@@ -49,7 +46,7 @@ exports.createPages = async ({ actions, graphql }: any) => {
         context: {
           mainCategory: categories[0].mainCategory,
         },
-        defer: true,
+        // defer: true,
       });
       createPage({
         path: `/subCategory/${categories[0].subCategory.toLowerCase()}`,
@@ -58,7 +55,7 @@ exports.createPages = async ({ actions, graphql }: any) => {
           mainCategory: categories[0].mainCategory,
           subCategory: categories[0].subCategory,
         },
-        defer: true,
+        // defer: true,
       });
     }
   });
