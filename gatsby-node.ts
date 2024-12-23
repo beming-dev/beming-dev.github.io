@@ -1,5 +1,18 @@
 const path = require(`path`);
 
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  // 404 페이지를 클라이언트 라우팅 처리 페이지로 설정
+  if (page.path.match(/^\/404\/$/)) {
+    deletePage(page);
+    createPage({
+      ...page,
+      matchPath: `/*`,
+    });
+  }
+};
+
 exports.createPages = async ({ actions, graphql }: any) => {
   const { createPage } = actions;
 
