@@ -1,3 +1,12 @@
+---
+thumbnail: bookreport.jpg
+slug: "/exchange/record"
+date: "2023-11-20"
+title: "Becoming the next successful online startup"
+categories:
+  - mainCategory: "Project"
+    subCategory: "exchange"
+---
 
 2023년 2학기 교환학생 생활에 관한 포스트 입니다.
 네덜란드에서 Hague University of Applied Science에 다녔습니다.

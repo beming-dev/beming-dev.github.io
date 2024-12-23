@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
     // "gatsby-plugin-google-gtag",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -32,6 +31,13 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `md-images`,
+        path: `${__dirname}/src/blog/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -40,7 +46,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/blog/`,
+        path: `${__dirname}/src/blog`,
       },
     },
     {
@@ -50,7 +56,10 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 500,
+              maxWidth: 800, // 이미지 최대 너비
+              linkImagesToOriginal: false, // 이미지 클릭 시 원본 링크로 이동하지 않음
+              showCaptions: true, // 캡션 표시
+              markdownCaptions: true, // Markdown에서 캡션 활성화
             },
           },
         ],

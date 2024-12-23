@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "78876d58dcae43f2",
+    "id": "c51e82d777bb597d",
     "type": "split",
     "children": [
       {
-        "id": "6326627510d9f2c1",
+        "id": "0af99fc253f3a1b1",
         "type": "tabs",
         "children": [
           {
-            "id": "e9799623693a9919",
+            "id": "0812f945f95cdb92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+                "file": "blog/Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7ff942333d048e93",
+    "id": "97cb8733259491b4",
     "type": "split",
     "children": [
       {
-        "id": "fc3e09828d44bd35",
+        "id": "1ef54dd1a84c20dd",
         "type": "tabs",
         "children": [
           {
-            "id": "11f1d488c5517a9b",
+            "id": "57a6a7ac25a5baa2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -47,7 +47,7 @@
             }
           },
           {
-            "id": "970e23febe281321",
+            "id": "655736807d7e57b3",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -64,7 +64,7 @@
             }
           },
           {
-            "id": "1e716a3a09b21e68",
+            "id": "d3c56862a8d212e3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,23 +77,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "14357fc326fa2d45",
+    "id": "9c6a0bdab86b46bf",
     "type": "split",
     "children": [
       {
-        "id": "2b462486db2630f8",
+        "id": "525df7489974da24",
         "type": "tabs",
         "children": [
           {
-            "id": "a7f3109a3f00a454",
+            "id": "0b940140952ad6cf",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Area/algorithm/동적계획 - 와일드카드.md",
+                "file": "blog/Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,25 +103,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "동적계획 - 와일드카드의 백링크"
+              "title": "About billing - heroku와 AWS ec2 비용 분석의 백링크"
             }
           },
           {
-            "id": "8eaf7eb50b70542e",
+            "id": "46862734a6aad7bb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Area/algorithm/동적계획 - 와일드카드.md",
+                "file": "blog/Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "동적계획 - 와일드카드의 나가는 링크"
+              "title": "About billing - heroku와 AWS ec2 비용 분석의 나가는 링크"
             }
           },
           {
-            "id": "0e6e384624da1a58",
+            "id": "920c763adadd3f8a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -134,15 +134,15 @@
             }
           },
           {
-            "id": "c31ffe9a990dfcee",
+            "id": "abe2e96eaf6dae84",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Area/algorithm/동적계획 - 와일드카드.md"
+                "file": "blog/Area/About/About billing - heroku와 AWS ec2 비용 분석.md"
               },
               "icon": "lucide-list",
-              "title": "동적계획 - 와일드카드 개요"
+              "title": "About billing - heroku와 AWS ec2 비용 분석 개요"
             }
           }
         ]
@@ -159,57 +159,17 @@
       "canvas:새 캔버스 만들기": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "markdown-importer:마크다운 형식 가져오기 열기": false
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "e9799623693a9919",
+  "active": "0812f945f95cdb92",
   "lastOpenFiles": [
-    "images/20231203210910.png",
-    "images/20241223141541.png",
-    "images/20241223134956.png",
-    "images/20241223134501.png",
-    "images/20241223134027.png",
-    "images/20241223133059.png",
-    "images/20241223133034.png",
-    "images/20241223133004.png",
-    "images/20241223132945.png",
-    "images/20241102163423.png",
-    "images/20241102163020.png",
-    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
-    "images/gatsby.htm",
-    "Area/algorithm/동적계획 - 두니발 박사의 탈옥.md",
-    "Area/algorithm/동적 계획법 실제 해 구하기.md",
-    "Project/exchange/1~3주차.md",
-    "stock/stock-1.png.md",
-    "Project/exchange/4~6주차.md",
-    "Project/exchange/Becoming the next successful online startup.md",
-    "Project/exchange/Our Becoming the next successful online startup.md",
-    "Project/exchange/Exchange Student Record.md",
-    "Area/blog-making/gatsby로 github page 블로그 만들기4.md",
-    "Area/blog-making/gatsby로 github page 블로그 만들기5.md",
-    "Area/blog-making/gatsby로 github page 블로그 만들기3.md",
-    "Area/blog-making/gatsby로 github page 블로그 만들기.md",
-    "Area/blog-making/블로그 리뉴얼.md",
-    "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
-    "Area/algorithm/완전탐색 - 시계 맞추기.md",
-    "Area/algorithm/분할정복 - 울타리 잘라내기.md",
-    "Area/algorithm/동적계획 - LIS.md",
-    "Area/algorithm/동적계획 - 폴리오미노.md",
-    "Area/algorithm/동적계획 - 원주율 외우기.md",
-    "Area/algorithm/동적계획 - 와일드카드.md",
-    "Area/algorithm/동적 계획 - Quantization.md",
-    "Area/algorithm/동적 계획 - 비대칭 타일링.md",
-    "Area/About/Express.js의 Error Handling.md",
-    "Area/About/Express.js Layered.md",
-    "Area/About",
-    "stock",
-    "Project/cs",
-    "images",
-    "Project",
-    "Archive",
-    "Resource",
-    "Area",
-    "Project/exchange"
+    "images/post/gatsby 1.jpg",
+    "blog/Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "images/post/gatsby.jpg",
+    "images/post/봉사2.png",
+    "images/post",
+    "images/gatsby 1.jpg",
+    "images/gatsby.jpg"
   ]
 }

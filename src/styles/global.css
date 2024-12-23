@@ -32,3 +32,8 @@ p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+.gatsby-resp-image-wrapper {
+  margin: 15px 0 !important;
+  border: 1px solid grey;
+}
