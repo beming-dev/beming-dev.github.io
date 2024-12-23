@@ -6,6 +6,8 @@ title: "About billing - heroku와 AWS ec2 비용 분석"
 categories:
   - mainCategory: Area
     subCategory: about
+typora-copy-images-to: ..\images
+typora-root-url: ..\images
 ---
 
 현재 About은 Heroku로 Frontend와 Backend모두 배포하고 있습니다.

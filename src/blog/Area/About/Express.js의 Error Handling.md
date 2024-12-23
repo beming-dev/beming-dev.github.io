@@ -6,6 +6,8 @@ title: "Express.js의 Error Handling"
 categories:
   - mainCategory: Area
     subCategory: about
+typora-copy-images-to: ..\images
+typora-root-url: ..\images
 ---
 
 # Express.js의 오류 처리 방식

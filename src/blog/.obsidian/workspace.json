@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/blog-making/블로그 리뉴얼.md",
+                "file": "Area/algorithm/동적 계획 - 비대칭 타일링.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "블로그 리뉴얼"
+              "title": "동적 계획 - 비대칭 타일링"
             }
           }
         ]
@@ -165,15 +165,20 @@
   },
   "active": "11635a3baf85fe6d",
   "lastOpenFiles": [
-    "Area/blog-making/gatsby로 github page 블로그 만들기.md",
-    "Area/blog-making/블로그 리뉴얼.md",
-    "Area/algorithm/완전탐색 - 시계 맞추기.md",
+    "Area/algorithm/동적 계획법 실제 해 구하기.md",
+    "Area/algorithm/동적계획 - 원주율 외우기.md",
     "Area/algorithm/동적계획 - 폴리오미노.md",
+    "Area/algorithm/동적계획 - LIS.md",
+    "Area/algorithm/분할정복 - 울타리 잘라내기.md",
     "Area/algorithm/동적계획 - 와일드카드.md",
-    "Area/algorithm/동적 계획 - 비대칭 타일링.md",
-    "Area/About/Express.js Layered.md",
     "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "Area/About/Express.js Layered.md",
     "Area/About/Express.js의 Error Handling.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기3.md",
+    "Area/blog-making/블로그 리뉴얼.md",
+    "Area/blog-making/gatsby로 github page 블로그 만들기.md",
+    "Area/algorithm/완전탐색 - 시계 맞추기.md",
+    "Area/algorithm/동적 계획 - 비대칭 타일링.md",
     "Area/algorithm/동적 계획 - Quantization.md",
     "Project/exchange/4~6주차.md",
     "images/Pasted image 20241102163423.png",
@@ -190,7 +195,6 @@
     "Project/exchange/Exchange Student Record.md",
     "Project/exchange/Becoming the next successful online startup.md",
     "Project/exchange/Our Becoming the next successful online startup.md",
-    "Area/algorithm/동적계획 - 원주율 외우기.md",
     "Area/About",
     "동적계획 - 두니발 박사의 탈옥.md",
     "Project/cs/컴퓨터 아키텍처와 운영체제.md",
@@ -198,10 +202,6 @@
     "Project/cs/전자 회로의 조합 논리.md",
     "Project/cs/컴퓨터 내부 구조.md",
     "Project/cs/컴퓨터 내부의 언어 체계.md",
-    "Area/algorithm/동적 계획법 실제 해 구하기.md",
-    "Area/algorithm/동적계획 - LIS.md",
-    "Area/stock/분산투자.md",
-    "Area/stock/채권.md",
     "stock",
     "Project/cs",
     "images",
