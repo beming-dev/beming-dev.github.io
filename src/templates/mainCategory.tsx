@@ -47,18 +47,20 @@ export default function MainCategory({ pageResources }: any) {
     <Layout sub={subCategoryList}>
       <div className="w-full h-full flex justify-center items-center flex-wrap">
         {[...subCategoryList].map((name: any, i) => (
-          <Link
-            to={`/subCategory/${name}`}
-            className="w-1/3 m-10 flex flex-col justify-center items-center"
-            key={i}
-          >
-            <StaticImage
-              src="../images/folder.png"
-              alt="folder"
-              className="w-24"
-            />
-            <span className="mt-2 text-center">{name}</span>
-          </Link>
+          <div className="w-1/2 m-5">
+            <Link
+              to={`/subCategory/${name}`}
+              className="flex flex-col justify-center items-center"
+              key={i}
+            >
+              <StaticImage
+                src="../images/folder.png"
+                alt="folder"
+                width={100}
+              />
+              <span className="mt-2 text-center">{name}</span>
+            </Link>
+          </div>
         ))}
       </div>
     </Layout>

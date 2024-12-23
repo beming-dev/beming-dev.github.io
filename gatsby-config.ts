@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  pathPrefix: "/beming-dev.github.io",
   siteMetadata: {
     title: `Beming-dev Blog`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -17,31 +18,13 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    `gatsby-transformer-remark`,
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
-    },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `limelight`,
-          `Noto+Sans+KR\:100,300,400,400i,500,700`, // you can also specify font weights and styles
+          `Noto+Sans+KR:wght@100;300;400;500;700;800`, // 정확한 표기법
           `Roboto\:100,300,500,700`,
         ],
         display: "swap",
@@ -61,6 +44,21 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/blog/`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+            },
+          },
+        ],
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
   ],
 };
 

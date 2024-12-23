@@ -1,11 +1,12 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import Layout from "../components/Layout";
+import NavMobile from "../components/NavMobile";
 
 export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
   const { frontmatter, html, tableOfContents } = markdownRemark;
   return (
-    <Layout>
+    <>
+      <NavMobile always={true} />
       <div className="w-full flex flex-col md:flex-row mt-12 md:mt-0">
         <div className="w-full md:w-4/5 mx-auto mt-24 max-w-4xl flex flex-col items-center">
           <h1 className="text-2xl md:text-3xl font-bold text-center">
@@ -15,7 +16,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
             {frontmatter.date}
           </h2>
           <span
-            className="w-full my-12 prose prose-lg prose-headings:underline prose-h1:decoration-solid prose-h1:underline-offset-4 prose-h2:decoration-dashed prose-h2:underline-offset-4"
+            className="w-full p-2 my-12 prose prose-headings content"
             dangerouslySetInnerHTML={{ __html: html }}
           ></span>
         </div>
@@ -24,7 +25,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
           dangerouslySetInnerHTML={{ __html: tableOfContents }}
         />
       </div>
-    </Layout>
+    </>
   );
 }
 

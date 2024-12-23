@@ -29,11 +29,15 @@ const Para = () => {
         {PARA.map((category, i) => (
           <Link
             to={`/mainCategory/${category.name.toLowerCase()}`}
-            className="w-1/3 m-10 h-52 flex flex-col justify-start items-center no-underline"
+            className="w-1/2 md:w-1/3 max-w-sm m-0 md:m-10 h-52 flex flex-col justify-center items-center no-underline "
             key={i}
           >
-            <span className="text-2xl mb-5 underline">{category.name}</span>
-            <span className="text-sm">{category.explain}</span>
+            <span className="text-2xl mb-10 underline sm:mb-5">
+              {category.name}
+            </span>
+            <span className="text-sm break-words p-5 sm:p-3">
+              {category.explain}
+            </span>
           </Link>
         ))}
       </div>

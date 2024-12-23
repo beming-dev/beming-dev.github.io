@@ -61,9 +61,9 @@ export default function SubCategory({ pageResources }: any) {
   return (
     <Layout sub={subCategoryList}>
       {/* <Seo title={subCategory} /> */}
-      <div className="category-page">
+      <div className="mt-16">
         {/* <span className="category-title">{params.frontmatter__categories}</span> */}
-        <div className="category-item-box">
+        <div className="flex flex-col items-center justify-center">
           {posts.map((post: any, i: number) => (
             <CategoryItemHorizon key={i} info={post.node} />
           ))}

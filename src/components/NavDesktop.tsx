@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 export default function NavDesktop({ sub }: any) {
   const data = useStaticQuery(graphql`
@@ -38,19 +38,15 @@ export default function NavDesktop({ sub }: any) {
     }
   `);
 
-  console.log(data);
   return (
-    <div className="navigation fixed left-0 top-0 h-screen w-72 p-4 box-border transition duration-1000 bg-gray-100 hidden md:block">
+    <div className="sticky navigation left-0 top-0 h-screen w-72 p-4 box-border transition duration-1000 bg-gray-100 hidden md:block">
       <div className="content flex flex-col items-center justify-center h-full">
         <h2 className="logo text-lg font-bold">
           <Link to="/">Beming-dev</Link>
         </h2>
         <div className="profile flex flex-col items-center my-5">
           <div className="profile-img-wrapper w-30 h-30 rounded-full overflow-hidden mb-2">
-            <GatsbyImage
-              alt="altImg"
-              image={data.allFile?.edges[3].node.childImageSharp.fluid}
-            />
+            {/* <StaticImage alt="altImg" src="../images/navigation/profile.png" /> */}
           </div>
           <div className="contacts flex space-x-4">
             <div
@@ -59,24 +55,24 @@ export default function NavDesktop({ sub }: any) {
                 window.open("mailto:mingfordev@gmail.com");
               }}
             >
-              <GatsbyImage
+              <StaticImage
                 alt="altImg"
-                image={data.allFile?.edges[0].node.childImageSharp.fluid}
+                src="../images/navigation/ico_email.png"
               />
             </div>
             <div className="img-wrapper w-8 h-8">
               <a href="https://github.com/beming-dev">
-                <GatsbyImage
+                <StaticImage
                   alt="altImg"
-                  image={data.allFile.edges[1].node.childImageSharp.fluid}
+                  src="../images/navigation/ico_github.png"
                 />
               </a>
             </div>
             <div className="img-wrapper w-8 h-8">
               <a href="https://github.com/beming-dev">
-                <GatsbyImage
+                <StaticImage
                   alt="altImg"
-                  image={data.allFile.edges[2].node.childImageSharp.fluid}
+                  src="../images/navigation/ico_instagram.png"
                 />
               </a>
             </div>
@@ -87,7 +83,7 @@ export default function NavDesktop({ sub }: any) {
             ? [...sub].map((category, i) => (
                 <li key={i}>
                   <Link
-                    className="text-blue-600 hover:underline"
+                    className="hover:underline"
                     to={`/subCategory/${category.toLowerCase()}`}
                   >
                     {category}
@@ -97,7 +93,7 @@ export default function NavDesktop({ sub }: any) {
             : data.allMarkdownRemark.group.map((category) => (
                 <li key={category.fieldValue}>
                   <Link
-                    className="text-blue-600 hover:underline"
+                    className="hover:underline"
                     to={`/mainCategory/${category.fieldValue.toLowerCase()}`}
                   >
                     {category.fieldValue}
