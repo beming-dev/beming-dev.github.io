@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/algorithm/동적 계획 - 비대칭 타일링.md",
+                "file": "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "동적 계획 - 비대칭 타일링"
+              "title": "About billing - heroku와 AWS ec2 비용 분석"
             }
           }
         ]
@@ -163,8 +163,17 @@
       "markdown-importer:마크다운 형식 가져오기 열기": false
     }
   },
-  "active": "11635a3baf85fe6d",
+  "active": "11f1d488c5517a9b",
   "lastOpenFiles": [
+    "images/Pasted image 20241223134956.png",
+    "images/Pasted image 20241223134501.png",
+    "images/Pasted image 20241223134027.png",
+    "images/Pasted image 20241223133059.png",
+    "images/Pasted image 20241223133034.png",
+    "images/Pasted image 20241223133004.png",
+    "images/Pasted image 20241223132945.png",
+    "images/Pasted image 20241223141541.png",
+    "Area/algorithm/동적 계획 - 비대칭 타일링.md",
     "Area/algorithm/동적 계획법 실제 해 구하기.md",
     "Area/algorithm/동적계획 - 원주율 외우기.md",
     "Area/algorithm/동적계획 - 폴리오미노.md",
@@ -178,20 +187,12 @@
     "Area/blog-making/블로그 리뉴얼.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기.md",
     "Area/algorithm/완전탐색 - 시계 맞추기.md",
-    "Area/algorithm/동적 계획 - 비대칭 타일링.md",
     "Area/algorithm/동적 계획 - Quantization.md",
     "Project/exchange/4~6주차.md",
     "images/Pasted image 20241102163423.png",
     "images/Pasted image 20241102163020.png",
     "images/Pasted image 20241102162959.png",
-    "images/Pasted image 20241102160002.png",
-    "images/Pasted image 20241102155912.png",
     "Project/exchange/1~3주차.md",
-    "images/Pasted image 20241102154326.png",
-    "images/Pasted image 20241102153352.png",
-    "images/Pasted image 20241102153325.png",
-    "images/Pasted image 20241102153302.png",
-    "images/Pasted image 20241102153245.png",
     "Project/exchange/Exchange Student Record.md",
     "Project/exchange/Becoming the next successful online startup.md",
     "Project/exchange/Our Becoming the next successful online startup.md",
@@ -201,7 +202,6 @@
     "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
     "Project/cs/전자 회로의 조합 논리.md",
     "Project/cs/컴퓨터 내부 구조.md",
-    "Project/cs/컴퓨터 내부의 언어 체계.md",
     "stock",
     "Project/cs",
     "images",
