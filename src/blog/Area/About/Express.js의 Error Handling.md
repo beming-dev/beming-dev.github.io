@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: /blog/about/error
+date: 2024-10-21
+title: "Express.js의 Error Handling"
+categories:
+  - mainCategory: Area
+    subCategory: about
+---
+
 # Express.js의 오류 처리 방식
 
 Express.js는 다음과 같은 미들웨어로 에러를 처리합니다.
