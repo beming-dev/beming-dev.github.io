@@ -1,0 +1,31 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .a4-container {
+    width: 210mm;
+    /* height: 297mm; */
+    height: auto;
+    overflow: hidden; /* 내용이 넘치면 잘림 */
+  }
+
+  /* 인쇄 시 버튼 등 불필요 요소 숨기기 */
+  .print-hide {
+    display: none !important;
+  }
+
+  /* 
+      필요시 전체 축소 (예: 0.95 배)
+      .scale-print {
+        transform: scale(0.95);
+        transform-origin: top center;
+      }
+    */
+}
