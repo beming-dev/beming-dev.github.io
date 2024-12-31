@@ -20,7 +20,7 @@ body {
 
 li {
   list-style: none;
-  color: gray;
+  color: inherit;
 }
 
 h1 {
