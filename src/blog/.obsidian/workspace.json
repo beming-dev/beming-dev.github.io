@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "6326627510d9f2c1",
+        "id": "fa82a858cbe86f01",
         "type": "tabs",
         "children": [
           {
-            "id": "e9799623693a9919",
+            "id": "808a86163588f25a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+                "file": "Resource/Kafka/Kafka CLI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "About billing - heroku와 AWS ec2 비용 분석"
-            }
-          },
-          {
-            "id": "f9f40b9c42d08ded",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Area/About/Express.js의 Error Handling.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Express.js의 Error Handling"
-            }
-          },
-          {
-            "id": "d4c50fbaed5f2556",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "About billing - heroku와 AWS ec2 비용 분석"
-            }
-          },
-          {
-            "id": "27f02e686cca11a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "AWS를 이용한 CI.CD pipeline 구성"
+              "title": "Kafka CLI"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,15 +163,25 @@
       "markdown-importer:마크다운 형식 가져오기 열기": false
     }
   },
-  "active": "27f02e686cca11a1",
+  "active": "808a86163588f25a",
   "lastOpenFiles": [
+    "images/20250104144640.png",
+    "images/20250104143219.png",
+    "Resource/Kafka/Kafka 개념.md",
+    "Resource/Kafka/Kafka CLI.md",
+    "images/20250104134842.png",
+    "images/20250104134258.png",
+    "images/20250104132656.png",
+    "images/20250104131523.png",
     "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
-    "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
     "Area/About/Express.js의 Error Handling.md",
+    "images/20250104130351.png",
+    "images/20250104130317.png",
+    "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
     "Area/About/Express.js Layered.md",
     "images/20250103105340.png",
     "images/20250103105258.png",
-    "위도 경도 기반 clustering 알고리즘.md",
+    "Area/About/위도 경도 기반 clustering 알고리즘.md",
     "images/20241230140929.png",
     "Plan.md",
     "Resource/Next.md",
@@ -226,13 +193,6 @@
     "Resource/Redis",
     "Resource/Kafka",
     "Resource",
-    "images/20231203210910.png",
-    "images/20241223141541.png",
-    "images/20241223134956.png",
-    "images/20241223134501.png",
-    "images/20241223134027.png",
-    "images/20241223133059.png",
-    "images/20241223133034.png",
     "images/gatsby.htm",
     "Area/algorithm/동적계획 - 두니발 박사의 탈옥.md",
     "Area/algorithm/동적 계획법 실제 해 구하기.md",
@@ -250,8 +210,6 @@
     "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
     "Area/algorithm/완전탐색 - 시계 맞추기.md",
     "Area/algorithm/분할정복 - 울타리 잘라내기.md",
-    "Area/algorithm/동적계획 - LIS.md",
-    "Area/algorithm/동적계획 - 폴리오미노.md",
     "Area/About"
   ]
 }

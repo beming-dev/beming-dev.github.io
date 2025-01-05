@@ -15,24 +15,24 @@ const ResumePage = () => {
       {/* A4 컨테이너 */}
       <div className="a4-container w-[210mm] min-h-[297mm] bg-white relative shadow-lg">
         {/* 인쇄하기 버튼 (인쇄 시 숨김) */}
-        <div className=" w-full justify-between absolute flex top-4 right-0 print-hide">
+        <div className=" w-full justify-between absolute flex  sm:top-4 top-0 right-0 print-hide z-0">
           <button
             onClick={toggleLanguage}
-            className="w-24 px-3 py-2 bg-indigo-600 text-white text-sm rounded-md hover:bg-indigo-500 transition"
+            className="w-24 px-3 py-2 sm: bg-indigo-600 bg-transparent text-white text-sm rounded-md hover:bg-indigo-500 transition"
           >
             {/* 버튼에 표시할 텍스트: 현재 언어가 ko면 'ENGLISH' 버튼, en이면 '한국어' 버튼 */}
             {lang === "ko" ? "ENGLISH" : "한국어"}
           </button>
           <button
             onClick={() => window.print()}
-            className="px-3 py-2 bg-indigo-500 text-white rounded-md text-sm hover:bg-indigo-600 transition mb-4"
+            className="px-3 py-2 sm: bg-indigo-500 bg-transparent text-white rounded-md text-sm hover:bg-indigo-600 transition"
           >
             인쇄하기
           </button>
         </div>
 
         {/* Hero 영역 */}
-        <div className="bg-gradient-to-r from-indigo-600 to-indigo-500 text-white px-20 py-10 flex flex-col items-center">
+        <div className="bg-gradient-to-r from-indigo-600 to-indigo-500 text-white px-20 py-10 flex flex-col items-center z-10">
           <div>
             <div className="self-start gap-3 flex justify-between items-center">
               {/* 이름 & 직책 */}
@@ -74,9 +74,9 @@ const ResumePage = () => {
         </div>
 
         {/* 메인 콘텐츠 */}
-        <div className="px-8 py-8">
+        <div className="px-4 py-8 flex flex-col items-center">
           {/* 소개 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "소개" : "Profile"}
             </h2>
@@ -90,7 +90,7 @@ const ResumePage = () => {
           </section>
 
           {/* 학력 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "학력" : "Education"}
             </h2>
@@ -107,7 +107,7 @@ const ResumePage = () => {
           </section>
 
           {/* 협업 프로젝트 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "협업 프로젝트" : "Collaborated Project"}
             </h2>
@@ -153,6 +153,7 @@ const ResumePage = () => {
                 <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  mt-2">
                   {lang === "ko" ? (
                     <>
+                      <li>시립대 해커톤 수상</li>
                       <li>Next.js, Tailwindcss</li>
                       <li>디자이너와의 협업으로 UI/UX 개선</li>
                     </>
@@ -169,7 +170,7 @@ const ResumePage = () => {
           </section>
 
           {/* 개인 프로젝트 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "개인 프로젝트" : "Personal Project"}
             </h2>
@@ -207,7 +208,7 @@ const ResumePage = () => {
           </section>
 
           {/* 기술 스택 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "기술 스택" : "Skills"}
             </h2>
@@ -263,7 +264,7 @@ const ResumePage = () => {
           </section>
 
           {/* 공부중인것 섹션 */}
-          <section className="mb-8">
+          <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "공부중인것" : "Studying"}
             </h2>
@@ -276,7 +277,7 @@ const ResumePage = () => {
           </section>
 
           {/* 기타 섹션 */}
-          <section>
+          <section className="w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "기타" : "Etc."}
             </h2>
