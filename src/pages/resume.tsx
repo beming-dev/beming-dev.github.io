@@ -169,6 +169,10 @@ const ResumePage = () => {
             </div>
           </section>
 
+          <br />
+          <br />
+          <br />
+          <br />
           {/* 개인 프로젝트 섹션 */}
           <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
@@ -192,8 +196,10 @@ const ResumePage = () => {
                       <li>
                         Oracle cloud와 Jenkins를 이용한 CI/CD 파이프라인 구축
                       </li>
-                      <li>Redis, Kafka를 이용한 대용량 데이터 처리</li>
-                      <li>MySQL query 최적화</li>
+                      <li>
+                        백엔드, 프론트엔드, 외부 api와의 Websocket 아키텍처 구성
+                      </li>
+                      {/* <li>MySQL query 최적화</li> */}
                     </>
                   ) : (
                     <>

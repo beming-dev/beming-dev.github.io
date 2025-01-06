@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: /blog/about/clustering
+date: 2025-01-05
+title: "위도 경도 기반 clustering 알고리즘"
+categories:
+  - mainCategory: Area
+    subCategory: about
+---
+
 # 배경
 
 스터디 매칭기능은 About 프로젝트의 주요 기능중 하나입니다.

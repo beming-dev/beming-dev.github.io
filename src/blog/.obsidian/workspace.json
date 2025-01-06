@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resource/Kafka/Kafka CLI.md",
+                "file": "Area/About/위도 경도 기반 clustering 알고리즘.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Kafka CLI"
+              "title": "위도 경도 기반 clustering 알고리즘"
             }
           }
         ]
@@ -165,15 +165,16 @@
   },
   "active": "808a86163588f25a",
   "lastOpenFiles": [
+    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "Area/About/위도 경도 기반 clustering 알고리즘.md",
+    "Resource/Kafka/Kafka CLI.md",
     "images/20250104144640.png",
     "images/20250104143219.png",
     "Resource/Kafka/Kafka 개념.md",
-    "Resource/Kafka/Kafka CLI.md",
     "images/20250104134842.png",
     "images/20250104134258.png",
     "images/20250104132656.png",
     "images/20250104131523.png",
-    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
     "Area/About/Express.js의 Error Handling.md",
     "images/20250104130351.png",
     "images/20250104130317.png",
@@ -181,8 +182,6 @@
     "Area/About/Express.js Layered.md",
     "images/20250103105340.png",
     "images/20250103105258.png",
-    "Area/About/위도 경도 기반 clustering 알고리즘.md",
-    "images/20241230140929.png",
     "Plan.md",
     "Resource/Next.md",
     "Resource/Spring",

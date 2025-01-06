@@ -4,6 +4,16 @@
 }
 
 @media print {
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, #4f46e5, #3b82f6) !important;
+  }
+
+  /* 모든 요소의 배경색 인쇄 허용 */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   body {
     margin: 0;
     padding: 0;

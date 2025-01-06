@@ -1,4 +1,5 @@
 Commandline Interface에서 어떻게 kafka를 동작시키는지 간단히 알아봅시다.
+[hello](https://beming-dev.github.io/subCategory/about/)
 
 kafka가 설치돼있고, 환경변수를 등록해서 bin경로 없이 kafka명령을 실행할 수 있는 환경을 가정한다.
 # Kafka Broker
