@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/About/위도 경도 기반 clustering 알고리즘.md",
+                "file": "Area/stock-simulator/WebSocket.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "위도 경도 기반 clustering 알고리즘"
+              "title": "WebSocket"
             }
           }
         ]
@@ -165,7 +165,10 @@
   },
   "active": "808a86163588f25a",
   "lastOpenFiles": [
+    "Area/stock/주식 티커.md",
+    "Area/stock-simulator/WebSocket.md",
     "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "Area/stock-simulator",
     "Area/About/위도 경도 기반 clustering 알고리즘.md",
     "Resource/Kafka/Kafka CLI.md",
     "images/20250104144640.png",
@@ -207,8 +210,6 @@
     "Area/blog-making/gatsby로 github page 블로그 만들기.md",
     "Area/blog-making/블로그 리뉴얼.md",
     "Area/blog-making/gatsby로 github page 블로그 만들기2.md",
-    "Area/algorithm/완전탐색 - 시계 맞추기.md",
-    "Area/algorithm/분할정복 - 울타리 잘라내기.md",
-    "Area/About"
+    "Area/algorithm/완전탐색 - 시계 맞추기.md"
   ]
 }

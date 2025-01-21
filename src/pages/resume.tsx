@@ -122,7 +122,7 @@ const ResumePage = () => {
                     ? "2022.06 ~ * | 백엔드 개발자"
                     : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 my-2">
                   {lang === "ko" ? (
                     <>
                       <li>Express.js, Nest.js, MongoDB</li>
@@ -138,6 +138,20 @@ const ResumePage = () => {
                     </>
                   )}
                 </ul>
+                <p className="text-blue-500 text-sm">
+                  Backend:{" "}
+                  <a href="https://github.com/AboutClan/nest-back">
+                    {" "}
+                    https://github.com/AboutClan/nest-back
+                  </a>
+                </p>
+                <p className="text-blue-500 text-sm">
+                  Frontend:{" "}
+                  <a href="https://github.com/AboutClan/nest-back">
+                    {" "}
+                    https://github.com/AboutClan/About
+                  </a>
+                </p>
               </div>
 
               {/* 회사 카드 #1 */}
@@ -150,7 +164,7 @@ const ResumePage = () => {
                     ? "2024.11 ~ 2024.11 | 프론트엔드 개발자"
                     : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  mt-2">
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  my-2">
                   {lang === "ko" ? (
                     <>
                       <li>시립대 해커톤 수상</li>
@@ -165,14 +179,20 @@ const ResumePage = () => {
                     </>
                   )}
                 </ul>
+                <p className="text-blue-500 text-sm">
+                  Frontend:{" "}
+                  <a
+                    href="https://github.com/orgs/UOSHackathon2024/repositories"
+                    className="text-blue-500"
+                  >
+                    {" "}
+                    https://github.com/orgs/UOSHackathon2024/repositories
+                  </a>
+                </p>
               </div>
             </div>
           </section>
 
-          <br />
-          <br />
-          <br />
-          <br />
           {/* 개인 프로젝트 섹션 */}
           <section className="mb-8 w-full">
             <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
@@ -189,7 +209,7 @@ const ResumePage = () => {
                     ? "2024.12 ~ * | 풀스택 개발"
                     : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  mt-2">
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  my-2">
                   {lang === "ko" ? (
                     <>
                       <li>Spring, MySQL, React.js, tailwindCSS</li>
@@ -209,6 +229,26 @@ const ResumePage = () => {
                     </>
                   )}
                 </ul>
+                <p className="text-blue-500 text-sm">
+                  Frontend:{" "}
+                  <a
+                    href="https://github.com/beming-dev/stock-simulator-front"
+                    className="text-blue-500"
+                  >
+                    {" "}
+                    https://github.com/beming-dev/stock-simulator-front
+                  </a>
+                </p>
+                <p className="text-blue-500 text-sm">
+                  Backend:{" "}
+                  <a
+                    href="https://github.com/beming-dev/stock-simulator-back"
+                    className="text-blue-500"
+                  >
+                    {" "}
+                    https://github.com/beming-dev/stock-simulator-back
+                  </a>
+                </p>
               </div>
             </div>
           </section>
