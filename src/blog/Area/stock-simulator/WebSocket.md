@@ -11,12 +11,17 @@ categories:
 # 개요
 
 Stocket simulator를 제작하면서, 한국 투자 증권의 API를 사용했습니다.
-백엔드 서버가 한국 투자증권의 서버와 WebSocket으로 통신하고, 백엔드 서버와 프론트엔드 클라이언트 사이에도 WebSocket을 구성해야 해서 백엔드에 두개의 WebSocket 연결을 가지는 Architecture를 구현했습니다.
+Backend가 한국 투자증권의 서버와 WebSocket으로 통신하고, Backend 서버와 Frontend 클라이언트 사이에도 WebSocket을 구성해야 해서 Backend에 두개의 WebSocket 연결을 가지는 Architecture를 구현했습니다.
 
 # WebSocket
 
 
-## 프론트 - 백엔드 WebSocket 설정
+## Frontend - Backend WebSocket Config
+
+- EnableWebsocket annotation을 통해 Spring이 WebSocket 관련 처리를 하게 해줍니다.
+- frontendWebSocketHandler를 등록하고, /ws를 WebSocket을 위한 endpoint로 사용합니다.
+- cors 설정으로, Frontend를 허용합니다.
+
 ``` java
 @Configuration  
 @EnableWebSocket  
@@ -40,7 +45,10 @@ public class WebSocketConfig implements WebSocketConfigurer {
 }
 ```
 
-## 백엔드 - 한투 API WebSocket 설정
+## Backend - 한투 API WebSocket 설정
+- Spring에서 제공하는 WebSocket client (StandardWebSocketClient) 를 사용합니다.
+- WebSocket key를 가져오고, 한투의 WebSocket 주소와 연결합니다.
+- 앱 실행시 자동으로 WebSocket이 연결되도록 합니다.
 ```java
 @Configuration  
 @EnableWebSocket  
@@ -51,7 +59,6 @@ public class WebSocketExternalConfig implements WebSocketConfigurer {
     public WebSocketExternalConfig(StockApiInterface stockApi, WebSocketHandler webSocketHandler, FrontendWebSocketHandler frontendWebSocketHandler) {  
         this.stockApi = stockApi;  
         this.webSocketHandler = webSocketHandler;  
-        this.frontendWebSocketHandler = frontendWebSocketHandler;  
     }  
   
     @Override  

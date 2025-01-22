@@ -15,7 +15,7 @@
               "state": {
                 "file": "Area/stock-simulator/WebSocket.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "WebSocket"
