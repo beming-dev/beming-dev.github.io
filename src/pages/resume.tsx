@@ -77,7 +77,7 @@ const ResumePage = () => {
         <div className="px-4 py-8 flex flex-col items-center">
           {/* 소개 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "소개" : "Profile"}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
@@ -91,7 +91,7 @@ const ResumePage = () => {
 
           {/* 학력 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "학력" : "Education"}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
@@ -108,154 +108,417 @@ const ResumePage = () => {
 
           {/* 협업 프로젝트 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "협업 프로젝트" : "Collaborated Project"}
             </h2>
             <div className="grid gap-4">
               {/* 회사 카드 #1 */}
-              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
-                <h3 className="font-semibold text-base">
+              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
+                {/* 프로젝트 제목/기간/직무 */}
+                <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "About 프로젝트" : "About Project"}
                 </h3>
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="text-md text-gray-500">
                   {lang === "ko"
-                    ? "2022.06 ~ * | 백엔드 개발자"
-                    : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
+                    ? "2022.06 ~ 현재 | 백엔드 개발자"
+                    : "Jun 2022 ~ Present | Backend Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 my-2">
-                  {lang === "ko" ? (
-                    <>
-                      <li>Express.js, Nest.js, MongoDB</li>
-                      <li>스터디 매칭을 위한 클러스터링 알고리즘 구현</li>
-                      <li>비용 최적화를 위해 AWS에 CI/CD 파이프라인 구축</li>
-                      <li>MongoDB 최적화</li>
-                    </>
-                  ) : (
-                    <>
-                      <li>Developed web apps using React.js</li>
-                      <li>Implemented responsive UI/UX improvements</li>
-                      <li>Conducted code reviews and mentored team</li>
-                    </>
-                  )}
-                </ul>
-                <p className="text-blue-500 text-sm">
-                  Backend:{" "}
-                  <a href="https://github.com/AboutClan/nest-back">
-                    {" "}
-                    https://github.com/AboutClan/nest-back
-                  </a>
-                </p>
-                <p className="text-blue-500 text-sm">
-                  Frontend:{" "}
-                  <a href="https://github.com/AboutClan/nest-back">
-                    {" "}
-                    https://github.com/AboutClan/About
-                  </a>
-                </p>
+                <br />
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "프로젝트 소개" : "Project Introduction"}
+                  </h4>
+                  <p className="text-md">
+                    {lang === "ko"
+                      ? "대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 400명 이상의 유저가 이용중입니다."
+                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                  </p>
+                  <p className="text-blue-500 text-sm mt-3">
+                    Backend:{" "}
+                    <a
+                      href="https://github.com/AboutClan/nest-back"
+                      className="underline hover:text-blue-700"
+                    >
+                      https://github.com/AboutClan/nest-back
+                    </a>
+                  </p>
+                  <p className="text-blue-500 text-sm">
+                    Frontend:{" "}
+                    <a
+                      href="https://github.com/AboutClan/About"
+                      className="underline hover:text-blue-700"
+                    >
+                      https://github.com/AboutClan/About
+                    </a>
+                  </p>
+                </div>
+                <br />
+                {/* 기여도(Contributions) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기여도 (80%)" : "Contributions (80%)"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          AWS codepipeline을 이용해 EC2에 Docker container로
+                          프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
+                        </li>
+                        <li>
+                          Filebeat, ElasticSearch, Logstash, Kibana를
+                          Docker-compose로 묶어 Docker container의 로그를
+                          시각화하는 파이프라인 구성
+                        </li>
+                        <li>
+                          Nest.js 프레임워크를 이용해 클린 아키텍처 개념 적용
+                        </li>
+                        <li>
+                          스터디 매칭을 위해, DBSCAN 알고리즘을 응용한
+                          클러스터링 알고리즘 구현
+                        </li>
+                        <li>
+                          Redis를 도입하여, Pub/Sub을 이용해 알림 메시지 기능을
+                          메시지 큐를 활용하도록 구성
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Implemented a clustering algorithm for study group
+                          matching
+                        </li>
+                        <li>Optimized MongoDB queries and managed indexes</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+                <br />
+                {/* 기술 스택(Tech Stack) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기술 스택" : "Tech Stack"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>Nest.js</li>
+                        <li>MongoDB</li>
+                        <li>AWS, Docker</li>
+                        <li>Redis</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>Nest.js</li>
+                        <li>MongoDB</li>
+                        <li>AWS, Docker</li>
+                        <li>Redis</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+
+                <br />
+                {/* 트러블슈팅(Troubleshooting) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "트러블슈팅" : "Troubleshooting"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          사용자가 증가하며 서버가 예기치 못한 에러가 자주 발생.
+                          예외 처리를 위해 에러의 타입을 정의하고, 코드 전반에
+                          에러 처리를 위한 코드 추가. ELK 스택을 도입하여 로그를
+                          모니터링하고, 빠른 대응이 가능하도록 함.
+                        </li>
+                        <li>
+                          MongoDB query가 느려지며, 문제 발생. populate 연산을
+                          줄이고, 리인덱싱 하여 query 속도를 높임.aggregation
+                          파이프라인을 활용
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Resolved server launch delay on AWS (process
+                          monitoring and log analysis)
+                        </li>
+                        <li>
+                          Addressed MongoDB concurrency issues by configuring a
+                          Replica Set to reduce downtime
+                        </li>
+                      </>
+                    )}
+                  </ul>
+                </div>
               </div>
 
-              {/* 회사 카드 #1 */}
-              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
-                <h3 className="font-semibold text-base">
+              {/* 회사 카드 #2 */}
+              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
+                {/* 프로젝트 제목/기간/직무 */}
+                <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "서울도서이음" : "Seoul Book Connection"}
                 </h3>
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="text-md text-gray-500">
                   {lang === "ko"
                     ? "2024.11 ~ 2024.11 | 프론트엔드 개발자"
                     : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  my-2">
-                  {lang === "ko" ? (
-                    <>
-                      <li>시립대 해커톤 수상</li>
-                      <li>Next.js, Tailwindcss</li>
-                      <li>디자이너와의 협업으로 UI/UX 개선</li>
-                    </>
-                  ) : (
-                    <>
-                      <li>Developed web apps using React.js</li>
-                      <li>Implemented responsive UI/UX improvements</li>
-                      <li>Conducted code reviews and mentored team</li>
-                    </>
-                  )}
-                </ul>
-                <p className="text-blue-500 text-sm">
-                  Frontend:{" "}
-                  <a
-                    href="https://github.com/orgs/UOSHackathon2024/repositories"
-                    className="text-blue-500"
-                  >
-                    {" "}
-                    https://github.com/orgs/UOSHackathon2024/repositories
-                  </a>
-                </p>
+                <br />
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "프로젝트 소개" : "Project Introduction"}
+                  </h4>
+                  <p className="text-md">
+                    {lang === "ko"
+                      ? "'서울시 공공데이터를 활용해 편의를 제공하는 서비스를 만들기'를 주제로 하는 해커톤 참여. 서울시 도서관에서 제공하는 책이음 서비스와 서울시 도서관의 프로그램을 한눈에 확인할 수 있는 서비스 제작."
+                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                  </p>
+                  <p className="text-blue-500 text-sm">
+                    Frontend:{" "}
+                    <a
+                      href="https://github.com/orgs/UOSHackathon2024/repositories"
+                      className="text-blue-500"
+                    >
+                      {" "}
+                      https://github.com/orgs/UOSHackathon2024/repositories
+                    </a>
+                  </p>
+                </div>
+                <br />
+                {/* 기여도(Contributions) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기여도" : "Contributions"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>디자이너와의 협업으로 UI/UX 개선</li>
+                        <li>
+                          Next.js를 이용한 빠른 프로토타이핑과, 내장된 백엔드
+                          기능을 활용한 Cors 문제 해결
+                        </li>
+                        <li>TailwindCSS를 활용하여 일관성있는 디자인</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Implemented a clustering algorithm for study group
+                          matching
+                        </li>
+                        <li>Optimized MongoDB queries and managed indexes</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+                <br />
+                {/* 기술 스택(Tech Stack) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기술 스택" : "Tech Stack"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>Next.js</li>
+                        <li>Tailwindcss</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>Next.js</li>
+                        <li>Tailwindcss</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+
+                <br />
+                {/* 트러블슈팅(Troubleshooting) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "트러블슈팅" : "Troubleshooting"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          사용자가 증가하며 서버가 예기치 못한 에러가 자주 발생.
+                          예외 처리를 위해 에러의 타입을 정의하고, 코드 전반에
+                          에러 처리를 위한 코드 추가. ELK 스택을 도입하여 로그를
+                          모니터링하고, 빠른 대응이 가능하도록 함.
+                        </li>
+                        <li>
+                          MongoDB query가 느려지며, 문제 발생. populate 연산을
+                          줄이고, 리인덱싱 하여 query 속도를 높임.aggregation
+                          파이프라인을 활용
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Resolved server launch delay on AWS (process
+                          monitoring and log analysis)
+                        </li>
+                        <li>
+                          Addressed MongoDB concurrency issues by configuring a
+                          Replica Set to reduce downtime
+                        </li>
+                      </>
+                    )}
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
 
           {/* 개인 프로젝트 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "개인 프로젝트" : "Personal Project"}
             </h2>
             <div className="grid gap-4">
               {/* 회사 카드 #1 */}
-              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
-                <h3 className="font-semibold text-base">
+              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
+                {/* 프로젝트 제목/기간/직무 */}
+                <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "주식 시뮬레이션" : "Stock Simulation"}
                 </h3>
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="text-md text-gray-500">
                   {lang === "ko"
                     ? "2024.12 ~ * | 풀스택 개발"
-                    : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
+                    : "Dec 2024 ~ * | Fullstack Developer"}
                 </p>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1  my-2">
-                  {lang === "ko" ? (
-                    <>
-                      <li>Spring, MySQL, React.js, tailwindCSS</li>
-                      <li>
-                        Oracle cloud와 Jenkins를 이용한 CI/CD 파이프라인 구축
-                      </li>
-                      <li>
-                        백엔드, 프론트엔드, 외부 api와의 Websocket 아키텍처 구성
-                      </li>
-                      {/* <li>MySQL query 최적화</li> */}
-                    </>
-                  ) : (
-                    <>
-                      <li>Developed web apps using React.js</li>
-                      <li>Implemented responsive UI/UX improvements</li>
-                      <li>Conducted code reviews and mentored team</li>
-                    </>
-                  )}
-                </ul>
-                <p className="text-blue-500 text-sm">
-                  Frontend:{" "}
-                  <a
-                    href="https://github.com/beming-dev/stock-simulator-front"
-                    className="text-blue-500"
-                  >
-                    {" "}
-                    https://github.com/beming-dev/stock-simulator-front
-                  </a>
-                </p>
-                <p className="text-blue-500 text-sm">
-                  Backend:{" "}
-                  <a
-                    href="https://github.com/beming-dev/stock-simulator-back"
-                    className="text-blue-500"
-                  >
-                    {" "}
-                    https://github.com/beming-dev/stock-simulator-back
-                  </a>
-                </p>
+                <br />
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "프로젝트 소개" : "Project Introduction"}
+                  </h4>
+                  <p className="text-md">
+                    {lang === "ko"
+                      ? "한국투자증권 api를 이용해, 실시간 한국 주식, 미국 주식 데이터를 받아오고 거래 시뮬레이션을 해볼 수 있는 서비스 개발"
+                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                  </p>
+                  <p className="text-blue-500 text-sm">
+                    Frontend:{" "}
+                    <a
+                      href="https://github.com/beming-dev/stock-simulator-front"
+                      className="text-blue-500"
+                    >
+                      {" "}
+                      https://github.com/beming-dev/stock-simulator-front
+                    </a>
+                  </p>
+                  <p className="text-blue-500 text-sm">
+                    Backend:{" "}
+                    <a
+                      href="https://github.com/beming-dev/stock-simulator-back"
+                      className="text-blue-500"
+                    >
+                      {" "}
+                      https://github.com/beming-dev/stock-simulator-back
+                    </a>
+                  </p>
+                </div>
+                <br />
+                {/* 기여도(Contributions) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기여도" : "Contributions"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          실시간 데이터를 받아오기 위해, 한투api와 백엔드 서버
+                          사이의 WebSocket, 백엔드 서버와 클라이언트 사이의
+                          WebSocket을 연결하는 아키텍처 구성
+                        </li>
+                        <li>
+                          Oracle cloud와 Jenkins, Gitlab webhook을 이용한 CI/CD
+                          파이프라인 구축
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Implemented a clustering algorithm for study group
+                          matching
+                        </li>
+                        <li>Optimized MongoDB queries and managed indexes</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+                <br />
+                {/* 기술 스택(Tech Stack) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기술 스택" : "Tech Stack"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>Spring</li>
+                        <li>MySQL</li>
+                        <li>React.js</li>
+                        <li>tailwindCSS</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>Spring</li>
+                        <li>MySQL</li>
+                        <li>React.js</li>
+                        <li>tailwindCSS</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+
+                <br />
+                {/* 트러블슈팅(Troubleshooting) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "트러블슈팅" : "Troubleshooting"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          사용자가 증가하며 서버가 예기치 못한 에러가 자주 발생.
+                          예외 처리를 위해 에러의 타입을 정의하고, 코드 전반에
+                          에러 처리를 위한 코드 추가. ELK 스택을 도입하여 로그를
+                          모니터링하고, 빠른 대응이 가능하도록 함.
+                        </li>
+                        <li>
+                          MongoDB query가 느려지며, 문제 발생. populate 연산을
+                          줄이고, 리인덱싱 하여 query 속도를 높임.aggregation
+                          파이프라인을 활용
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Resolved server launch delay on AWS (process
+                          monitoring and log analysis)
+                        </li>
+                        <li>
+                          Addressed MongoDB concurrency issues by configuring a
+                          Replica Set to reduce downtime
+                        </li>
+                      </>
+                    )}
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
 
           {/* 기술 스택 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "기술 스택" : "Skills"}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
@@ -311,7 +574,7 @@ const ResumePage = () => {
 
           {/* 공부중인것 섹션 */}
           <section className="mb-8 w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "공부중인것" : "Studying"}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
@@ -324,7 +587,7 @@ const ResumePage = () => {
 
           {/* 기타 섹션 */}
           <section className="w-full">
-            <h2 className="text-lg font-semibold mb-2 border-b border-gray-300 pb-1">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "기타" : "Etc."}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
