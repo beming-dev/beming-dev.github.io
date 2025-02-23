@@ -70,6 +70,8 @@ const ResumePage = () => {
                 <a
                   href="https://github.com/beming-dev"
                   className="underline hover:text-blue-700"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   github.com/beming-dev
                 </a>
@@ -144,6 +146,8 @@ const ResumePage = () => {
                     <a
                       href="https://study-about.club/"
                       className="underline hover:text-blue-700"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       https://study-about.club/
                     </a>
@@ -153,6 +157,8 @@ const ResumePage = () => {
                     <a
                       href="https://github.com/AboutClan/nest-back"
                       className="underline hover:text-blue-700"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       https://github.com/AboutClan/nest-back
                     </a>
@@ -162,6 +168,8 @@ const ResumePage = () => {
                     <a
                       href="https://github.com/AboutClan/About"
                       className="underline hover:text-blue-700"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       https://github.com/AboutClan/About
                     </a>
@@ -340,6 +348,8 @@ const ResumePage = () => {
                     <a
                       href="https://uos-hackathon-static.vercel.app/"
                       className="text-blue-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       https://uos-hackathon-static.vercel.app/
@@ -355,6 +365,8 @@ const ResumePage = () => {
                     <a
                       href="https://github.com/orgs/UOSHackathon2024/repositories"
                       className="text-blue-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       https://github.com/orgs/UOSHackathon2024/repositories
@@ -495,6 +507,8 @@ const ResumePage = () => {
                     <a
                       href="https://beming-stock.kro.kr/"
                       className="text-blue-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       https://beming-stock.kro.kr/
@@ -510,6 +524,8 @@ const ResumePage = () => {
                     <a
                       href="https://github.com/beming-dev/stock-simulator-front"
                       className="text-blue-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       https://github.com/beming-dev/stock-simulator-front
@@ -520,6 +536,8 @@ const ResumePage = () => {
                     <a
                       href="https://github.com/beming-dev/stock-simulator-back"
                       className="text-blue-500"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {" "}
                       https://github.com/beming-dev/stock-simulator-back

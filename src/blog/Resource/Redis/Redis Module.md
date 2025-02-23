@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/module"
+date: "2025-02-20"
+title: "Redis Module"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
+
 Redis Module이란, redis에 로딩할 별도의 프로그램을 말합니다.
 
 우리는 그 중 유명한 RedisJSON과 RedisSearch를 알아봅시다.

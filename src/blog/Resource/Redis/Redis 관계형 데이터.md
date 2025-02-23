@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/relation"
+date: "2025-02-19"
+title: "Redis 관계형 데이터"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
+
 # 관계형 데이터
 
 redis에서 관계형 데이터를 어떻게 다룰까요?

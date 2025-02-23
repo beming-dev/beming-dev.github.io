@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "무제.md",
+                "file": "Resource/Redis/Reids의 동시성 문제와 lua 스크립트.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "무제"
+              "title": "Reids의 동시성 문제와 lua 스크립트"
             }
           }
         ],
@@ -181,16 +181,17 @@
   },
   "active": "78648e5ee32b0fd0",
   "lastOpenFiles": [
+    "Resource/Redis/Redis Streams.md",
+    "Resource/Redis/Redis Module.md",
+    "Resource/Redis/Redis 사용하기.md",
+    "Resource/Redis/Redis 시작하기.md",
+    "Resource/Redis/Redis 관계형 데이터.md",
+    "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
+    "무제.md",
     "images/Pasted image 20250215202232.png",
     "images/Pasted image 20250215201903.png",
     "images/Pasted image 20250215201416.png",
-    "Resource/Redis/Redis Streams.md",
-    "무제.md",
-    "Resource/Redis/Redis Module.md",
     "Resource/Redis/Reids의 동시성 문제와 lua 스크립트.md",
-    "Resource/Redis/Redis 관계형 데이터.md",
-    "Resource/Redis/Redis 사용하기.md",
-    "Resource/Redis/Redis 시작하기.md",
     "Area/About/Docker에서 ELK 스택 적용.md",
     "redis.io/commands.md",
     "redis.io",
@@ -209,7 +210,6 @@
     "images/20250104131523.png",
     "Area/About/Express.js의 Error Handling.md",
     "images/20250104130351.png",
-    "images/20250104130317.png",
     "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
     "Area/About/Express.js Layered.md",
     "Plan.md",

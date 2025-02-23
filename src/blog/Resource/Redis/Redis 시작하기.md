@@ -1,3 +1,12 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/start"
+date: "2025-02-17"
+title: "Redis 시작하기"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
 # Redis
 
 redis는 데이터베이스입니다.

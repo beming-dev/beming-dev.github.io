@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/use"
+date: "2025-02-18"
+title: "Redis 사용하기"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
+
 # Redis design
 
 Redis를 사용할 때, 기존의 데이터베이스를 사용할 때와는 다르게 접근해야 합니다.

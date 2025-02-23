@@ -1,3 +1,12 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/lua"
+date: "2025-02-19"
+title: "Redis 동시성 문제와 lua 스크립트"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
 # 동시성 문제
 
 만약에 Redis에서 GET관련 함수로 값을 가져오고 그 값을 애플리케이션에서 업데이트 한다음에, 다시 Redis에 save한다고 생각해봅시다.

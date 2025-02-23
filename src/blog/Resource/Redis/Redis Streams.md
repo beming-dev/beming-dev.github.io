@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: "/blog/redis/streams"
+date: "2025-02-22"
+title: "Redis Streams"
+categories:
+  - mainCategory: "Resource"
+    subCategory: "redis"
+---
+
 Stream 데이터 타입은, 지금까지 본 데이터 타입과는 많이 다릅니다.
 list와 sorted set이 섞인 형태라고 볼 수 있습니다.
 주로 서로 다른 서버 간 통신이 필요할 때 많이 사용합니다.
