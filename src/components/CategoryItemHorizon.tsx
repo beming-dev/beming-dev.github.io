@@ -15,7 +15,7 @@ const CategoryItemHorizon = ({ info }) => {
           {/* <StaticImage src={`/${meta.thumbnail}`} alt="thumbnail" className="mb-0"/> */}
         </div>
         <div className="relative left-[-82.5px] flex flex-col justify-center pl-24 pr-5 rounded-lg w-[calc(100%-62.5px)] min-w-[calc(100%-62.5px)] h-32">
-          <span className="text-sm">{meta.date}</span>
+          <span className="text-sm">{meta.date.substr(0, 10)}</span>
           <span className="font-bold text-xl whitespace-nowrap overflow-hidden text-ellipsis mb-1">
             {meta.title}
           </span>
