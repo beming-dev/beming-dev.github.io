@@ -185,6 +185,9 @@ const ResumePage = () => {
                     {lang === "ko" ? (
                       <>
                         <li>
+                          Nest.js 프레임워크를 이용해 클린 아키텍처 개념 적용
+                        </li>
+                        <li>
                           AWS codepipeline을 이용해 EC2에 Docker container로
                           프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
                         </li>
@@ -192,9 +195,6 @@ const ResumePage = () => {
                           Filebeat, ElasticSearch, Logstash, Kibana를
                           Docker-compose로 묶어 Docker container의 로그를
                           시각화하는 파이프라인 구성
-                        </li>
-                        <li>
-                          Nest.js 프레임워크를 이용해 클린 아키텍처 개념 적용
                         </li>
                         <li>
                           스터디 매칭을 위해, DBSCAN 알고리즘을 응용한
@@ -253,23 +253,6 @@ const ResumePage = () => {
                         <div className="bg-white p-6 rounded-lg shadow">
                           <div className="font-semibold"># 문제 상황</div>
                           <div className="mt-1">
-                            사용자가 증가하며 RAM 사용량도 증가하고, Heroku의
-                            높은 비용을 감당하기 어려워짐
-                          </div>
-                          <div className="font-semibold mt-2"># 해결 방법</div>
-                          <div className="mt-1">
-                            AWS에서 EC2인스턴스를 대여하고, Codepipeline을
-                            사용해 Github의 코드를 트래킹하여 Docker Container로
-                            배포하는 CI/CD pipeline 구성
-                          </div>
-                          <div className="mt-1">
-                            기존 Heroku 배포 방식보다 높은 RAM을 사용하며, 매달
-                            100달러 가량의 비용 절감
-                          </div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow">
-                          <div className="font-semibold"># 문제 상황</div>
-                          <div className="mt-1">
                             사용자가 증가하며 서버가 예기치 못한 에러가 자주
                             발생하고 서버가 종료되는 일 발생
                           </div>
@@ -301,6 +284,23 @@ const ResumePage = () => {
                             MongoDB의 aggregation 파이프라인 기능을 적극적으로
                             활용하여 복잡한 데이터 처리 로직을 최적화함으로써
                             응답 속도를 개선
+                          </div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># 문제 상황</div>
+                          <div className="mt-1">
+                            사용자가 증가하며 RAM 사용량도 증가하고, Heroku의
+                            높은 비용을 감당하기 어려워짐
+                          </div>
+                          <div className="font-semibold mt-2"># 해결 방법</div>
+                          <div className="mt-1">
+                            AWS에서 EC2인스턴스를 대여하고, Codepipeline을
+                            사용해 Github의 코드를 트래킹하여 Docker Container로
+                            배포하는 CI/CD pipeline 구성
+                          </div>
+                          <div className="mt-1">
+                            기존 Heroku 배포 방식보다 높은 RAM을 사용하며, 매달
+                            100달러 가량의 비용 절감
                           </div>
                         </div>
                       </>

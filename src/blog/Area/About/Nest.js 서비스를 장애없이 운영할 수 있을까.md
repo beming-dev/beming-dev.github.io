@@ -1,6 +1,40 @@
-# ELK란?
+---
+thumbnail: default.jpg
+slug: /blog/about/elk
+date: 2025-03-01
+title: "Nest.js 서비스를 장애없이 운영할 수 있을까?"
+categories:
+  - mainCategory: Area
+    subCategory: about
+---
 
-ElasticSearch, Logstash, Kibana 라는 세가지 인기있는 데이터 처리 솔루션을 일컫는 말입니다.
+# Error 로깅과 모니터링의 중요성
+서비스를 운영하며 가장 중요하게 생각된 부분은 서비스를 장애 없이 운영하는 것이었습니다.
+Express.js에서 Nest.js로 코드를 porting하며 처음에 가장 문제가 됐던 부분은 에러 발생시 백엔드가 종료돼버리는 것이었습니다.
+처음에는 종료되는 에러가 발생하면 처리하는 식으로 해결해보려 했는데, 계속 서버가 종료되는걸 그냥 둘 수 없었습니다.
+
+서비스가 예기치 않게 종료되는건 Error가 제대로 Handling 되지 않아서 인데, Nest.js에서 처리되지 않은 Error를 Handling할 수 있는 Listener를 제공합니다.
+main.ts에 다음과 같은 코드를 추가하여 해결할 수 있었습니다.
+```
+//전역 에러 핸들링
+process.on('unhandledRejection', (reason, promise) => {
+  logger.error('🔥 Unhandled Rejection', { promise, reason });
+});
+  
+process.on('uncaughtException', (error) => {
+  logger.error('🔥 Uncaught Exception', { error });
+});
+```
+일단 급한불은 껐지만 얼른 에러에 대한 처리를 해주고, 에러가 발생할 때마다 바로 바로 대응이 가능하도록 하고 싶었습니다.
+
+# 왜 ELK 스택은 선택했을까?
+
+1. ELK는 Open source입니다. Splunk와 같은 다른 유료 서비스와 비교했을 때, 무료로 사용할 수 있는 ELK 스택이 서비스에 맞았습니다.
+2. Docker container의 로그를 수집할 수 있고, ElasticSearch 기반으로 빠른 검색 성능을 보유하고 있습니다.
+3. Kubernetes를 사용하고 있지 않습니다. Kubernetes를 사용중이라면, Prometheus, Grafana같은 다른 서비스도 고려해봤을 수 있지만, ELK가 가장 간편하게 사용할 수 있었습니다.
+
+# ELK란 무엇일까?
+ELK란 ElasticSearch, Logstash, Kibana 라는 세가지 인기있는 데이터 처리 솔루션을 일컫는 말입니다.
 
 ElasticSearch는 검색 및 분석
 Logstash는 데이터 수집
@@ -8,7 +42,7 @@ Libana는 데이터 시각화
 
 이렇게 각각 담당합니다.
 
-# Docker-compose로 ELK 구성
+# Docker-compose로 ELK 구성하기
 
 About은 Frontend와 Backend를 Docker Container로 배포하고 있습니다.
 ELK를 Docker conatiner로 띄우고, Docker의 로그를 수집하는 과정을 구성해봅시다.
