@@ -11,7 +11,7 @@ const ResumePage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-50 min-h-screen py-8">
+    <div className="resume flex justify-center items-center bg-gray-50 min-h-screen py-8">
       {/* A4 컨테이너 */}
       <div className="a4-container w-[210mm] min-h-[297mm] bg-white relative shadow-lg">
         {/* 인쇄하기 버튼 (인쇄 시 숨김) */}
@@ -190,15 +190,24 @@ const ResumePage = () => {
                         <li>
                           AWS codepipeline을 이용해 EC2에 Docker container로
                           프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
+                          <a href="https://beming-dev.github.io/blog/about/pipeline/">
+                            [블로그]
+                          </a>
                         </li>
                         <li>
                           Filebeat, ElasticSearch, Logstash, Kibana를
                           Docker-compose로 묶어 Docker container의 로그를
                           시각화하는 파이프라인 구성
+                          <a href="https://beming-dev.github.io/blog/about/elk/">
+                            [블로그]
+                          </a>
                         </li>
                         <li>
                           스터디 매칭을 위해, DBSCAN 알고리즘을 응용한
                           클러스터링 알고리즘 구현
+                          <a href="https://beming-dev.github.io/blog/about/clustering/">
+                            [블로그]
+                          </a>
                         </li>
                         <li>
                           Redis를 도입하여, Pub/Sub을 이용해 알림 메시지 기능을
@@ -688,8 +697,15 @@ const ResumePage = () => {
                             구축한 경험이 있습니다.
                           </li>
                           <li>
-                            미들웨어를 활용해 인증/권한 처리, 로깅, 에러 핸들링
-                            등을 유연하게 구성합니다.
+                            미들웨어를 활용해 인증/권한 처리, 로깅 등을 유연하게
+                            구성합니다.
+                          </li>
+                          <li>
+                            Express.js의 Error Handling 과정을 이해하고 있고,
+                            Custom Error Handler를 구성할 수 있습니다.
+                            <a href="https://beming-dev.github.io/blog/about/error/">
+                              [블로그]
+                            </a>
                           </li>
                         </ul>
                       </div>
@@ -840,13 +856,14 @@ const ResumePage = () => {
                           Redis
                         </span>
                         <ul className="list-disc ml-3 mt-2 text-sm space-y-1">
-                          <li>
+                          {/* <li>
                             인메모리 캐싱을 활용해 DB 부하 감소 및 애플리케이션
                             응답 속도를 최적화해본 경험이 있습니다.
-                          </li>
+                          </li> */}
                           <li>
                             Pub/Sub 기능을 이용해 실시간 메시징 구조를 구축해본
                             경험이 있습니다.
+                            <a href="https://naver.com">[블로그]</a>
                           </li>
                         </ul>
                       </div>

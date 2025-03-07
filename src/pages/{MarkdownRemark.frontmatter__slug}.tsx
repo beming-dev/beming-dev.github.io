@@ -8,15 +8,6 @@ export function Head() {
     <>
       <title>Blog Post</title>
       <meta name="description" content="Simple and clean blog post layout" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
     </>
   );
 }
@@ -30,11 +21,11 @@ export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
       <NavMobile always={true} />
 
       {/* 전체 컨테이너 */}
-      <div className="min-h-screen font-sans text-gray-800 bg-white">
+      <div className="min-h-screen text-gray-800 bg-white">
         {/* 본문 최대 너비 지정 및 좌우 여백 설정 */}
         <div className="container mx-auto px-4 py-8 max-w-5xl">
           {/* 본문 영역과 목차 영역을 좌우로 배치 (md 이상일 때) */}
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col justify-center md:flex-row gap-8">
             {/* 실제 포스트 콘텐츠 영역 */}
             <main className="w-full md:w-3/4">
               <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 mt-20">
@@ -52,13 +43,13 @@ export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
             </main>
 
             {/* 목차 영역 (md 이상일 때만 보이도록) */}
-            <aside className="toc hidden md:block w-full md:w-1/4 md:sticky md:top-20 border-l border-gray-200 pl-6 self-start">
+            {/* <aside className="toc hidden md:block w-full md:w-1/4 md:sticky md:top-20 border-l border-gray-200 pl-6 self-start">
               <h2 className="text-lg font-semibold mb-4">목차</h2>
               <div
                 className="text-sm leading-6 text-gray-600"
                 dangerouslySetInnerHTML={{ __html: tableOfContents }}
               />
-            </aside>
+            </aside> */}
           </div>
         </div>
       </div>

@@ -20,11 +20,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `limelight`,
-          `Noto+Sans+KR:wght@100;300;400;500;700;800`, // 정확한 표기법
-          `Roboto\:100,300,500,700`,
-        ],
+        fonts: [`Roboto:300,400,500,700`, `Noto Sans KR:300,400,500,700`],
         display: "swap",
       },
     },

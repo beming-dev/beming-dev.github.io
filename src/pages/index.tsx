@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 
 const pageStyles = {
   color: "#232129",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  fontFamily: "Roboto, sans-serif, serif",
 };
 
 const IndexPage: React.FC<PageProps> = () => {
