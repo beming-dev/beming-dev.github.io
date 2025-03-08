@@ -188,17 +188,17 @@ const ResumePage = () => {
                           Nest.js 프레임워크를 이용해 클린 아키텍처 개념 적용
                         </li>
                         <li>
-                          AWS codepipeline을 이용해 EC2에 Docker container로
-                          프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
-                          <a href="https://beming-dev.github.io/blog/about/pipeline/">
-                            [블로그]
-                          </a>
-                        </li>
-                        <li>
                           Filebeat, ElasticSearch, Logstash, Kibana를
                           Docker-compose로 묶어 Docker container의 로그를
                           시각화하는 파이프라인 구성
                           <a href="https://beming-dev.github.io/blog/about/elk/">
+                            [블로그]
+                          </a>
+                        </li>
+                        <li>
+                          AWS codepipeline을 이용해 EC2에 Docker container로
+                          프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
+                          <a href="https://beming-dev.github.io/blog/about/pipeline/">
                             [블로그]
                           </a>
                         </li>

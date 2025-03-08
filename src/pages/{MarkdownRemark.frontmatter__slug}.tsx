@@ -21,7 +21,7 @@ export default function BlogPostTemplate({ data: { markdownRemark } }: any) {
       <NavMobile always={true} />
 
       {/* 전체 컨테이너 */}
-      <div className="min-h-screen text-gray-800 bg-white">
+      <div className="post min-h-screen text-gray-800 bg-white">
         {/* 본문 최대 너비 지정 및 좌우 여백 설정 */}
         <div className="container mx-auto px-4 py-8 max-w-5xl">
           {/* 본문 영역과 목차 영역을 좌우로 배치 (md 이상일 때) */}

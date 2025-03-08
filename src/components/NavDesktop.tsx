@@ -39,7 +39,7 @@ export default function NavDesktop({ sub }: any) {
   `);
 
   return (
-    <div className="sticky navigation left-0 top-0 h-screen w-72 p-4 box-border transition duration-1000 bg-gray-100 hidden md:block">
+    <div className="nav sticky navigation left-0 top-0 h-screen w-72 p-4 box-border transition duration-1000 bg-gray-100 hidden md:block">
       <div className="content flex flex-col items-center justify-center h-full">
         <h2 className="logo text-lg font-bold">
           <Link to="/">Beming-dev</Link>

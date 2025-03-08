@@ -17,7 +17,7 @@ export default function NavMobile({ sub, always }: any) {
 
   return (
     <div
-      className={`flex w-full flex-col items-center z-10 transition duration-1000 flex ${
+      className={`nav flex w-full flex-col items-center z-10 transition duration-1000 flex ${
         always ? "" : "md:hidden"
       }`}
     >

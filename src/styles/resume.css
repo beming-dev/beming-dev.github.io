@@ -42,12 +42,14 @@
     */
 }
 
-ul li {
-  list-style: disc inside;
-}
+.resume {
+  ul li {
+    list-style: disc inside;
+  }
 
-.resume li > a {
-  color: blue;
-  text-decoration: underline;
-  margin: 0 5px;
+  li > a {
+    color: blue;
+    text-decoration: underline;
+    margin: 0 5px;
+  }
 }
