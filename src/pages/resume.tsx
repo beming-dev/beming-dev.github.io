@@ -234,10 +234,52 @@ const ResumePage = () => {
                   <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
                     {lang === "ko" ? (
                       <>
-                        <li>Nest.js</li>
-                        <li>MongoDB</li>
-                        <li>AWS, Docker</li>
-                        <li>Redis</li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Nest.js
+                          </span>
+                          <span>
+                            를 도입하여 DI/DIP 개념을 적용함으로써
+                            데이터베이스의 결합도를 낮추고 유지보수성을
+                            개선했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            MongoDB
+                          </span>
+                          <span>
+                            를 활용하여 스키마 변경이 잦은 데이터 모델에
+                            유연하게 대응할 수 있도록 설계했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            AWS
+                          </span>
+                          <span>
+                            에 배포를 구성하여 배포 비용을 절감하고, 다양한
+                            기능을 사용해보았습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Docker
+                          </span>
+                          <span>
+                            를 활용하여 애플리케이션을 컨테이너화하고, 일관된
+                            개발 및 배포 환경을 유지하고 있습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Redis
+                          </span>
+                          <span>
+                            를 메시지 큐로 활용해 알림 서비스를 운영하고
+                            있습니다.
+                          </span>
+                        </li>
                       </>
                     ) : (
                       <>
@@ -262,8 +304,8 @@ const ResumePage = () => {
                         <div className="bg-white p-6 rounded-lg shadow">
                           <div className="font-semibold"># 문제 상황</div>
                           <div className="mt-1">
-                            사용자가 증가하며 서버가 예기치 못한 에러가 자주
-                            발생하고 서버가 종료되는 일 발생
+                            사용자가 증가하며 서버에 예기치 못한 에러가 자주
+                            발생하고 종료되는 일 발생
                           </div>
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
@@ -418,8 +460,24 @@ const ResumePage = () => {
                   <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
                     {lang === "ko" ? (
                       <>
-                        <li>Next.js</li>
-                        <li>Tailwindcss</li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Next.js
+                          </span>
+                          <span>
+                            를 사용하여 API 라우팅 기능을 사용해 간단한 서버
+                            기능을 처리하고, 효율적인 개발을 했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Tailwindcss
+                          </span>
+                          <span>
+                            를 사용하여 유틸리티 기반 스타일링 으로 일관된
+                            디자인을 유지하면서도 개발 속도를 향상시켰습니다.
+                          </span>
+                        </li>
                       </>
                     ) : (
                       <>
@@ -592,10 +650,42 @@ const ResumePage = () => {
                   <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
                     {lang === "ko" ? (
                       <>
-                        <li>Spring</li>
-                        <li>MySQL</li>
-                        <li>React.js</li>
-                        <li>tailwindCSS</li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Spring
+                          </span>
+                          <span>
+                            을 사용하여 유지보수성과 확장성을 고려한 백엔드를
+                            구축했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            MySQL
+                          </span>
+                          <span>
+                            를 사용하여 정규화된 데이터 모델을 설계하고, 인덱싱
+                            및 쿼리 최적화를 통해 성능을 개선했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            React.js
+                          </span>
+                          <span>
+                            를 사용하여 컴포넌트 기반 UI를 설계하고, 상태 관리를
+                            효율적으로 처리하여 사용자 경험을 최적화했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            tailwindCSS
+                          </span>
+                          <span>
+                            를 사용하여 유틸리티 기반 스타일링 으로 일관된
+                            디자인을 유지하면서도 개발 속도를 향상시켰습니다.
+                          </span>
+                        </li>
                       </>
                     ) : (
                       <>
@@ -869,6 +959,12 @@ const ResumePage = () => {
                           <li>
                             Pub/Sub 기능을 이용해 실시간 메시징 구조를 구축해본
                             경험이 있습니다.
+                            <a
+                              href="https://beming-dev.github.io/blog/about/pubsub/"
+                              className="blog-link"
+                            >
+                              [블로그]
+                            </a>
                           </li>
                         </ul>
                       </div>
