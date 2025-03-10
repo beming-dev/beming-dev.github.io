@@ -50,6 +50,12 @@ ELK를 Docker conatiner로 띄우고, Docker의 로그를 수집하는 과정을
 여기선 Container의 로그를 Logstash로 전송해주기 위해 추가로 Filebeat을 사용합니다.
 
 ELK는 현재 8.xx 버전까지 나와있지만, 8버전 이상부터는 보안 문제를 해결하려면 무료 사용에 제한이 있어 7버전을 사용했습니다.
+
+현재 저희는 AWS의 RAM 4GB, 100GB 디스크의 인스턴스를 사용중입니다. 
+제한된 환경에서 ELK 스택을 사용하기 위해 다음과 같은 사항을 주로 고려했습니다.
+- 수집하는 log의 양 제한.
+- ELK의 각 stack의 메모리 사용량 제한.
+- 특정 기간이 지난 로그는 삭제
 ## Elasticsearch
 ```
 elasticsearch:
@@ -76,6 +82,51 @@ elasticsearch:
 - Cors 설정을 활성화했습니다.
 - 익명 사용자가 superuser 권한을 가집니다. 이 또한 실제로는 수정해야 합니다.
 - 메모리 사용량을 512mb로 제한합니다.
+
+5일이 지난 데이터를 삭제하고, 일별로 로그를 관리하기 위해, docker-compose가 시작할 때 ilm 정책을 적용해 줬습니다.
+
+```
+# 1) ILM 정책 생성
+echo "=== Create ILM policy ==="
+curl -X PUT "http://elasticsearch:9200/_ilm/policy/delete-after-5d" \
+     -H 'Content-Type: application/json' \
+     -d '{
+       "policy": {
+         "phases": {
+           "hot": {
+             "actions": {
+               "rollover": {
+                 "max_age": "1d",
+                 "max_size": "1gb"
+               }
+             }
+           },
+           "delete": {
+             "min_age": "5d",
+             "actions": {
+               "delete": {}
+             }
+           }
+         }
+       }
+     }'
+
+# 2) 인덱스 템플릿에 ILM 적용 예시
+echo "=== Create index template with ILM ==="
+curl -X PUT "http://elasticsearch:9200/_index_template/logs_template" \
+     -H 'Content-Type: application/json' \
+     -d '{
+       "index_patterns": ["nest-logs-*"],
+       "template": {
+         "settings": {
+           "index.lifecycle.name": "delete-after-5d",
+           "index.lifecycle.rollover_alias": "logs-alias"
+         }
+       }
+     }'
+```
+- rollover: 1일이 지나거나, 1GB가 넘으면 다음 index로 넘어감.
+- delete: 5일이 지난 index는 삭제됨
 ## kibana
 ```
 kibana:
@@ -90,7 +141,7 @@ kibana:
     depends_on:
       - elasticsearch
 ```
-- elasticsearch가 실행돼야 kibanan가 작동되도록 합니다.
+- elasticsearch가 실행돼야 kibana가 작동되도록 합니다.
 - 마찬가지로 보안설정은 해두지 않았습니다.
 - 5601 포트로 접속하면 kibana UI를 사용할 수 있습니다.
 ## Logstash
@@ -115,7 +166,7 @@ logstash:
 - 5000번 포트는 추가적인 데이터 입력을 받을때 필요합니다.
 - 9600 포트는 logstash를 모니터링 하기위한 api입니다.
 
-logstash.yml
+logstash.conf
 ```
 input {
   beats {
@@ -124,15 +175,29 @@ input {
 }
 
 filter {
-  json {
-    source => "message"
-    target => "parsed_json"
+  # message가 JSON 형식인지 체크
+  if [message] =~ "^\{[\s\S]*\}$" {
+    json {
+      source => "message"
+      target => "parsed_json"
+    }
+  } else {
+    mutate {
+      rename => { "message" => "raw_message" }
+    }
   }
+
+  # JSON 파싱 실패한 경우
   if "_jsonparsefailure" in [tags] {
     mutate {
       rename => { "message" => "raw_message" }
-      remove_field => [ "parsed_json" ]
+      remove_field => [ "parsed_json" ]  # 실패한 parsed_json 필드 제거
     }
+  }
+
+  # 필요 없는 필드 제거 (메모리 절약)
+  mutate {
+    remove_field => ["@version", "host"]
   }
 }
 
@@ -140,11 +205,19 @@ output {
   elasticsearch {
     hosts => ["http://elasticsearch:9200"]
     index => "nest-logs-%{+YYYY.MM.dd}"
+    retry_on_conflict => 3  # 충돌 시 최대 3번 재시도
   }
-  stdout { codec => rubydebug }
+
+  # stdout 최소화 (운영 환경에서 메모리 절약)
+  stdout {
+    codec => plain {
+      format => "%{message}"
+    }
+  }
 }
 ```
 - 5044포트에서 beats 프로토콜 데이터를 받습니다.
+- '{' 를 새 로그의 시작으로 봅니다. Nest.js의 로깅에서 모든 로그를 json 형식으로 변환했으므로 이렇게 작성할 수 있습니다.
 - 로그 데이터를 JSON 형식으로 변환합니다. 변환이 실패하면 raw_message로 저장합니다.
 - output을 elasticsearch:9200으로 전송합니다. 
 
@@ -173,11 +246,55 @@ filebeat.inputs:
   - type: container
     paths:
       - /var/lib/docker/containers/*/*.log
+    ignore_older: 48h  # 2일 이상 된 로그 무시 (디스크 절약)
+    scan_frequency: 30s  # 30초마다 로그 확인
+    close_inactive: 10m  # 10분 동안 업데이트 없는 파일 닫기
+
+    multiline:
+      pattern: '^{'  # JSON 로그가 '{'로 시작하면 새 이벤트로 간주
+      negate: true   # 이 패턴이 아닐 때 이전 로그와 합치기
+      match: after
+
+    containers:
+      ids:
+        - "nest-app"
+        - "next-app"
     processors:
       - add_docker_metadata: ~
+
+processors:
+  - drop_event:
+      when:
+        or:
+          - equals:
+              message: ""
+          - not:
+              has_fields: ["message", "@timestamp"]
+          - contains:
+              message: "Health check"  # 필요 없는 헬스 체크 로그 삭제
+          - contains:
+              message: "DEBUG"  # DEBUG 로그 필터링
+
 output.logstash:
   hosts: ["logstash:5044"]
+  bulk_max_size: 25  # 기존 50 → 25로 줄여 메모리 부담 완화
+  worker: 2  # 기본 1 → 2로 병렬 처리 향상
 ```
+- 오래된(2일 이상된) 로그는 filebeat가 읽지 않습니다.
 - docker container의 로그파일을 읽어서 수집합니다.
-- add_docker_metadata로 메타데이터를 추가합니다.
+- add_docker_metadata로 docker 관련 메타데이터를 추가합니다.
 - 수집한 로그를 logstash:5044로 전송합니다.
+
+# 실제 저장되는 데이터 확인해보기
+
+이제 5601 포트에서 실행중인 kibana에 접속하여 어떻게 logging이 되는지 확인해봅시다.
+
+먼저, index를 확인해보면 다음과 같습니다.
+![](../../images/20250308171200.png)
+ilm정책은 잘 적용되었지만, 로그는 7일치가 기록되고 있네요.
+이 부분은 추가적인 확인이 필요할 것 같습니다.
+
+이제 에러들이 어떻게 로깅되고 있는지 확인해봅시다. Discover 탭에 접속하여 보고싶은 field들을 선택하고, 적절한 fileter를 설정해주면 보고싶은 데이터만 확인할 수 있습니다.
+
+![](../../images/20250308171514.png)
+저는 다음과 같이 구성해줬는데, 에러 메시지들을 잘 확인할 수 있었습니다.

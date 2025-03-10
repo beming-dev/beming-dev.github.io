@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/About/Nest.js 서비스를 장애없이 운영할 수 있을까.md",
+                "file": "Area/About/Redis Pub,Sub을 이용한 메시지 큐 기능 사용.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Nest.js 서비스를 장애없이 운영할 수 있을까"
+              "title": "Redis Pub,Sub을 이용한 메시지 큐 기능 사용"
             }
           }
         ]
@@ -167,10 +167,18 @@
   "active": "c5678e9acccd22c4",
   "lastOpenFiles": [
     "Area/About/Nest.js는 어떻게 Error Handling을 할까.md",
+    "Area/About/Redis Pub,Sub을 이용한 메시지 큐 기능 사용.md",
     "Area/About/Nest.js 서비스를 장애없이 운영할 수 있을까.md",
-    "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
-    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "images/20250308171514.png",
+    "images/20250308171427.png",
+    "images/20250308171200.png",
+    "Area/About/Micro Service Architecture를 적용해보자.md",
+    "images/20250308162446.png",
+    "images/20250308161440.png",
     "Area/About/Express.js는 어떻게 Error Handling을 할까.md",
+    "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
+    "images/20250308155446.png",
+    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
     "Area/stock-simulator/WebSocket.md",
     "Area/stock-simulator/Mysql indexing 성능 + custom annotation.md",
     "Area/About/위도 경도 기반 clustering 알고리즘.md",
@@ -191,18 +199,11 @@
     "Resource/Redis/Redis 시작하기.md",
     "Resource/Redis/Redis Module.md",
     "Resource/Redis/Redis Streams.md",
-    "images/Pasted image 20250215202232.png",
-    "images/Pasted image 20250215201903.png",
-    "images/Pasted image 20250215201416.png",
     "Resource/Redis/Reids의 동시성 문제와 lua 스크립트.md",
     "redis.io/commands.md",
     "redis.io",
     "Area/stock/주식 티커.md",
     "Area/stock-simulator",
-    "Resource/Kafka/Kafka CLI.md",
-    "images/20250104144640.png",
-    "images/20250104143219.png",
-    "images/20250104134842.png",
     "Resource/Spring",
     "Resource/Express",
     "Resource/Nest",

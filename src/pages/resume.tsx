@@ -630,6 +630,12 @@ const ResumePage = () => {
                             방식으로 각 클라이언트에 전송하도록 구성하여 지연과
                             중복 전송 문제를 해결
                           </div>
+                          <a
+                            href="https://beming-dev.github.io/blog/stock-simulator/websocket/"
+                            className="blog-link"
+                          >
+                            [블로그]
+                          </a>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow">
                           <div className="font-semibold"># 문제 상황</div>
@@ -863,7 +869,6 @@ const ResumePage = () => {
                           <li>
                             Pub/Sub 기능을 이용해 실시간 메시징 구조를 구축해본
                             경험이 있습니다.
-                            <a href="https://naver.com">[블로그]</a>
                           </li>
                         </ul>
                       </div>
