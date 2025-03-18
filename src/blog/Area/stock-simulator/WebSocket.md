@@ -8,14 +8,187 @@ categories:
     subCategory: "stock-simulator"
 ---
 
-# 개요
+# WebSocket을 왜 사용해야 할까요?
 
-Stocket simulator를 제작하면서, 한국 투자 증권의 API를 사용했습니다.
-Backend가 한국 투자증권의 서버와 WebSocket으로 통신하고, Backend 서버와 Frontend 클라이언트 사이에도 WebSocket을 구성해야 해서 Backend에 두개의 WebSocket 연결을 가지는 Architecture를 구현했습니다.
+WebSocket은 하나의 TCP 연결로 클라이언트와 서버가 지속적으로 실시간 데이터를 전송할 수 있는 프로토콜 입니다. 간단히 말하면 실시간 양방향 데이터 전송 프로토콜이라 할 수 있습니다.
 
-# WebSocket
+HTTP는 매 요청마다 연결과 응답이 끝나면 다시 연결을 맺어야 합니다. 데이터를 지속적으로 주고받으려면 polling을 사용해야 하는데,  polling 방식은 서버의 자원을 많이 사용합니다.
+
+그래서 주식 현재가, 거래 데이터 같은 실시간 데이터를 주고받을 때는 WebSocket을 활용하는 것이 효율적입니다.
+
+# WebSocket 구성을 어떻게 해야할까?
+
+Stocket simulator를 제작하면서, 한국투자증권의 API를 사용했습니다.
+프론트엔드, 백엔드, 한투 서버 이렇게 3가지를 두고 실시간 데이터를 전송하려면, WebSocket을 이중으로 구현해야 합니다.
+
+그래서 Backend와 한투 서버 사이의 WebSocket 통신과, 백엔드와 프론트 사이의 WebSocket 통신 두 가지를 함께 구성해야 했습니다.
+
+# 어떤 문제가 있었을까?
+
+구조를 설계하면서, 세 가지 문제가 있었습니다.
+
+1. WebSocket연결이 중복 생성되어 너무 많은 WebSocket연결이 생성되어 서버가 감당하지 못했습니다.
+2. 페이지를 나갈 때 WebSocket 연결이 제대로 끊어지지 않아서 낭비가 발생했습니다.
+3. 두 WebSocket Handler가 서로를 순환참조 하여 에러가 발생했습니다.
+
+## 1번 문제 해결
+
+먼저, 다음과 같은 구조를 설계했습니다.
+
+각 WebSocket 요청 별로, key를 생성하여, 그 요청을 요구하는 Session들을 저장하는 자료구조를 만들었습니다. 
+```java
+private final Map<String, Set<WebSocketSession>> subscriptions = new ConcurrentHashMap<>();
+```
+WebSocket subscribe요청이 들어오면, key 값으로 같은 요청이 있는지 판단하고 없으면 그 요청을 생성하고 있다면 이미 있는 요청에 구독자로 추가됩니다.
+```java
+if ("subscribe".equals(type)) {  
+    String subscriptionKey = trId + "|" + trKey;  
+  
+    // 중복 요청 확인  
+    subscriptions.computeIfAbsent(subscriptionKey, k -> new CopyOnWriteArraySet<>()).add(session);  
+    System.out.println("User Subscribed: " + session.getId() + " to " + subscriptionKey);  
+  
+    eventPublisher.publishEvent(new WebSocketEvent(this, trId, trKey, trType));  
+}else if ("unsubscribe".equals(type)) {  
+    removeSession(session, trId, trKey);  
+}
+```
+구독을 취소할 때는, 구독자가 남아있는지 판단하여 구독자가 없다면 그 key의 연결을 아예 삭제합니다.
+```java
+public void removeSession(WebSocketSession session, String trId, String trKey) {  
+    String subscriptionKey = trId + "|" + trKey;  
+    Set<WebSocketSession> sessions = subscriptions.get(subscriptionKey);  
+  
+    if (sessions != null) {  
+        // session 삭제  
+        if (sessions.remove(session)) {  
+            System.out.println("Removed session: " + session.getId() + " from subscription: " + subscriptionKey);  
+  
+            System.out.println(sessions.size());  
+            // sessions가 비어 있으면 subscriptions에서 subscriptionKey 삭제
+            if (sessions.isEmpty()) {  
+                subscriptions.remove(subscriptionKey);  
+                eventPublisher.publishEvent(new WebSocketEvent(this, trId, trKey, "2"));  
+            }  
+        } else {  
+            System.out.println("Session not found in subscription: " + subscriptionKey);  
+        }  
+    } else {  
+        System.out.println("No sessions found for subscription key: " + subscriptionKey);  
+    }  
+}
+
+```
+
+이러한 구조를 구현하여, 같은 요청에 대해 중복된 WebSocket 연결을 생성하지 않고, 필요없는 연결을 삭제할 수 있도록 설계했습니다.
 
 
+## 2번 문제 해결
+
+주식 페이지를 벗어날 때, 그 주식에 대해 unsubscribe가 되지 않는 문제가 있었습니다.
+
+이 문제는 useEffect의 cleanup과 eventListener를 이용해 해결했습니다.
+
+먼저 주식 정보 페이지에 들어가면, subscibe 요청을 보냅니다.
+구독 취소를 요청하는 함수를 작성한 후, useEffect의 return에서 호출합니다. 원래라면 이 때 구독 해제가 잘 작동해야 하는데 페이지를 벗어날 때 잘 작동하지 않는 문제가 있었습니다.
+
+그래서 beforeunload eventListener에 해당 함수를 등록해두고, cleanup에서 제거해주는 방식을 채택했습니다.
+
+
+
+```typescript
+useEffect(() => {
+    if (isConnected) {
+      const socketOpenData = JSON.stringify({
+        type: "subscribe",
+        tr_type: "1",
+        rq_type: "current",
+        symbol: stockSymbol,
+      });
+  
+      sendMessage(socketOpenData);
+    }
+  
+    const handleBeforeUnload = () => {
+      const unsubscribeMessage = JSON.stringify({
+        type: "unsubscribe",
+        tr_type: "2",
+        rq_type: "current",
+        symbol: stockSymbol,
+      });
+      sendMessage(unsubscribeMessage);
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      handleBeforeUnload();
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [isConnected, stockSymbol, location.pathname]);
+```
+
+
+## 3번 문제 해결
+
+프론트-백 WebSocket에서 백-한투 WebSocket에 구독, 구독해제 정보를 보내기 위해 호출해야하고.
+백-한투 WebSocket에서 프론트-백 WebSocket에 데이터 전송을 위해 호출해야 하는데, 이 과정에서 순환 참조가 발생하여 오류가 났습니다.
+
+이 문제는 Java의 EventListener 기능을 사용하여 해결했습니다.
+한쪽에서 Event를 발행하고, Listener가 그 Event를 듣고 함수를 호출하면, 인스턴스를 직접 호출할 필요가 없어집니다.
+
+먼저, Event 객체를 만들어줍니다. 
+```java
+package com.stock.stock_simulator.event;  
+import org.springframework.context.ApplicationEvent;  
+  
+public class WebSocketEvent extends ApplicationEvent {  
+    private final String tr_id;  
+    private final String tr_key;  
+    private final String tr_type;  
+  
+    public WebSocketEvent(Object source, String trId, String trKey, String trType) {  
+        super(source);  
+        tr_id = trId;  
+        tr_key = trKey;  
+        tr_type = trType;  
+    }  
+  
+    //getter
+}
+```
+프론트-백 WebSocket Handler에서 event를 발행합니다.
+```java
+private final ApplicationEventPublisher eventPublisher;
+
+public FrontendWebSocketHandler(ApplicationEventPublisher eventPublisher) {  
+    this.eventPublisher = eventPublisher;    
+}
+
+eventPublisher.publishEvent(new WebSocketEvent(this, trId, trKey, "2"));
+```
+
+백-한투 WebSocket Handler에서 발행된 Event를 수신합니다.
+```java
+public class WebSocketHandler extends TextWebSocketHandler implements ApplicationListener<WebSocketEvent> {
+	@Override  
+	public void onApplicationEvent(WebSocketEvent event) {  
+	    String tr_id = event.getTr_id();  
+	    String tr_key = event.getTr_key();  
+	    String tr_type = event.getTr_type();  
+	  
+	    try {  
+	        sendMessage(tr_id, tr_key, tr_type);  
+	    } catch (Exception e) {  
+	        throw new RuntimeException(e);  
+	    }  
+	}
+
+}
+```
+
+
+# 코드를 분석해봅시다
+
+아래부터는 어떻게 두가지 WebSocket Handler를 구성했는지에 대한 자세한 코드입니다. 필요시 참고만 해주세요.
 ## Frontend - Backend WebSocket Config
 
 - EnableWebsocket annotation을 통해 Spring이 WebSocket 관련 처리를 하게 해줍니다.
