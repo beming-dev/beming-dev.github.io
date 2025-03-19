@@ -8,51 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "358a23f379eb76c9",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Area/stock-simulator/WebSocket.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "WebSocket"
-            }
-          },
-          {
-            "id": "3f9fac9ba1b34de4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "면접준비/주식 시뮬레이션.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "주식 시뮬레이션"
-            }
-          },
-          {
             "id": "ef667009c8b8073d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Area/About/시간이 오래걸리는 API를 캐싱하자.md",
+                "file": "면접준비/기술스택.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "시간이 오래걸리는 API를 캐싱하자"
+              "title": "기술스택"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,16 +166,25 @@
   },
   "active": "ef667009c8b8073d",
   "lastOpenFiles": [
-    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
+    "Area/About/Express.js는 어떻게 Error Handling을 할까.md",
+    "면접준비/기술스택.md",
+    "면접준비/당근.md",
+    "Resource/Redis/Redis Streams.md",
+    "Resource/Redis/Redis 사용하기.md",
+    "Resource/Redis/Redis 시작하기.md",
+    "Resource/Redis/Reids의 동시성 문제와 lua 스크립트.md",
+    "Resource/Redis/Redis Module.md",
+    "Resource/Redis/Redis 관계형 데이터.md",
+    "면접준비/서울도서이음.md",
+    "면접준비/주식 시뮬레이션.md",
+    "Area/stock-simulator/WebSocket.md",
     "Area/About/시간이 오래걸리는 API를 캐싱하자.md",
+    "Area/About/About billing - heroku와 AWS ec2 비용 분석.md",
     "Area/About/Nest.js는 어떻게 Error Handling을 할까.md",
     "Area/About/Redis 와 Bull을 이용한 메시지 큐 기능 사용.md",
-    "Area/stock-simulator/WebSocket.md",
-    "면접준비/주식 시뮬레이션.md",
     "Area/stock-simulator/데이터베이스 설계.md",
     "images/20250318151737.png",
     "Area/stock-simulator/Mysql indexing 성능 + custom annotation.md",
-    "면접준비/서울도서이음.md",
     "면접준비/About 기술 스택.md",
     "면접준비/ELK.md",
     "면접준비/AWS CICD.md",
@@ -219,20 +197,12 @@
     "images/20250317172315.png",
     "Area/About/위도 경도 기반 clustering 알고리즘.md",
     "Area/About/Nest.js 서비스를 장애없이 운영할 수 있을까.md",
-    "Area/About/Micro Service Architecture를 적용해보자.md",
-    "Area/About/Express.js는 어떻게 Error Handling을 할까.md",
-    "Area/About/AWS를 이용한 CI.CD pipeline 구성.md",
     "images/20250315162706.png",
     "images/20250315155814.png",
-    "Resource/Redis/Redis 관계형 데이터.md",
-    "redis.io/commands.md",
     "images/20250315150812.png",
-    "할일.md",
     "images/20250314203710.png",
     "면접준비",
     "images/20250308171514.png",
-    "Area/About/Express.js Layered.md",
-    "Plan.md",
     "redis.io",
     "Area/stock-simulator",
     "Resource/Spring",

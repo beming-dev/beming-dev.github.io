@@ -926,7 +926,7 @@ const ResumePage = () => {
                           <li>
                             트랜잭션과 락(Lock) 메커니즘을 이해하고 있으며,
                             데이터 무결성 유지를 위한 다양한 기법을
-                            적용해보았습니다.
+                            알고있습니다.
                           </li>
                         </ul>
                       </div>
@@ -952,13 +952,29 @@ const ResumePage = () => {
                           Redis
                         </span>
                         <ul className="list-disc ml-3 mt-2 text-sm space-y-1">
-                          {/* <li>
+                          <li>
+                            Redis에서 제공하는 기본 자료구조에 대해
+                            알고있습니다.
+                            <a
+                              href="https://beming-dev.github.io/subCategory/redis/"
+                              className="blog-link"
+                            >
+                              [블로그]
+                            </a>
+                          </li>
+                          <li>
                             인메모리 캐싱을 활용해 DB 부하 감소 및 애플리케이션
                             응답 속도를 최적화해본 경험이 있습니다.
-                          </li> */}
+                            <a
+                              href="https://beming-dev.github.io/blog/about/caching/"
+                              className="blog-link"
+                            >
+                              [블로그]
+                            </a>
+                          </li>
                           <li>
-                            Pub/Sub 기능을 이용해 실시간 메시징 구조를 구축해본
-                            경험이 있습니다.
+                            Redis를 메시지 큐로 활용해 실시간 메시징 구조를
+                            구축해본 경험이 있습니다.
                             <a
                               href="https://beming-dev.github.io/blog/about/pubsub/"
                               className="blog-link"

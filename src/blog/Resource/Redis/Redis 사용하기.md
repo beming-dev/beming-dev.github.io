@@ -82,7 +82,7 @@ key에 저장된 값의 value들을 가져옵니다.
 문자열의 집합을 저장합니다. 중복값은 저장되지 않습니다.
 
 ### SADD
-SADD  \[keys] ] \[value]
+SADD  \[key]\[value]
 key 이름으로 set을 생성하고, value를 저장합니다.
 중복 값은 저장되지 않으므로, 저장이 성공하면 1, 실패하면 0을 반환합니다.
 ### SMEMBERS
