@@ -210,7 +210,7 @@ const ResumePage = () => {
                           </a>
                         </li>
                         <li>
-                          Redis를 도입하여, Pub/Sub을 이용해 알림 메시지 기능을
+                          Redis를 도입하여, 알림 메시지 기능을
                           메시지 큐를 활용하도록 구성
                         </li>
                       </>
