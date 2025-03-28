@@ -210,8 +210,14 @@ const ResumePage = () => {
                           </a>
                         </li>
                         <li>
-                          Redis를 도입하여, 알림 메시지 기능을
-                          메시지 큐를 활용하도록 구성
+                          Redis를 도입하여, 캐싱을 사용해 api 응답속도를 줄이고, 
+                          알림 서비스의 메시지 큐로 활용
+                          <a href="https://beming-dev.github.io/blog/about/caching/">
+                            [캐싱 블로그]
+                          </a>
+                          <a href="https://beming-dev.github.io/blog/about/caching/">
+                            [메시지큐 블로그]
+                          </a>
                         </li>
                       </>
                     ) : (
