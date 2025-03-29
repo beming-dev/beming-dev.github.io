@@ -239,18 +239,12 @@ const ResumePage = () => {
                         </li>
                         <li>
                           Redis를 도입하여, 캐싱을 사용해 api 응답속도를 줄이고,
-                          알림 서비스의 메시지 큐로 활용 <br />
+                          알림 서비스의 메시지 큐로 활용
                           <a
                             href="https://beming-dev.github.io/blog/about/caching/"
                             className="blog-link"
                           >
-                            [캐싱 블로그]
-                          </a>
-                          <a
-                            href="https://beming-dev.github.io/blog/about/caching/"
-                            className="blog-link"
-                          >
-                            [메시지큐 블로그]
+                            [블로그]
                           </a>
                         </li>
                       </>
@@ -379,7 +373,7 @@ const ResumePage = () => {
                 </div>
                 {/* 트러블슈팅(Troubleshooting) */}
                 <div>
-                  <h4 className="text-lg font-semibold border-b pb-1">
+                  <h4 className="text-lg font-semibold border-b pb-1 mt-8">
                     {lang === "ko" ? "트러블슈팅" : "Troubleshooting"}
                   </h4>
                   <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
@@ -407,19 +401,26 @@ const ResumePage = () => {
                         <div className="bg-white p-6 rounded-lg shadow">
                           <div className="font-semibold"># 문제 상황</div>
                           <div className="mt-1">
-                            MongoDB 쿼리 성능 저하로 인해 데이터 검색 및 응답
-                            속도가 현저히 느려지는 문제가 발생
+                            초기 페이지 렌더링에서, 로딩 속도가 느려져 사용자
+                            경험이 안좋아지는 상황 발생
                           </div>
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
-                            불필요한 populate 연산을 최소화하고, 인덱싱을 통해
-                            데이터베이스 인덱스를 재구성하여 쿼리 처리 속도를
-                            향상
+                            MongoDB에서, 불필요한 populate 연산을 최소화하고,
+                            인덱싱을 통해 데이터베이스 인덱스를 재구성하여 쿼리
+                            처리 속도를 향상했습니다.
                           </div>
                           <div className="mt-1">
-                            MongoDB의 aggregation 파이프라인 기능을 적극적으로
-                            활용하여 복잡한 데이터 처리 로직을 최적화함으로써
-                            응답 속도를 개선
+                            ELK스택을 사용해 시간이 오래 걸리는 API를 시각화하여
+                            찾아내고, Redis 캐싱 기능을 이용해 해당 API를
+                            캐싱하여, 최종적으로는 데이터 처리속도를 절반 가량
+                            줄였습니다.
+                            <a
+                              href="https://beming-dev.github.io/blog/about/caching/"
+                              className="blog-link ml-2"
+                            >
+                              [블로그]
+                            </a>
                           </div>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow">
