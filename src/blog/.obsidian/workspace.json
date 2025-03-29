@@ -190,9 +190,9 @@
   },
   "active": "a18ed850df981e8b",
   "lastOpenFiles": [
-    "images/20250329105503.png",
     "면접준비/1자클린아키텍처.md",
     "Area/About/Clean Architecture.md",
+    "images/20250329105503.png",
     "Area/About/위도 경도 기반 clustering 알고리즘.md",
     "Area/About/시간이 오래걸리는 API를 캐싱하자.md",
     "Area/About/Express.js는 어떻게 Error Handling을 할까.md",
@@ -226,7 +226,6 @@
     "images/20250315150812.png",
     "images/20250314203710.png",
     "면접준비",
-    "images/20250308171514.png",
     "redis.io",
     "Area/stock-simulator",
     "Resource/Spring",

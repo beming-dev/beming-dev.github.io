@@ -209,8 +209,203 @@ Clean Architecture에서는 코드의 의존성 방향을 어떻게 설계해야
 ![](../../images/20250329105503.png)
 위 그림에서 요소를 크게 분리해보자면, 엔티티, 유즈케이스, 어댑터, 세부사항 정도로 나눌 수 있습니다.
 
-세부사항 -> 어댑터 -> 세부사항 -> 엔티티
+세부사항 -> 어댑터 -> 유즈케이스 -> 엔티티
 
 와 같은 방향을 따르고, 내부 원에 속한 요소는 외부 원에 대해 어떤 것도 알지 못해야 합니다.
 
 요소 각각에 대해 한번 알아봅시다.
+
+## 엔티티
+
+애플리케이션의 핵심 중의 핵심이 되는 업무 객체입니다.
+예들 들어, 배달 서비스라면 음식점과 주문자 의 존재 정책이 엔티티가 될 수 있습니다.
+
+## 유즈케이스
+
+유즈케이스는 애플리케이션의 핵심 업무 객체입니다.
+앤티티는 애플리케이션이 없어도 존재해야 하지만, 유즈케이스는 애플리케이션에서 제공하는 기능입니다.
+"예를 들면, 장바구니에 음식을 담는다"와 같은 행위입니다.
+
+## 어댑터
+
+유즈케이스가 작동하기 위해서는, 사용자 인터페이스, 데이터베이스와 소통해야 합니다. 유즈케이스가 GUI와 데이터베이스 사이에서 브릿지 역할을 해 주는 것이 어댑터 레이어입니다.
+Controller와 같은 코드들이 어댑터가 될 수 있습니다.
+
+## 세부사항
+
+웹, 데이터베이스, 프레임워크 등입니다.
+그리고 언제든지 바뀔 수 있는 것들입니다.
+예를 들면, 데이터베이스를 MongoDB에서 MySQL로 바꿔야 할 수 있습니다.
+
+클린 아키텍처를 적용하면 이런 세부사항의 결정을 끝까지 미룰 수 있고, 언제든 바꿀 수 있습니다.
+
+![](../../images/20250329105503.png)
+이미지의 오른쪽 아래 그림을 살펴봅시다.
+Controller에서 입력이 들어오면, 그걸 use case로 전달하여 처리하고, presenter로 전송하는게 자연스럽습니다.
+
+그러나 이를 위해서는 UseCase가 Presenter를 알아야 합니다.
+내부 원이 바깥쪽 요소를 알지 않아야 한다는 철학을 지키기 위해, 우리는 의존성 역전 개념을 사용하여, UseCase가 Presenter에 의존하지 않게 만들 수 있습니다.
+
+이런식으로 의존성 흐름을 제어하여 위 이미지와 같은 의존 흐름을 만드는 것이 Clean Architecture의 기본 개념입니다.
+
+# 코드를 통해 Clean Architecture를 설계해보자
+
+제가 운영중인 서비스에는 단순한 채팅 기능이 있습니다.
+이 모듈이 단순한 Entity를 유지하고 있으므로, 예시로 사용해보겠습니다.
+
+아래 코드에서 확인할 부분은 데이터베이스 의존성을 제거한 부분입니다.
+엔티티의 정의와 세부사항을 정하는 코드를 확인해보면 좋습니다.
+## 엔티티를 정의하자
+
+서비스를 만들 때, 가장 먼저 Entity를 설계해야 합니다. 
+Entity는 애플리케이션이 존재하지 않아도 존재해야 합니다.
+
+채팅 기능이라면, 아래와 같은 Entity를 가질 수 있습니다.
+
+/entities/Chat.ts
+```typescript
+export type ChatStatus = 'normal' | 'inactive' | 'deleted';
+  
+export interface ChatProps {
+  user1: string | IUser;
+  user2: string | IUser;
+  status?: ChatStatus;
+  contents: ContentProps[];
+}
+  
+export class Chat {
+  private props: {
+    user1: string | IUser;
+    user2: string | IUser;
+    status: ChatStatus;
+    contents: Content[];
+  };
+  
+  constructor(props: ChatProps) {
+    this.props = {
+      user1: props.user1,
+      user2: props.user2,
+      status: props.status ?? 'normal',
+      contets: (props.contents ?? []).map((c) => new Content(c)),
+    };
+  }
+  
+  //getter
+
+  addContent(contentProps: ContentProps) {
+    const content = new Content(contentProps);
+    this.props.contents.push(content);
+  }
+  
+  // 도메인 엔티티 -> DTO or primitive 변환
+  toPrimitives(): ChatProps {
+    return {
+      user1: this.props.user1,
+      user2: this.props.user2,
+      status: this.props.status,
+      contents: tis.props.contents.map((c) => c.toPrimitives()),
+    };
+  }
+}
+```
+/entities/Content.ts
+```typescript
+export interface ContentProps {
+  userId: string;
+  content: string;
+}
+  
+export class Content {
+  private props: Required<ContentProps>;
+  
+  constructor(props: ContentProps) {
+    this.props = {
+      userId: props.userId,
+      content: props.content,
+    };
+  }
+  
+  get userId(): string {
+    return this.props.userId;
+  }
+  
+  get content(): string {
+    return this.props.content;
+  }
+  
+  toPrimitives(): ContentProps {
+    return { ...this.props };
+  }
+}
+```
+먼저, Chat은 하나의 채팅방 역할을 합니다.
+다음으로 Content는 채팅방에서 하나하나의 채팅을 의미합니다.
+
+엔티티를 설계할 때는 Entity가 가지는 필수 요소를 정의하고, 생성자를 정의합니다. 이 때 생성자에서 데이터 무결성을 위한 검사를 할 수 있습니다.
+
+그리고, addContent와 같은 데이터 무결성을 위한 약간의 비즈니스 로직이 포함될 수 있습니다. 이 부분도 완전히 제거하는 편이 좋을 수 있는데, 저는 포함하여 사용중입니다.
+
+## 유즈케이스를 정의하자
+
+유즈케이스는 service 코드를 정의하여 사용하고 있습니다.
+
+```typescript
+export class ChatService {
+  constructor(
+    //repository DI
+    @Inject(ICHAT_REPOSITORY)
+    private readonly chatRepository: IChatRepository,
+	...
+  ) {}
+  
+  async getChat(userId: string) {
+    const token = RequestContext.getDecodedToken();
+  
+    const user1 = token.id > userId ? userId : token.id;
+    const user2 = token.id < userId ? userId : token.id;
+  
+    const chat = await this.chatRepository.findByUser1AndUser2WithUser(
+      user1,
+      user2,
+    );
+  
+    if (!chat)
+      throw new NotFoundException(`can't find chat ${user1} and ${user2}`);
+  
+    const opponent =
+      (chat.user1 as IUser)._id == token.id
+        ? (chat.user2 as IUser)
+        : (chat.user1 as IUser);
+  
+    const conversationForm = { opponent, contents: chat.contents };
+    return conversationForm;
+
+  }
+```
+데이터베이스에 접근하는 코드를 의존성 주입하여 사용하고 있습니다. 
+getChat에서 비즈니스 로직을 수행하고, 결과를 반환합니다.
+
+## 어댑터를 정의하자.
+
+어댑터로는 Controller를 사용하고 있습니다.
+클라이언트의 입력을 Service로 전달해줍니다.
+
+```typescript
+@Controller('chat')
+export class ChatContoller {
+  constructor(private readonly chatService: ChatService) {}
+  
+  @Get()
+  async getChat(@Query() getChatDTO: GetChatDTO) {
+    const { toUid } = getChatDTO;
+    return await this.chatService.getChat(toUid);
+  }
+}
+```
+크게 확인할 부분은 없습니다.
+
+## 세부사항을 정의하자
+
+여기에서 말하는 세부사항은 어떤 DB를 쓸 것인가? 와 같은 문제입니다.
+저는 MongoDB를 사용할 것인데, 나중에 MySQL과 같은 DB로 옮길것을 대비해서 DB의 의존성을 제거하고 싶습니다.
+다음과 같이 해볼 수 있습니다.

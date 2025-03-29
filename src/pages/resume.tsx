@@ -89,9 +89,22 @@ const ResumePage = () => {
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
               <p className="text-sm text-gray-700 leading-relaxed">
-                {lang === "ko"
-                  ? "코드 간 의존성을 낮추어 유지 보수가 쉬운 아키텍처를 설계하기 위해 고민하고, 사용자의 요구사항과 의사소통을 중요시하는 개발자 채민관 입니다."
-                  : "Developer Mingwan who likes to learn something new and emphasizes communication"}
+                {lang === "ko" ? (
+                  <>
+                    코드 간 의존성을 낮추어 유지 보수가 쉬운 아키텍처를 설계하기
+                    위해 고민하고,
+                    <br />
+                    사용자의 요구사항과 의사소통을 중요시하는 개발자 채민관
+                    입니다.
+                  </>
+                ) : (
+                  <>
+                    I am developer Chae Min Gwan who carefully considers
+                    designing an architecture that lowers code dependencies for
+                    easier maintenance, and who places great importance on user
+                    requirements and communication.
+                  </>
+                )}
               </p>
             </div>
           </section>
@@ -138,7 +151,7 @@ const ResumePage = () => {
                   <p className="text-md">
                     {lang === "ko"
                       ? "대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 google analytics 기준 400명 정도의 DAU(Daily Active User)를 유지하고 있습니다."
-                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                      : "A platform designed for college students, offering features like study groups, instant meetups, and small clubs. Currently, it maintains around 400 Daily Active Users (based on Google Analytics)."}
                   </p>
                   <br />
                   <p className="text-blue-500 text-sm mt-3">
@@ -186,6 +199,12 @@ const ResumePage = () => {
                       <>
                         <li>
                           Nest.js 프레임워크를 이용해 클린 아키텍처 개념 적용
+                          <a
+                            href="https://beming-dev.github.io/blog/about/clean/"
+                            className="blog-link"
+                          >
+                            [블로그]
+                          </a>
                         </li>
                         <li>
                           Filebeat, ElasticSearch, Logstash, Kibana를
@@ -238,10 +257,57 @@ const ResumePage = () => {
                     ) : (
                       <>
                         <li>
-                          Implemented a clustering algorithm for study group
-                          matching
+                          Applied Clean Architecture principles using the
+                          Nest.js framework
                         </li>
-                        <li>Optimized MongoDB queries and managed indexes</li>
+                        <li>
+                          Configured a pipeline for visualizing Docker container
+                          logs by integrating Filebeat, Elasticsearch, Logstash,
+                          and Kibana with Docker Compose{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/elk/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Built a CI/CD pipeline on AWS CodePipeline to deploy
+                          both frontend and backend to EC2 via Docker containers{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/pipeline/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Implemented a clustering algorithm based on DBSCAN for
+                          study matching{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/clustering/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Introduced Redis to reduce API response times via
+                          caching and to utilize its messaging queue
+                          capabilities for notifications <br />
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
+                            [Caching Blog]
+                          </a>{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
+                            [Message Queue Blog]
+                          </a>
+                        </li>
                       </>
                     )}
                   </ul>
@@ -311,8 +377,6 @@ const ResumePage = () => {
                     )}
                   </ul>
                 </div>
-
-                <br />
                 {/* 트러블슈팅(Troubleshooting) */}
                 <div>
                   <h4 className="text-lg font-semibold border-b pb-1">
@@ -378,14 +442,63 @@ const ResumePage = () => {
                       </>
                     ) : (
                       <>
-                        <li>
-                          Resolved server launch delay on AWS (process
-                          monitoring and log analysis)
-                        </li>
-                        <li>
-                          Addressed MongoDB concurrency issues by configuring a
-                          Replica Set to reduce downtime
-                        </li>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            As the user base grew, the server frequently
+                            encountered unexpected errors and occasionally shut
+                            down.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Explicitly defined error types for potential
+                            exceptions and revamped the overall exception
+                            handling logic to increase stability.
+                          </div>
+                          <div className="mt-1">
+                            Adopted the ELK stack (Elasticsearch, Logstash,
+                            Kibana) with Filebeat for centralized log management
+                            and monitoring, enabling quick identification and
+                            resolution of issues.
+                          </div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            MongoDB query performance deteriorated due to the
+                            increasing data volume, significantly slowing down
+                            both data retrieval and response time.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Minimized unnecessary populate operations and
+                            reorganized database indexes to improve query
+                            processing speed.
+                          </div>
+                          <div className="mt-1">
+                            Leveraged MongoDB’s aggregation pipeline to optimize
+                            complex data processing, thus enhancing overall
+                            response times.
+                          </div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            As the number of users increased, RAM usage
+                            skyrocketed, making Heroku’s costs unsustainable.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Migrated to AWS EC2 instances and used CodePipeline
+                            to track GitHub commits and deploy the Docker
+                            containers through a CI/CD pipeline.
+                          </div>
+                          <div className="mt-1">
+                            This approach provided higher RAM capacity and
+                            reduced monthly costs by roughly 100 USD compared to
+                            the previous Heroku setup.
+                          </div>
+                        </div>
                       </>
                     )}
                   </ul>
@@ -401,7 +514,7 @@ const ResumePage = () => {
                 <p className="text-md text-gray-500">
                   {lang === "ko"
                     ? "2024.11 ~ 2024.11 | 프론트엔드 개발자"
-                    : "Jan 2019 ~ Dec 2021 | Frontend Developer"}
+                    : "Nov 2024 ~ Nov 2024 | Frontend Developer"}
                 </p>
                 <br />
                 <div>
@@ -412,7 +525,7 @@ const ResumePage = () => {
                     {lang === "ko"
                       ? `'서울시 공공데이터를 활용해 편의를 제공하는 서비스를 만들기'를 주제로 하는 해커톤에 참여했습니다. 
                       서울시 도서관에서 제공하는 책이음 서비스와 서울시 도서관의 프로그램을 한눈에 확인할 수 있는 서비스 제작했습니다.`
-                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                      : `I participated in a hackathon under the theme "Creating a service that provides convenience by utilizing Seoul's public data." We developed a service that allows users to view the Book Connection service and various library programs provided by the Seoul Metropolitan Library at a glance.`}
                   </p>
                   <br />
                   <p className="text-blue-500 text-sm">
@@ -461,18 +574,25 @@ const ResumePage = () => {
                         </li>
                         <li>
                           React의 useState, useEffect를 활용한 상태 관리,
-                          Context API를 활용한 전영 상태 관리 사용
+                          Context API를 활용한 전역 상태 관리 사용
                         </li>
-
                         <li>TailwindCSS를 활용하여 일관성있는 디자인</li>
                       </>
                     ) : (
                       <>
+                        <li>Collaborated with a designer to enhance UI/UX</li>
                         <li>
-                          Implemented a clustering algorithm for study group
-                          matching
+                          Used Next.js API Routes for server functionalities
+                          without needing a separate backend
                         </li>
-                        <li>Optimized MongoDB queries and managed indexes</li>
+                        <li>
+                          Managed state using React’s useState and useEffect,
+                          and utilized the Context API for global state
+                          management
+                        </li>
+                        <li>
+                          Maintained a consistent design using Tailwind CSS
+                        </li>
                       </>
                     )}
                   </ul>
@@ -507,8 +627,24 @@ const ResumePage = () => {
                       </>
                     ) : (
                       <>
-                        <li>Next.js</li>
-                        <li>Tailwindcss</li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Next.js
+                          </span>
+                          <span>
+                            Used API Routes to handle lightweight server
+                            features efficiently without a dedicated backend.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            TailwindCSS
+                          </span>
+                          <span>
+                            Employed utility-based styling for a consistent
+                            design while speeding up development.
+                          </span>
+                        </li>
                       </>
                     )}
                   </ul>
@@ -551,14 +687,34 @@ const ResumePage = () => {
                       </>
                     ) : (
                       <>
-                        <li>
-                          Resolved server launch delay on AWS (process
-                          monitoring and log analysis)
-                        </li>
-                        <li>
-                          Addressed MongoDB concurrency issues by configuring a
-                          Replica Set to reduce downtime
-                        </li>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            Calling the Seoul Public Data API directly on the
+                            client side caused issues due to CORS policies,
+                            preventing the application from accessing the data
+                            normally.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Implemented a backend proxy layer using Next.js API
+                            Routes to circumvent CORS restrictions.
+                          </div>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            Encountered time constraints in the hackathon when
+                            implementing a library program recommendation
+                            feature.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Leveraged a Generative AI API with well-crafted
+                            prompts and parsed responses to quickly build a
+                            recommendation system.
+                          </div>
+                        </div>
                       </>
                     )}
                   </ul>
@@ -573,7 +729,7 @@ const ResumePage = () => {
               {lang === "ko" ? "개인 프로젝트" : "Personal Project"}
             </h2>
             <div className="grid gap-4">
-              {/* 회사 카드 #1 */}
+              {/* 개인프로젝트 #1 */}
               <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
                 {/* 프로젝트 제목/기간/직무 */}
                 <h3 className="text-xl font-semibold text-base">
@@ -592,7 +748,7 @@ const ResumePage = () => {
                   <p className="text-md">
                     {lang === "ko"
                       ? "한국투자증권 api를 이용해, 실시간 한국 주식, 미국 주식 데이터를 받아오고 거래 시뮬레이션을 해볼 수 있는 서비스를 개발했습니다."
-                      : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
+                      : "Developed a service that utilizes the Korea Investment & Securities API to fetch real-time Korean and US stock data, allowing users to simulate trades."}
                   </p>
                   <br />
                   <p className="text-blue-500 text-sm">
@@ -659,10 +815,15 @@ const ResumePage = () => {
                     ) : (
                       <>
                         <li>
-                          Implemented a clustering algorithm for study group
-                          matching
+                          Designed an architecture that connects WebSockets
+                          between the Korea Investment & Securities API and the
+                          backend, as well as between the backend and the
+                          client, for real-time data handling
                         </li>
-                        <li>Optimized MongoDB queries and managed indexes</li>
+                        <li>
+                          Built a CI/CD pipeline using Oracle Cloud, Jenkins,
+                          and GitLab webhooks
+                        </li>
                       </>
                     )}
                   </ul>
@@ -715,10 +876,43 @@ const ResumePage = () => {
                       </>
                     ) : (
                       <>
-                        <li>Spring</li>
-                        <li>MySQL</li>
-                        <li>React.js</li>
-                        <li>tailwindCSS</li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Spring
+                          </span>
+                          <span>
+                            Built a backend with an emphasis on maintainability
+                            and scalability.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            MySQL
+                          </span>
+                          <span>
+                            Designed a normalized data model and gained
+                            experience with indexing and various queries.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            React.js
+                          </span>
+                          <span>
+                            Developed a component-based UI and effectively
+                            handled state management to optimize user
+                            experience.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            tailwindCSS
+                          </span>
+                          <span>
+                            Used a utility-first approach for consistent design
+                            and faster development.
+                          </span>
+                        </li>
                       </>
                     )}
                   </ul>
@@ -778,14 +972,49 @@ const ResumePage = () => {
                       </>
                     ) : (
                       <>
-                        <li>
-                          Resolved server launch delay on AWS (process
-                          monitoring and log analysis)
-                        </li>
-                        <li>
-                          Addressed MongoDB concurrency issues by configuring a
-                          Replica Set to reduce downtime
-                        </li>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            As the number of WebSocket connections increased,
+                            data transmission became delayed and some data was
+                            sent redundantly.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Grouped WebSocket connections that requested the
+                            same data, then used event-based broadcasting to
+                            deliver updates to each client, resolving the delay
+                            and duplication issues.
+                          </div>
+                          <a
+                            href="https://beming-dev.github.io/blog/stock-simulator/websocket/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </div>
+                        <div className="bg-white p-6 rounded-lg shadow">
+                          <div className="font-semibold"># Issue</div>
+                          <div className="mt-1">
+                            Attempted to run a Jenkins server on an Oracle Cloud
+                            instance and integrate GitLab Webhooks for automated
+                            build/deployment, but the pipeline failed due to
+                            missing network security group/firewall settings.
+                            Webhook requests never reached Jenkins, and the
+                            necessary ports for Docker containers were not open.
+                          </div>
+                          <div className="font-semibold mt-2"># Solution</div>
+                          <div className="mt-1">
+                            Allowed Jenkins ports and configured
+                            Inbound/Outbound rules on the Oracle Cloud VM
+                            instance.
+                          </div>
+                          <div className="mt-1">
+                            Set up the Webhook URL in the GitLab project
+                            settings, testing to ensure HTTP 200 responses were
+                            received successfully.
+                          </div>
+                        </div>
                       </>
                     )}
                   </ul>
@@ -803,7 +1032,6 @@ const ResumePage = () => {
               <div className="flex flex-wrap gap-2">
                 {/* 각각의 박스 */}
                 <div className="w-full max-w-screen-lg mx-auto py-2 px-2">
-                  {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
                   <div className="grid grid-cols-1 gap-6">
                     {/* Backend Card */}
                     <div className="bg-white p-6 rounded-lg shadow">
@@ -1098,14 +1326,20 @@ const ResumePage = () => {
               </h3>
               <p className="text-sm text-gray-500">2023.08 ~ 2024.02</p>
               <ul className="text-sm text-gray-700 mt-2">
-                <li>Becoming the Next successful online startup 수업 수강</li>
                 <li>
-                  온라인 스타트업을 시작하기 위해 거쳐야하는 과정들을 직접
-                  서비스를 제작하며 경험
+                  {lang === "ko"
+                    ? "Becoming the Next successful online startup 수업 수강"
+                    : "Took the 'Becoming the Next successful online startup' course"}
                 </li>
                 <li>
-                  Next.js와 Next.js api를 이용해 헬스케어 온라인 스타트업
-                  프로토타입 개발
+                  {lang === "ko"
+                    ? "온라인 스타트업을 시작하기 위해 거쳐야하는 과정들을 직접 서비스를 제작하며 경험"
+                    : "Hands-on experience creating a service that covers the steps needed to launch an online startup"}
+                </li>
+                <li>
+                  {lang === "ko"
+                    ? "Next.js와 Next.js api를 이용해 헬스케어 온라인 스타트업 프로토타입 개발"
+                    : "Developed a healthcare online startup prototype using Next.js and its API features"}
                 </li>
               </ul>
             </div>
