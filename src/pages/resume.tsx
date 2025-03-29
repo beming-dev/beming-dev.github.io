@@ -164,6 +164,10 @@ const ResumePage = () => {
                     >
                       https://study-about.club/
                     </a>
+                    <p className="text-black text-sm">
+                      접속하여, 게스트 로그인을 클릭해 사이트를 체험할 수
+                      있습니다.
+                    </p>
                   </p>
                   <p className="text-blue-500 text-sm mt-3">
                     Backend:{" "}

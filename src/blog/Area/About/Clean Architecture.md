@@ -408,4 +408,78 @@ export class ChatContoller {
 
 여기에서 말하는 세부사항은 어떤 DB를 쓸 것인가? 와 같은 문제입니다.
 저는 MongoDB를 사용할 것인데, 나중에 MySQL과 같은 DB로 옮길것을 대비해서 DB의 의존성을 제거하고 싶습니다.
-다음과 같이 해볼 수 있습니다.
+다음과 같이 해 볼 수 있습니다.
+
+먼저 Service 코드에서 MongoDB에 접근하는 코드를 직접 호출하면, service 코드가 세부사항을 알아야 하므로, Clean Architecture가 지켜지지 않습니다.
+
+따라서 의존성을 역전시키기 위한 interface를 정의해줍니다.
+``` typescript
+export interface IChatRepository {
+  findByUser1AndUser2WithUser(
+    user1Id: string,
+    user2Id: string,
+  ): Promise<Chat | null>;
+// 나머지 코드
+}
+```
+
+구현체도 만들어줍시다.
+```typescript
+
+export class ChatRepository implements IChatRepository {
+  constructor(
+    @InjectModel('Chat')
+    private readonly ChatModel: Model<IChat>,
+  ) {}
+  
+  async findByUser1AndUser2WithUser(
+    user1Id: string,
+    user2Id: string,
+  ): Promise<Chat | null> {
+    const doc = await this.ChatModel.findOne({
+      user1: user1Id,
+      user2: user2Id,
+    }).populate('user1 user2');
+    if (!doc) return null;
+    return this.mapToDomain(doc);
+  }
+  
+ private mapToDomain(doc: IChat): Chat {
+    const chat = new Chat({
+      user1: doc.user1,
+      user2: doc.user2,
+      status: doc.status,
+      contents: doc.contents.map((c) => ({
+        userId: c.userId,
+        content: c.content,
+        createdAt: c.createdAt.toString(),
+      })),
+    });
+  
+    return chat;
+  }
+}
+```
+구현체에서 주의해야 할 부분은, Repository는 Entity를 반환해야 한다는 점입니다. Entity가 아닌 DB에서 읽은 데이터를 그대로 반환한다면, 그 코드를 사용하는 Service는 결국 DB에 의존하게 되어버립니다.
+
+이제 DB를 MySQL로 바꾸고 싶다면 어떻게 할까요?
+ChatRepository대신 MySQLChatRepository를 작성하고, 의존성 주입을 해주면 끝입니다. 다른 모듈은 ChatRepository에 직접 의존하지 않으므로 변경에 영향을 받지 않습니다.
+
+# Clean Architecture를 어떻게 더 적용해볼까?
+
+지금까지 간단한 코드로 어떤 느낌으로 DB의존성을 제거하는지 살펴보았습니다.
+
+의존성을 제어하는 방법을 잘 사용한다면, 더 다양한 세부사항에 대한 결정을 미룰 수 있습니다.
+
+예를 들면, 결제 기능을 구현할 때 Interface를 정의해둔다면 어떤 결제 서비스를 이용할지 와 같은 결정은 멀리 미뤄둘 수 있습니다.
+
+코드들이 추상화에만 의존하게 되니 변경도 훨씬 자유로울것이고, 유지보수 역시 훨씬 편해질 것입니다.
+
+즉, 처음에 우리가 달성하고자 했던 목표를 많이 달성했습니다.
+
+이 포스팅에서 설명한 내용이 전부는 아닙니다.
+FP, OOP등도 적용하고, SOLID 원칙 같은것도 적용하면 더 좋은 코드를 만들 수 있습니다.
+
+저도 처음부터 클린아키텍처를 적용하며 서비스를 만들었으면 좋았겠지만, 당시에는 이런 개념을 몰랐었기에 이제서야 하나씩 리팩토링 해 가고 있습니다.
+
+앞으로도 다양한 개념들을 적용하며, 더 나은 구조에 대해 탐구해보겠습니다.
