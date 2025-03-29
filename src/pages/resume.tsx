@@ -220,12 +220,12 @@ const ResumePage = () => {
                         <li>
                           AWS codepipeline을 이용해 EC2에 Docker container로
                           프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
-                          <a
+                          {/* <a
                             href="https://beming-dev.github.io/blog/about/pipeline/"
                             className="blog-link"
                           >
                             [블로그]
-                          </a>
+                          </a> */}
                         </li>
                         <li>
                           스터디 매칭을 위해, DBSCAN 알고리즘을 응용한
@@ -241,7 +241,7 @@ const ResumePage = () => {
                           Redis를 도입하여, 캐싱을 사용해 api 응답속도를 줄이고,
                           알림 서비스의 메시지 큐로 활용
                           <a
-                            href="https://beming-dev.github.io/blog/about/caching/"
+                            href="https://beming-dev.github.io/blog/about/pubsub/"
                             className="blog-link"
                           >
                             [블로그]
