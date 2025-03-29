@@ -16,6 +16,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   height: 100%;
+  word-break: keep-all;
 }
 
 .nav {
@@ -55,6 +56,6 @@ body {
   }
 }
 .blog-link {
-  color: blue;
+  color: rgb(59, 130, 246);
   text-decoration: underline;
 }

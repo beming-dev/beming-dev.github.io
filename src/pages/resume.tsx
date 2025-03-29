@@ -90,7 +90,7 @@ const ResumePage = () => {
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
               <p className="text-sm text-gray-700 leading-relaxed">
                 {lang === "ko"
-                  ? "새로운걸 배우기 좋아하고 의사소통을 중시하는 개발자 채민관입니다."
+                  ? "코드 간 의존성을 낮추어 유지 보수가 쉬운 아키텍처를 설계하기 위해 고민하고, 사용자의 요구사항과 의사소통을 중요시하는 개발자 채민관 입니다."
                   : "Developer Mingwan who likes to learn something new and emphasizes communication"}
               </p>
             </div>
@@ -137,7 +137,7 @@ const ResumePage = () => {
                   </h4>
                   <p className="text-md">
                     {lang === "ko"
-                      ? "대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 400명 이상의 유저가 이용중입니다."
+                      ? "대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 google analytics 기준 400명 정도의 DAU(Daily Active User)를 유지하고 있습니다."
                       : "A gathering platform for college students (study, meetups, clubs) with over 400 active users."}
                   </p>
                   <br />
@@ -191,31 +191,46 @@ const ResumePage = () => {
                           Filebeat, ElasticSearch, Logstash, Kibana를
                           Docker-compose로 묶어 Docker container의 로그를
                           시각화하는 파이프라인 구성
-                          <a href="https://beming-dev.github.io/blog/about/elk/">
+                          <a
+                            href="https://beming-dev.github.io/blog/about/elk/"
+                            className="blog-link"
+                          >
                             [블로그]
                           </a>
                         </li>
                         <li>
                           AWS codepipeline을 이용해 EC2에 Docker container로
                           프론트엔드, 백엔드를 배포하는 CI/CD 파이프라인 구성
-                          <a href="https://beming-dev.github.io/blog/about/pipeline/">
+                          <a
+                            href="https://beming-dev.github.io/blog/about/pipeline/"
+                            className="blog-link"
+                          >
                             [블로그]
                           </a>
                         </li>
                         <li>
                           스터디 매칭을 위해, DBSCAN 알고리즘을 응용한
                           클러스터링 알고리즘 구현
-                          <a href="https://beming-dev.github.io/blog/about/clustering/">
+                          <a
+                            href="https://beming-dev.github.io/blog/about/clustering/"
+                            className="blog-link"
+                          >
                             [블로그]
                           </a>
                         </li>
                         <li>
-                          Redis를 도입하여, 캐싱을 사용해 api 응답속도를 줄이고, 
-                          알림 서비스의 메시지 큐로 활용
-                          <a href="https://beming-dev.github.io/blog/about/caching/">
+                          Redis를 도입하여, 캐싱을 사용해 api 응답속도를 줄이고,
+                          알림 서비스의 메시지 큐로 활용 <br />
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
                             [캐싱 블로그]
                           </a>
-                          <a href="https://beming-dev.github.io/blog/about/caching/">
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
                             [메시지큐 블로그]
                           </a>
                         </li>
@@ -282,8 +297,7 @@ const ResumePage = () => {
                             Redis
                           </span>
                           <span>
-                            를 메시지 큐로 활용해 알림 서비스를 운영하고
-                            있습니다.
+                            를 메시지큐와 캐싱기능을 위해 사용하고 있습니다.
                           </span>
                         </li>
                       </>
@@ -316,13 +330,14 @@ const ResumePage = () => {
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
                             발생 가능한 예외 상황에 대해 에러 타입을 명시적으로
-                            정의하고, 코드 전반에 걸쳐 체계적인 예외 처리를
-                            추가하여 안정성을 높임.
+                            정의하고, 코드 전반에 걸쳐 체계적인 예외 처리 로직을
+                            정비하여 안정성을 높였습니다.
                           </div>
                           <div className="mt-1">
-                            ELK 스택(Elasticsearch, Logstash, Kibana)을 도입하여
-                            로그를 중앙 집중식으로 관리, 모니터링함으로써 문제
-                            발생 시 신속하게 원인을 파악하고 대응
+                            ELK 스택(Elasticsearch, Logstash, Kibana) +
+                            Filebeat을 도입하여 로그를 중앙 집중식으로 관리,
+                            모니터링함으로써 문제 발생 시 신속하게 원인을
+                            파악하고 대응하고 있습니다.
                           </div>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow">
@@ -333,7 +348,7 @@ const ResumePage = () => {
                           </div>
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
-                            불필요한 populate 연산을 최소화하고, 리인덱싱을 통해
+                            불필요한 populate 연산을 최소화하고, 인덱싱을 통해
                             데이터베이스 인덱스를 재구성하여 쿼리 처리 속도를
                             향상
                           </div>
@@ -441,9 +456,14 @@ const ResumePage = () => {
                       <>
                         <li>디자이너와의 협업으로 UI/UX 개선</li>
                         <li>
-                          Next.js를 이용한 빠른 프로토타이핑과, 내장된 백엔드
-                          기능을 활용한 Cors 문제 해결
+                          Next.js의 API Routes를 활용하여 별도의 백엔드 구축
+                          없이 효율적으로 서버 기능을 개발
                         </li>
+                        <li>
+                          React의 useState, useEffect를 활용한 상태 관리,
+                          Context API를 활용한 전영 상태 관리 사용
+                        </li>
+
                         <li>TailwindCSS를 활용하여 일관성있는 디자인</li>
                       </>
                     ) : (
@@ -513,7 +533,7 @@ const ResumePage = () => {
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
                             Next.js의 API Routes를 사용하여 백엔드 프록시
-                            레이어를 구현
+                            레이어를 구현했습니다.
                           </div>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow">
@@ -525,7 +545,7 @@ const ResumePage = () => {
                           <div className="font-semibold mt-2"># 해결 방법</div>
                           <div className="mt-1">
                             생성형 AI API를 사용하여 적절한 프롬프팅과 응답을
-                            파싱하여 빠르게 추천 시스템 구현
+                            파싱하여 빠르게 추천 시스템 구현했습니다.
                           </div>
                         </div>
                       </>
@@ -670,8 +690,8 @@ const ResumePage = () => {
                             MySQL
                           </span>
                           <span>
-                            를 사용하여 정규화된 데이터 모델을 설계하고, 인덱싱
-                            및 쿼리 최적화를 통해 성능을 개선했습니다.
+                            를 사용하여 정규화된 데이터 모델을 설계하고,
+                            인덱싱과 다양한 쿼리를 경험해봤습니다.
                           </span>
                         </li>
                         <li>
@@ -724,7 +744,7 @@ const ResumePage = () => {
                             같은 데이터를 요청하는 WebSocket 연결을 그룹화하고,
                             데이터가 들어올 때 Event를 활용한 브로드캐스트
                             방식으로 각 클라이언트에 전송하도록 구성하여 지연과
-                            중복 전송 문제를 해결
+                            중복 전송 문제를 해결했습니다.
                           </div>
                           <a
                             href="https://beming-dev.github.io/blog/stock-simulator/websocket/"
@@ -748,11 +768,11 @@ const ResumePage = () => {
                           <div className="mt-1">
                             Oracle Cloud VM 인스턴스의 보안
                             규칙(Inbound/Outbound Rules)과 Jenkins가 사용하는
-                            포트를 정확히 허용.
+                            포트를 허용했습니다.
                           </div>
                           <div className="mt-1">
                             GitLab 프로젝트 설정에서 Webhook URL을 설정하고,
-                            정상적으로 HTTP 200 응답을 받는지 테스트.
+                            정상적으로 HTTP 200 응답을 받는지 테스트했습니다.
                           </div>
                         </div>
                       </>
@@ -805,7 +825,10 @@ const ResumePage = () => {
                           <li>
                             Express.js의 Error Handling 과정을 이해하고 있고,
                             Custom Error Handler를 구성할 수 있습니다.
-                            <a href="https://beming-dev.github.io/blog/about/error/">
+                            <a
+                              href="https://beming-dev.github.io/blog/about/error/"
+                              className="blog-link"
+                            >
                               [블로그]
                             </a>
                           </li>
@@ -820,6 +843,10 @@ const ResumePage = () => {
                           <li>
                             모듈(Module) 구조와 의존성 주입(Dependency
                             Injection) 등을 활용해 아키텍처를 설계합니다.
+                          </li>
+                          <li>
+                            클린아키텍처 구조를 따르기 위해 노력하고, 코드간
+                            의존성을 제거하기 위해 노력합니다.
                           </li>
                           <li>
                             데코레이터 기반으로 라우팅, 파이프, 가드 등을 설정해
@@ -925,9 +952,12 @@ const ResumePage = () => {
                         </span>
                         <ul className="list-disc ml-3 mt-2 text-sm space-y-1">
                           <li>
-                            인덱스를 활용하여 성능 최적화를 진행해본 경험이
-                            있으며, Join을 효율적으로 사용하는 방법을 잘 알고
+                            관계형 데이터베이스를 설계하고 정규화 할 수
                             있습니다.
+                          </li>
+                          <li>
+                            인덱스를 활용한 성능 최적화, Join을 효율적으로
+                            사용하는 방법을 잘 알고 있습니다.
                           </li>
                           <li>
                             트랜잭션과 락(Lock) 메커니즘을 이해하고 있으며,
@@ -1025,6 +1055,10 @@ const ResumePage = () => {
                           <li>
                             Git-flow 전략 등을 통해 협업 시 브랜치 및 릴리즈
                             관리를 체계적으로 해본 경험이 있습니다.
+                          </li>
+                          <li>
+                            rebase와 branch 개념을 이용해 git graph를 깔끔하게
+                            관리하는 것에 관심이 있습니다.
                           </li>
                           <li>
                             Pull Request 기반 코드 리뷰와 Github Issues 연동으로
