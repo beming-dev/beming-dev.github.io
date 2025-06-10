@@ -81,12 +81,14 @@
             "id": "fe861fd4ea6230b9",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.8.10"
+                "file": "면접준비/1자기소개.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
+              "icon": "lucide-file",
+              "title": "1자기소개"
             }
           }
         ],
@@ -236,6 +238,8 @@
   },
   "active": "fe861fd4ea6230b9",
   "lastOpenFiles": [
+    "면접준비/3About 기술 스택.md",
+    "면접준비/1자기소개.md",
     "zz네면/자료구조.md",
     "zz네면/창의수학.md",
     "zz네면/운영체제.md",
@@ -250,10 +254,8 @@
     "면접준비/6협업에 관한 질문.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/4서울도서이음.md",
-    "면접준비/3About 기술 스택.md",
     "면접준비/2당근.md",
     "면접준비/1자클린아키텍처.md",
-    "면접준비/1자기소개.md",
     "zz네면/ETC.md",
     "zz네면/CS지식.md",
     "zz네면/프로젝트.md",
