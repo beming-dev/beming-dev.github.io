@@ -78,16 +78,18 @@ const Portfolio: React.FC = () => {
 
         {/* Main Content */}
         <main className="max-w-4xl mx-auto px-6 py-10 space-y-16">
-          {/* About Me */}
-          <section id="about" className="py-8">
-            <h2 className="text-3xl font-extrabold text-indigo-600 mb-4">
-              About Me
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              사용자의 요구사항과 의사소통을 우선시 하며,
-              <br /> 유지 보수와 협업이 쉬운 아키텍처에 대해 고민하는 개발자
-              채민관입니다.
-            </p>
+          <section className="py-8 flex items-center gap-6">
+            <div>
+              <h2 className="text-3xl font-extrabold text-indigo-600 mb-2">
+                About Me
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                사용자의 요구사항과 의사소통을 우선시하며,
+                <br />
+                유지 보수와 협업이 쉬운 아키텍처에 대해 고민하는 개발자
+                채민관입니다.
+              </p>
+            </div>
           </section>
 
           {/* Internship Experience */}
@@ -96,7 +98,7 @@ const Portfolio: React.FC = () => {
               Internship Experience
             </h2>
             <p className="text-lg my-6">주식회사 코딧 | 2025.03 ~ 2025.09</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Card */}
               <div className="bg-white border-l-4 border-indigo-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
                 <h3 className="text-2xl font-semibold mb-3">Backend Intern</h3>
@@ -206,16 +208,33 @@ const Portfolio: React.FC = () => {
               ))}
             </div>
           </section>
-          {/* Certifications */}
-          <section id="certifications" className="py-8">
+          {/* Etc Section */}
+          <section id="etc" className="py-8">
             <h2 className="text-3xl font-extrabold text-indigo-600 mb-6">
-              Certifications
+              Etc.
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              {certifications.map((cert) => (
-                <li key={cert}>{cert}</li>
-              ))}
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  Certifications
+                </h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  {certifications.map((cert) => (
+                    <li key={cert}>{cert}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
+                  Exchange Program
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  교환학생 프로그램 참여: Entrepreneurship 과정을 수강하고,
+                  다양한 국가의 국제 학생들과 협업하며 커뮤니케이션 역량을
+                  강화했습니다.
+                </p>
+              </div>
+            </div>
           </section>
         </main>
 
