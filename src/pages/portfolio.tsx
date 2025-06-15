@@ -77,7 +77,7 @@ const Portfolio: React.FC = () => {
         </header>
 
         {/* Main Content */}
-        <main className="max-w-4xl mx-auto px-6 py-10 space-y-16">
+        <main className="max-w-4xl mx-auto px-6 py-10 space-y-8">
           <section className="py-8 flex items-center gap-6">
             <div>
               <h2 className="text-3xl font-extrabold text-indigo-600 mb-2">
@@ -98,33 +98,33 @@ const Portfolio: React.FC = () => {
               Internship Experience
             </h2>
             <p className="text-lg my-6">주식회사 코딧 | 2025.03 ~ 2025.09</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8">
               {/* Card */}
               <div className="bg-white border-l-4 border-indigo-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">Backend Intern</h3>
+                <h3 className="text-2xl font-semibold mb-3">Api Server</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>REST API 설계 및 구현 (NestJS)</li>
+                  <li>REST API 설계 및 구현</li>
                   <li>MySQL 데이터베이스 모델링 & 성능 튜닝</li>
                   <li>신규 기능 개발 및 코드 리뷰 참여</li>
                 </ul>
               </div>
 
               <div className="bg-white border-l-4 border-green-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">DevOps Intern</h3>
+                <h3 className="text-2xl font-semibold mb-3">DevOps</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>CI/CD 파이프라인 구축 (Jenkins, GitLab CI)</li>
-                  <li>Docker & Kubernetes 배포 자동화</li>
-                  <li>모니터링 및 로깅 설정 (Prometheus, ELK)</li>
+                  <li>
+                    Api 판매를 위해 AWS Gateway 연동, plan설계 및 사용량 추적
+                  </li>
+                  <li>Container로 배포되던 서비스를 kubernetes로 래핑</li>
+                  <li>모니터링 및 로깅 설정 (ELK)</li>
                 </ul>
               </div>
 
               <div className="bg-white border-l-4 border-yellow-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">
-                  Data Eng. Intern
-                </h3>
+                <h3 className="text-2xl font-semibold mb-3">Data Eng.</h3>
                 <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>로그 데이터 파이프라인 설계 (Kafka, Redis)</li>
-                  <li>배치 처리 스크립트 작성 (Python, Airflow)</li>
+                  <li>국내외 정부 부처 법령, 의안등 크롤링</li>
+                  <li>ElasticSearch 인덱스 설계 및 데이터 인덱싱</li>
                   <li>데이터 분석 및 시각화 대시보드 제작</li>
                 </ul>
               </div>
@@ -133,48 +133,282 @@ const Portfolio: React.FC = () => {
 
           {/* Projects */}
           <section id="projects" className="py-8">
-            <h2 className="text-3xl font-extrabold text-indigo-600">
+            <h2 className="text-4xl font-bold text-indigo-600 mb-6">
               Projects
             </h2>
-            <p className="text-md text-gray-500 pt-2 pb-8">
-              2022.06 ~ 현재 | 백엔드 개발자
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
-              <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition min-h-[300px]">
+            <div className="grid grid-cols-1 gap-10 py-4">
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition-transform min-h-[320px]">
                 <h3 className="text-3xl font-semibold mb-4">About</h3>
-                <p className="text-gray-700 mb-6">
-                  프로젝트에 대한 간략한 설명을 여기에 작성하세요. 어떤 문제를
-                  해결하고 어떤 가치를 제공했는지 요약합니다.
+                <p className="text-lg text-gray-600 mb-8">
+                  2022.06 – Present | 백엔드 개발자
                 </p>
-                <div className="space-y-4">
+                <p className="text-gray-700 mb-6">
+                  대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임,
+                  소모임 등의 기능을 제공하며, Google Analytics 기준 약 400
+                  DAU(Daily Active User)를 유지하고 있습니다.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <a
+                    href="https://study-about.club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    사이트: study-about.club (게스트 로그인 가능)
+                  </a>
+                  <br />
+                  <a
+                    href="https://github.com/AboutClan/nest-back"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    Backend Repo
+                  </a>
+                  <br />
+                  <a
+                    href="https://github.com/AboutClan/About"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    Frontend Repo
+                  </a>
+                </div>
+                <div className="space-y-8">
                   <div>
-                    <h4 className="text-xl font-medium text-gray-900">
+                    <h4 className="text-xl font-medium mb-2">
                       My Contribution
                     </h4>
-                    <ul className="list-disc list-inside text-gray-700 mt-1">
-                      <li>주요 기여 내용 1</li>
-                      <li>주요 기여 내용 2</li>
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
+                      <li>
+                        NestJS로 클린 아키텍처 적용
+                        <a
+                          href="https://beming-dev.github.io/blog/about/clean/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>
+                        ELK & Filebeat 파이프라인 Docker-Compose 구성
+                        <a
+                          href="https://beming-dev.github.io/blog/about/elk/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>AWS CodePipeline 통한 CI/CD 배포</li>
+                      <li>
+                        DBSCAN 기반 스터디 매칭 알고리즘 구현
+                        <a
+                          href="https://beming-dev.github.io/blog/about/clustering/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>
+                        Redis 캐싱 및 메시지 큐 활용
+                        <a
+                          href="https://beming-dev.github.io/blog/about/pubsub/"
+                          className="ml-2 text-blue-501 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gray-900">
-                      Tech Stack
-                    </h4>
-                    <p className="text-gray-700 mt-1">
+                    <h4 className="text-xl font-medium mb-2">Tech Stack</h4>
+                    <p className="text-gray-700">
                       NestJS, TypeScript, MySQL, Redis, AWS
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-gray-900">
+                    <h4 className="text-xl font-medium mb-2">
                       Troubleshooting
                     </h4>
-                    <p className="text-gray-700 mt-1">
-                      주요 이슈 및 해결 방안에 대한 간단한 설명을 작성하세요.
-                    </p>
+                    <div className="space-y-6">
+                      {[
+                        {
+                          problem: "서버 예기치 않은 오류 및 중단",
+                          solution:
+                            "예외 타입 명시 및 전역 예외 처리 정비, ELK 스택 도입을 통한 중앙 로그 관리",
+                        },
+                        {
+                          problem: "초기 페이지 로딩 속도 저하",
+                          solution:
+                            "불필요한 populate 제거, 인덱싱 최적화, Redis 캐싱 도입 (응답 속도 50% 향상)",
+                        },
+                        {
+                          problem: "Heroku 비용·RAM 이슈",
+                          solution:
+                            "AWS EC2로 이전 및 Docker CI/CD 구성, 비용 100달러 절감",
+                        },
+                      ].map(({ problem, solution }) => (
+                        <div
+                          key={problem}
+                          className="bg-white border border-gray-200 rounded-lg shadow p-6 hover:shadow-lg transition"
+                        >
+                          <div className="flex items-center mb-1">
+                            <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                            <h5 className="font-semibold text-gray-800">
+                              Issue
+                            </h5>
+                          </div>
+                          <p className="text-gray-700 mb-4">{problem}</p>
+                          <div className="flex items-center mb-1">
+                            <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            <h5 className="font-semibold text-gray-800">
+                              Solution
+                            </h5>
+                          </div>
+                          <p className="text-gray-700">{solution}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* 추가 프로젝트 카드는 동일한 구조로 복제 */}
+            </div>
+            <div className="grid grid-cols-1 gap-10 py-4">
+              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition-transform min-h-[320px]">
+                <h3 className="text-3xl font-semibold mb-4">About</h3>
+                <p className="text-lg text-gray-600 mb-8">
+                  2022.06 – Present | 백엔드 개발자
+                </p>
+                <p className="text-gray-700 mb-6">
+                  대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임,
+                  소모임 등의 기능을 제공하며, Google Analytics 기준 약 400
+                  DAU(Daily Active User)를 유지하고 있습니다.
+                </p>
+                <div className="space-y-2 mb-6">
+                  <a
+                    href="https://study-about.club/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    사이트: study-about.club (게스트 로그인 가능)
+                  </a>
+                  <br />
+                  <a
+                    href="https://github.com/AboutClan/nest-back"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    Backend Repo
+                  </a>
+                  <br />
+                  <a
+                    href="https://github.com/AboutClan/About"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-blue-500 underline hover:text-blue-700"
+                  >
+                    Frontend Repo
+                  </a>
+                </div>
+                <div className="space-y-8">
+                  <div>
+                    <h4 className="text-xl font-medium mb-2">
+                      My Contribution
+                    </h4>
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
+                      <li>
+                        NestJS로 클린 아키텍처 적용
+                        <a
+                          href="https://beming-dev.github.io/blog/about/clean/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>
+                        ELK & Filebeat 파이프라인 Docker-Compose 구성
+                        <a
+                          href="https://beming-dev.github.io/blog/about/elk/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>AWS CodePipeline 통한 CI/CD 배포</li>
+                      <li>
+                        DBSCAN 기반 스터디 매칭 알고리즘 구현
+                        <a
+                          href="https://beming-dev.github.io/blog/about/clustering/"
+                          className="ml-2 text-blue-500 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                      <li>
+                        Redis 캐싱 및 메시지 큐 활용
+                        <a
+                          href="https://beming-dev.github.io/blog/about/pubsub/"
+                          className="ml-2 text-blue-501 underline hover:text-blue-700"
+                        >
+                          [블로그]
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-medium mb-2">Tech Stack</h4>
+                    <p className="text-gray-700">
+                      NestJS, TypeScript, MySQL, Redis, AWS
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-medium mb-2">
+                      Troubleshooting
+                    </h4>
+                    <div className="space-y-6">
+                      {[
+                        {
+                          problem: "서버 예기치 않은 오류 및 중단",
+                          solution:
+                            "예외 타입 명시 및 전역 예외 처리 정비, ELK 스택 도입을 통한 중앙 로그 관리",
+                        },
+                        {
+                          problem: "초기 페이지 로딩 속도 저하",
+                          solution:
+                            "불필요한 populate 제거, 인덱싱 최적화, Redis 캐싱 도입 (응답 속도 50% 향상)",
+                        },
+                        {
+                          problem: "Heroku 비용·RAM 이슈",
+                          solution:
+                            "AWS EC2로 이전 및 Docker CI/CD 구성, 비용 100달러 절감",
+                        },
+                      ].map(({ problem, solution }) => (
+                        <div
+                          key={problem}
+                          className="bg-white border border-gray-200 rounded-lg shadow p-6 hover:shadow-lg transition"
+                        >
+                          <div className="flex items-center mb-1">
+                            <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                            <h5 className="font-semibold text-gray-800">
+                              Issue
+                            </h5>
+                          </div>
+                          <p className="text-gray-700 mb-4">{problem}</p>
+                          <div className="flex items-center mb-1">
+                            <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            <h5 className="font-semibold text-gray-800">
+                              Solution
+                            </h5>
+                          </div>
+                          <p className="text-gray-700">{solution}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
