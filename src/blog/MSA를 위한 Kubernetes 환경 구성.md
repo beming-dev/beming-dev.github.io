@@ -31,9 +31,10 @@ sudo sysctl --system
 - lsb-release: 배포판 정보를 조회
 - modprobe br_netfilter: CNI 플러그인이 Pod 간 트래픽을 브리지로 처리할 때 필수입니다.
 - - - `net.bridge.bridge-nf-call-iptables = 1` → 브리지 인터페이스의 트래픽도 iptables 체인(FILTER/NAT)에 걸리도록 허용
-    - `net.ipv4.ip_forward = 1` → 노드가 IP 패킷을 다른 인터페이스로 포워딩하도록 허용 (클러스터 내부 라우팅)
-        
-    - `/etc/sysctl.d/k8s.conf`에 저장해 재부팅 후에도 유지되게 하고, `sysctl --system`으로 즉시 적용
+- `net.ipv4.ip_forward = 1` → 노드가 IP 패킷을 다른 인터페이스로 포워딩하도록 허용 (클러스터 내부 라우팅)     
+- `/etc/sysctl.d/k8s.conf`에 저장해 재부팅 후에도 유지되게 하고, `sysctl --system`으로 즉시 적용
+
+
 # 컨테이너 런타임 설정
 ```shell
 # containerd 설치
@@ -51,7 +52,9 @@ sudo systemctl restart containerd
 sudo systemctl enable containerd
 
 ```
-
+containerd 설치
+- Kubernetes가 직접 통신하는 CRI(Container Runtime Interface) 호환 런타임입니다.
+- Docker 엔진보다 가볍고, Docker가 내부적으로 사용하는 런타임 자체이기도 합니다.
 # Kubernetes 컴포넌트 설치
 ```shell
 # GPG 키 가져오기
@@ -70,10 +73,15 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 ```
 
+- GPG 키를 가져오고, kubernetes 공식 바이너리의 APT 저장소 추가
+- 자동 업그레이드 시 버전 충돌을 막기 위해, 이 세 패키지를 고정
+
 # 램스왑 끄기
+
 ``` shell
 KUBELET_EXTRA_ARGS="--fail-swap-on=false"
 ```
+kubernetes는 기본적으로 swap 메모리를 허용하지 않습니다. 위 플래그를 주어 swap 메모리를 허용하거나, swap메모리를 삭제합시다.
 
 # 마스터 노드 초기화
 ``` shell
