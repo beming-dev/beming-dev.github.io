@@ -26,6 +26,14 @@ sudo sysctl --system
 
 ```
 
+- Kubernetes 저장소를 HTTPS로 안전하게 조회
+- GPG 키 검증에 필요한 도구들
+- lsb-release: 배포판 정보를 조회
+- modprobe br_netfilter: CNI 플러그인이 Pod 간 트래픽을 브리지로 처리할 때 필수입니다.
+- - - `net.bridge.bridge-nf-call-iptables = 1` → 브리지 인터페이스의 트래픽도 iptables 체인(FILTER/NAT)에 걸리도록 허용
+    - `net.ipv4.ip_forward = 1` → 노드가 IP 패킷을 다른 인터페이스로 포워딩하도록 허용 (클러스터 내부 라우팅)
+        
+    - `/etc/sysctl.d/k8s.conf`에 저장해 재부팅 후에도 유지되게 하고, `sysctl --system`으로 즉시 적용
 # 컨테이너 런타임 설정
 ```shell
 # containerd 설치
@@ -89,4 +97,6 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 ```
 
 # 단일 노드에 워커 스케줄링 허용
-``
+``` shell
+kubectl taint nodes --all node-role.kubernetes.io/master-
+```
