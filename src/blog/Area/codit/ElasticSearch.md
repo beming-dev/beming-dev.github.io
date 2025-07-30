@@ -1,8 +1,8 @@
 ---
 thumbnail: default.jpg
-slug: "/blog/codit/sql"
-date: "2025-07-13"
-title: "Bulk insert를 이용한 MySQL 쿼리 최적화"
+slug: "/blog/codit/elasticsearch"
+date: "2025-07-25"
+title: "왜 ElasticSearch를 사용할까?"
 categories:
   - mainCategory: "Area"
     subCategory: "codit"
