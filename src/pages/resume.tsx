@@ -38,7 +38,7 @@ const ResumePage = () => {
               {/* 이름 & 직책 */}
               <div className="min-h-full  flex flex-col justify-between">
                 <h1 className="text-2xl font-bold mb-2">
-                  채민관 (Chae Min Gwan)
+                  채민관 (Chae Mingwan)
                 </h1>
                 <p className="text-sm text-indigo-100 mt-1">
                   Fullstack Developer
@@ -140,7 +140,7 @@ const ResumePage = () => {
                 </h3>
                 <p className="text-md text-gray-500">
                   {lang === "ko"
-                    ? "2025.03 ~ 2025.08 | 백엔드 인턴"
+                    ? "2025.03 ~ 2025.07 | 백엔드 인턴"
                     : "Mar 2025 ~ Aug 2025 | Backend Internship"}
                 </p>
                 <br />
@@ -400,8 +400,7 @@ const ResumePage = () => {
                           </a>
                         </li>
                         <li>
-                          최근 도메인 주도 개발을 적용하는 리팩토링을 진행하고
-                          있습니다.
+                          도메인 주도 개발을 적용하기 위한 리팩토링을 진행
                         </li>
                         <li>
                           Filebeat, ElasticSearch, Logstash, Kibana를
