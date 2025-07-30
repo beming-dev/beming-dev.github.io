@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: "/blog/codit/sql"
+date: "2025-07-13"
+title: "Bulk insert를 이용한 MySQL 쿼리 최적화"
+categories:
+  - mainCategory: "Area"
+    subCategory: "codit"
+---
+
 # 문제 상황
 
 뉴스 알림을 보내는 기능은, 코딧 서비스에서 중요한 역할을 합니다.
@@ -35,7 +45,7 @@ async writeNotification(
 		//...
 		)
 	`;
-	  
+
 	if (query && query.length > 0) {
 		await this.orm.query(query).then(([results, metadata]) => {});
 	}
@@ -48,6 +58,7 @@ async writeNotification(
 # 어떤 문제가 있을까요?
 
 위 상황에서는 다음과 같은 문제가 발생할 수 있습니다.
+
 1. for 루프 안에서 await를 사용합니다. 알림 개수가 많아지면 전체 실행 시간이 정비례하여 증가합니다.
 2. 개별 INSERT마다 DB와의 연결이 필요하고, 네트워크 전송이 필요하므로 네트워크가 병목되고 DB 트랜잭션 관리 부담도 커집니다.
 3. 동시에 DB로 여러 요청이 갈 경우 connection pool이 금방 소진됩니다.
@@ -59,7 +70,8 @@ async writeNotification(
 MySQL은 여러 레코드를 한번의 쿼리로 DB에 넣을 수 있는 Bulk Insert를 제공합니다.
 
 대충 아래와 같은 형태입니다.
-``` sql
+
+```sql
 INSERT INTO notifications(field1, field2, field3, field4)
 VALUES
   ('u1', 's1', 'Hello', 1),
@@ -73,21 +85,22 @@ javascript에서는 아래와 같이 할 수 있습니다.
 
 ```javascript
 const insertValues = insertList
-.map(item => {
-	return `(
+  .map((item) => {
+    return `(
 	'${item.userId}',
 	'${item.shopId}',
 	'${item.country}',
 	'${item.type}',
 	'${item.uniqId}'
 	)`;
-})
-.join(',');
+  })
+  .join(",");
 ```
 
 이렇게 해주면 Values에 들어갈 형태의 데이터가 만들어집니다.
 이제, 이걸 사용해서 하나의 쿼리를 만들어주면 됩니다.
-``` javascript
+
+```javascript
 const query = `
 
 INSERT INTO ${table} (
@@ -102,6 +115,7 @@ ${insertValues}
 ```
 
 # Bulk insert의 이점, 시간 단축
+
 여러번 날리던 쿼리를 이렇게 하나의 쿼리로 처리하면 다음과 같은 이점이 있습니다.
 
 1. 네트워크 왕복 지연 감소
@@ -110,11 +124,12 @@ ${insertValues}
 
 이 외에도 락, 디스크 효율등 다양한 이점을 가지고 있습니다.
 
-그럼 실제로 얼마만큼 효율이 좋아졌을까요? 
+그럼 실제로 얼마만큼 효율이 좋아졌을까요?
 시간을 확인해보기 위해, 모든 데이터를 기록할 때까지의 시간을 console.time으로 찍어보았습니다.
 
 제가 사용한 코드에서 기존에는 50개의 데이터를 반복문으로 돌며 insert 해줬습니다.
 아래는 시간을 찍어보며 테스트 한 결과입니다.
+
 ```
 default: 1.528s
 default: 1.521s
@@ -129,9 +144,11 @@ default: 1.370s
 default: 1.238s
 default: 1.473s
 ```
+
 데이터를 확인해보면 평균 1.5s가 소요되는 것을 확인할 수 있습니다.
 
 이제 bulk insert를 적용한 시간을 봅시다.
+
 ```
 default: 488.031ms
 default: 469.722ms
@@ -148,11 +165,13 @@ default: 348.015ms
 default: 368.04ms
 default: 455.504ms
 ```
+
 평균적으로 500ms가 소요되는 것을 확인해볼 수 있습니다.
 
 약 1/3의 시간이 줄었습니다. 한번에 처리하는 데이터의 양이 많아지면 더 큰 효과를 느릴 수 있을것이란걸 기대해볼 수 있습니다.
 
 # Bulk insert의 단점
+
 물론 장점만 있는것은 아닙니다.
 
 1. 단일 쿼리가 너무 커지면 패킷 크기 제한, 메모리 부족 등 문제 발생
@@ -170,13 +189,15 @@ default: 455.504ms
 적절한 크기로 Batch 사이즈를 나누고 시스템 자원을 고려해 수백~수천개씩 bulk insert를 날리면 됩니다.
 
 ---
+
 다음으로, 하나의 레코드에 에러가 나면 전체 쿼리가 롤백되는 문제는 어떻게 해결할까요?
 물론 요구사항에 따라, 전체를 롤백해야 할 수 있습니다.
 
 하지만 저의 경우는 문제가 있는 데이터는 삽입하지 않고, 나머지는 정상적으로 삽입되길 바랐습니다.
 
 이 경우, INSERT에 IGNORE 값을 주면 됩니다
-``` javascript
+
+```javascript
 const query = `
 
 INSERT IGNORE INTO ${table} (
@@ -194,7 +215,8 @@ INSERT IGNORE 구문은, 삽입 중 발생하는 경고 수준의 에러는 무�
 중복 키 충돌과 같은 문제는 무시하고 삽입을 진행합니다.
 
 혹은 ON DUPLICATE KEY 옵션을 줄 수도 있습니다.
-``` javascript
+
+```javascript
 const query = `
 
 INSERT IGNORE INTO ${table} (
