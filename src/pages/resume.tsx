@@ -88,7 +88,7 @@ const ResumePage = () => {
               {lang === "ko" ? "소개" : "Profile"}
             </h2>
             <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-black leading-relaxed">
                 {lang === "ko" ? (
                   <>
                     코드 간 의존성을 낮추어 유지 보수가 쉬운 아키텍처를 설계하기
@@ -138,7 +138,7 @@ const ResumePage = () => {
                 <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "코딧" : "CODIT"}
                   <a
-                    href="https://beming-dev.github.io/blog/about/clean/"
+                    href="https://beming-dev.github.io/subCategory/codit/"
                     className="blog-link text-sm font-semibold ml-2"
                   >
                     [블로그]
@@ -332,6 +332,12 @@ const ResumePage = () => {
                 {/* 프로젝트 제목/기간/직무 */}
                 <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "About 프로젝트" : "About Project"}
+                  <a
+                    href="https://beming-dev.github.io/subCategory/about/"
+                    className="blog-link text-sm font-semibold ml-2"
+                  >
+                    [블로그]
+                  </a>
                 </h3>
                 <p className="text-md text-gray-500">
                   {lang === "ko"
@@ -721,6 +727,12 @@ const ResumePage = () => {
                 {/* 프로젝트 제목/기간/직무 */}
                 <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "주식 시뮬레이션" : "Stock Simulation"}
+                  <a
+                    href="https://beming-dev.github.io/subCategory/stock-simulator/"
+                    className="blog-link text-sm font-semibold ml-2"
+                  >
+                    [블로그]
+                  </a>
                 </h3>
                 <p className="text-md text-gray-500">
                   {lang === "ko"
