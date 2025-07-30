@@ -1260,6 +1260,40 @@ const ResumePage = () => {
                           </li>
                         </ul>
                       </div>
+                      {/* Kubernetes */}
+                      <div className="mb-4">
+                        <span className="inline-block px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-600 font-semibold">
+                          Kubernetes
+                        </span>
+                        <ul className="list-disc ml-3 mt-2 text-sm space-y-1">
+                          <li>
+                            Kubernetes 클러스터를 구성하고, Pod, Service,
+                            Deployment 등의 리소스를 관리해본 경험이 있습니다.
+                          </li>
+                          <li>
+                            ArgoCd를 사용하여 GitOps 방식으로 Kubernetes
+                            리소스를 관리하고, 배포 자동화를 구현해본 경험이
+                            있습니다.
+                          </li>
+                        </ul>
+                      </div>
+                      {/* AWS */}
+                      <div className="mb-4">
+                        <span className="inline-block px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-600 font-semibold">
+                          AWS
+                        </span>
+                        <ul className="list-disc ml-3 mt-2 text-sm space-y-1">
+                          <li>
+                            EC2, S3, RDS 등 AWS 서비스를 활용하여 인프라를
+                            구성하고, 배포한 경험이 있습니다.
+                          </li>
+                          <li>
+                            IAM을 통해 사용자 및 권한 관리를 설정하고, 보안
+                            그룹을 이용해 네트워크 접근 제어를 구현해본 경험이
+                            있습니다.
+                          </li>
+                        </ul>
+                      </div>
                       {/* Git */}
                       <div className="mb-4">
                         <span className="inline-block px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-600 font-semibold">
