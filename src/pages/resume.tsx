@@ -126,6 +126,191 @@ const ResumePage = () => {
             </div>
           </section>
 
+          {/* 경력 섹션 */}
+          <section className="mb-8 w-full">
+            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
+              {lang === "ko" ? "경력" : "Career"}
+            </h2>
+            <div className="grid gap-4">
+              {/* 회사 카드 #1 */}
+              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
+                {/* 프로젝트 제목/기간/직무 */}
+                <h3 className="text-xl font-semibold text-base">
+                  {lang === "ko" ? "코딧" : "CODIT"}
+                </h3>
+                <p className="text-md text-gray-500">
+                  {lang === "ko"
+                    ? "2025.03 ~ 2025.08 | 백엔드 인턴"
+                    : "Mar 2025 ~ Aug 2025 | Backend Internship"}
+                </p>
+                <br />
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "소개" : "Introduction"}
+                  </h4>
+                  <p className="text-md">
+                    {lang === "ko"
+                      ? `기업에게 법·규제·정책 솔루션을 제공하는 B2B 스타트업입니다.`
+                      : ""}
+                    <br />
+                    {lang === "ko"
+                      ? `API 개발, 알림 서버, 크롤링, Opensearch 인덱싱 등 다양한 부분을 경험하고 서비스에 기여했습니다.`
+                      : ""}
+                  </p>
+                  <br />
+                  <p className="text-blue-500 text-sm mt-3">
+                    사이트 주소:{" "}
+                    <a
+                      href="https://thecodit.com/kr-ko"
+                      className="underline hover:text-blue-700"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://thecodit.com
+                    </a>
+                  </p>
+                </div>
+                <br />
+                {/* 기여도(Contributions) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "배운것" : "What I learn"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          애자일 개발 프로세스 하에서 2~3주 단위의 스프린트를
+                          운영하고, 매일 스크럼 회의를 통해 진행 상황을 공유하며
+                          신속하게 이슈를 해결하는 방법을 경헙했습니다.
+                        </li>
+                        <li>
+                          실제 운영 중인 프로덕션 코드베이스를 직접 다루며 코드
+                          이해력과 문제 해결 역량을 강화했습니다.
+                        </li>
+                        <li>
+                          수백만 건 규모의 데이터를 Opensearch에 인덱싱하여,
+                          인덱스 구조 최적화와 단계별 캐싱 전략을 적용함으로써
+                          검색 쿼리 성능을 향상시켰습니다.
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          Applied Clean Architecture principles using the
+                          Nest.js framework
+                        </li>
+                        <li>
+                          Configured a pipeline for visualizing Docker container
+                          logs by integrating Filebeat, Elasticsearch, Logstash,
+                          and Kibana with Docker Compose{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/elk/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Built a CI/CD pipeline on AWS CodePipeline to deploy
+                          both frontend and backend to EC2 via Docker containers{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/pipeline/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Implemented a clustering algorithm based on DBSCAN for
+                          study matching{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/clustering/"
+                            className="blog-link"
+                          >
+                            [Blog]
+                          </a>
+                        </li>
+                        <li>
+                          Introduced Redis to reduce API response times via
+                          caching and to utilize its messaging queue
+                          capabilities for notifications <br />
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
+                            [Caching Blog]
+                          </a>{" "}
+                          <a
+                            href="https://beming-dev.github.io/blog/about/caching/"
+                            className="blog-link"
+                          >
+                            [Message Queue Blog]
+                          </a>
+                        </li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+                <br />
+                {/* 기술 스택(Tech Stack) */}
+                <div>
+                  <h4 className="text-lg font-semibold border-b pb-1">
+                    {lang === "ko" ? "기술 스택" : "Tech Stack"}
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
+                    {lang === "ko" ? (
+                      <>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Express.js
+                          </span>
+                          <span>
+                            를 사용해 RESTful API 서버를 설계·개발했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            MySQL
+                          </span>
+                          <span>
+                            을 기반으로 복잡한 조인 쿼리와 인덱스 튜닝을 통해
+                            데이터베이스 성능을 최적화했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            AirFlow
+                          </span>
+                          <span>
+                            를 활용해 ETL 워크플로우를 정의하고, 스케줄러를 통해
+                            배치 작업 자동화를 구현했습니다.
+                          </span>
+                        </li>
+                        <li>
+                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
+                            Opensearch
+                          </span>
+                          <span>
+                            를 사용해 데이터 인덱싱 및 검색 인프라를
+                            구축했습니다.
+                          </span>
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>Nest.js</li>
+                        <li>MongoDB</li>
+                        <li>AWS, Docker</li>
+                        <li>Redis</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* 협업 프로젝트 섹션 */}
           <section className="mb-8 w-full">
             <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
@@ -209,6 +394,10 @@ const ResumePage = () => {
                           >
                             [블로그]
                           </a>
+                        </li>
+                        <li>
+                          최근 도메인 주도 개발을 적용하는 리팩토링을 진행하고
+                          있습니다.
                         </li>
                         <li>
                           Filebeat, ElasticSearch, Logstash, Kibana를
@@ -502,222 +691,6 @@ const ResumePage = () => {
                             This approach provided higher RAM capacity and
                             reduced monthly costs by roughly 100 USD compared to
                             the previous Heroku setup.
-                          </div>
-                        </div>
-                      </>
-                    )}
-                  </ul>
-                </div>
-              </div>
-
-              {/* 회사 카드 #2 */}
-              <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 space-y-2">
-                {/* 프로젝트 제목/기간/직무 */}
-                <h3 className="text-xl font-semibold text-base">
-                  {lang === "ko" ? "서울도서이음" : "Seoul Book Connection"}
-                </h3>
-                <p className="text-md text-gray-500">
-                  {lang === "ko"
-                    ? "2024.11 ~ 2024.11 | 프론트엔드 개발자"
-                    : "Nov 2024 ~ Nov 2024 | Frontend Developer"}
-                </p>
-                <br />
-                <div>
-                  <h4 className="text-lg font-semibold border-b pb-1">
-                    {lang === "ko" ? "프로젝트 소개" : "Project Introduction"}
-                  </h4>
-                  <p className="text-md">
-                    {lang === "ko"
-                      ? `'서울시 공공데이터를 활용해 편의를 제공하는 서비스를 만들기'를 주제로 하는 해커톤에 참여했습니다. 
-                      서울시 도서관에서 제공하는 책이음 서비스와 서울시 도서관의 프로그램을 한눈에 확인할 수 있는 서비스 제작했습니다.`
-                      : `I participated in a hackathon under the theme "Creating a service that provides convenience by utilizing Seoul's public data." We developed a service that allows users to view the Book Connection service and various library programs provided by the Seoul Metropolitan Library at a glance.`}
-                  </p>
-                  <br />
-                  <p className="text-blue-500 text-sm">
-                    사이트주소:{" "}
-                    <a
-                      href="https://uos-hackathon-static.vercel.app/"
-                      className="text-blue-500"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      https://uos-hackathon-static.vercel.app/
-                    </a>
-                    <p className="text-black text-sm">
-                      * 해커톤 종료후, api연결을 끊고 데이터를 하드코딩하여 무료
-                      배포해두었습니다. 사이트의 접속, 혹은 일부 기능이 원활하지
-                      않을 수 있습니다.
-                    </p>
-                  </p>
-                  <p className="text-blue-500 text-sm">
-                    Frontend:{" "}
-                    <a
-                      href="https://github.com/orgs/UOSHackathon2024/repositories"
-                      className="text-blue-500"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      https://github.com/orgs/UOSHackathon2024/repositories
-                    </a>
-                  </p>
-                </div>
-                <br />
-                {/* 기여도(Contributions) */}
-                <div>
-                  <h4 className="text-lg font-semibold border-b pb-1">
-                    {lang === "ko" ? "기여도" : "Contributions"}
-                  </h4>
-                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
-                    {lang === "ko" ? (
-                      <>
-                        <li>디자이너와의 협업으로 UI/UX 개선</li>
-                        <li>
-                          Next.js의 API Routes를 활용하여 별도의 백엔드 구축
-                          없이 효율적으로 서버 기능을 개발
-                        </li>
-                        <li>
-                          React의 useState, useEffect를 활용한 상태 관리,
-                          Context API를 활용한 전역 상태 관리 사용
-                        </li>
-                        <li>TailwindCSS를 활용하여 일관성있는 디자인</li>
-                      </>
-                    ) : (
-                      <>
-                        <li>Collaborated with a designer to enhance UI/UX</li>
-                        <li>
-                          Used Next.js API Routes for server functionalities
-                          without needing a separate backend
-                        </li>
-                        <li>
-                          Managed state using React’s useState and useEffect,
-                          and utilized the Context API for global state
-                          management
-                        </li>
-                        <li>
-                          Maintained a consistent design using Tailwind CSS
-                        </li>
-                      </>
-                    )}
-                  </ul>
-                </div>
-                <br />
-                {/* 기술 스택(Tech Stack) */}
-                <div>
-                  <h4 className="text-lg font-semibold border-b pb-1">
-                    {lang === "ko" ? "기술 스택" : "Tech Stack"}
-                  </h4>
-                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
-                    {lang === "ko" ? (
-                      <>
-                        <li>
-                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
-                            Next.js
-                          </span>
-                          <span>
-                            를 사용하여 API 라우팅 기능을 사용해 간단한 서버
-                            기능을 처리하고, 효율적인 개발을 했습니다.
-                          </span>
-                        </li>
-                        <li>
-                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
-                            Tailwindcss
-                          </span>
-                          <span>
-                            를 사용하여 유틸리티 기반 스타일링 으로 일관된
-                            디자인을 유지하면서도 개발 속도를 향상시켰습니다.
-                          </span>
-                        </li>
-                      </>
-                    ) : (
-                      <>
-                        <li>
-                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
-                            Next.js
-                          </span>
-                          <span>
-                            Used API Routes to handle lightweight server
-                            features efficiently without a dedicated backend.
-                          </span>
-                        </li>
-                        <li>
-                          <span className="inline-block px-3 py-1 text-xs text-black font-semibold mr-2">
-                            TailwindCSS
-                          </span>
-                          <span>
-                            Employed utility-based styling for a consistent
-                            design while speeding up development.
-                          </span>
-                        </li>
-                      </>
-                    )}
-                  </ul>
-                </div>
-
-                <br />
-                {/* 트러블슈팅(Troubleshooting) */}
-                <div>
-                  <h4 className="text-lg font-semibold border-b pb-1">
-                    {lang === "ko" ? "트러블슈팅" : "Troubleshooting"}
-                  </h4>
-                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
-                    {lang === "ko" ? (
-                      <>
-                        <div className="bg-white p-6 rounded-lg shadow">
-                          <div className="font-semibold"># 문제 상황</div>
-                          <div className="mt-1">
-                            서울시 공공데이터 API를 클라이언트 측에서 직접
-                            호출하려 하니, CORS 정책 때문에 데이터를 정상적으로
-                            받지 못함
-                          </div>
-                          <div className="font-semibold mt-2"># 해결 방법</div>
-                          <div className="mt-1">
-                            Next.js의 API Routes를 사용하여 백엔드 프록시
-                            레이어를 구현했습니다.
-                          </div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow">
-                          <div className="font-semibold"># 문제 상황</div>
-                          <div className="mt-1">
-                            도서관 프로그램 추천 기능을 해커톤 시간 내에 구현이
-                            어려운 상황에 직면
-                          </div>
-                          <div className="font-semibold mt-2"># 해결 방법</div>
-                          <div className="mt-1">
-                            생성형 AI API를 사용하여 적절한 프롬프팅과 응답을
-                            파싱하여 빠르게 추천 시스템 구현했습니다.
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="bg-white p-6 rounded-lg shadow">
-                          <div className="font-semibold"># Issue</div>
-                          <div className="mt-1">
-                            Calling the Seoul Public Data API directly on the
-                            client side caused issues due to CORS policies,
-                            preventing the application from accessing the data
-                            normally.
-                          </div>
-                          <div className="font-semibold mt-2"># Solution</div>
-                          <div className="mt-1">
-                            Implemented a backend proxy layer using Next.js API
-                            Routes to circumvent CORS restrictions.
-                          </div>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow">
-                          <div className="font-semibold"># Issue</div>
-                          <div className="mt-1">
-                            Encountered time constraints in the hackathon when
-                            implementing a library program recommendation
-                            feature.
-                          </div>
-                          <div className="font-semibold mt-2"># Solution</div>
-                          <div className="mt-1">
-                            Leveraged a Generative AI API with well-crafted
-                            prompts and parsed responses to quickly build a
-                            recommendation system.
                           </div>
                         </div>
                       </>
@@ -1352,12 +1325,12 @@ const ResumePage = () => {
               <h3 className="font-semibold text-base">TOEIC (875/990)</h3>
               <p className="text-sm text-gray-500">2023.02</p>
             </div>
-            {/* <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
               <h3 className="font-semibold text-base">
                 {lang === "ko" ? "정보처리기사" : "Exchange Student"}
               </h3>
-              <p className="text-sm text-gray-500">2025.02</p>
-            </div> */}
+              <p className="text-sm text-gray-500">2025.06</p>
+            </div>
           </section>
         </div>
       </div>
