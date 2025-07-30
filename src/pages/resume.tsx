@@ -137,6 +137,12 @@ const ResumePage = () => {
                 {/* 프로젝트 제목/기간/직무 */}
                 <h3 className="text-xl font-semibold text-base">
                   {lang === "ko" ? "코딧" : "CODIT"}
+                  <a
+                    href="https://beming-dev.github.io/blog/about/clean/"
+                    className="blog-link text-sm font-semibold ml-2"
+                  >
+                    [블로그]
+                  </a>
                 </h3>
                 <p className="text-md text-gray-500">
                   {lang === "ko"
