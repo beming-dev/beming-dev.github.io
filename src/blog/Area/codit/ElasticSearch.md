@@ -1,7 +1,7 @@
 ---
 thumbnail: default.jpg
 slug: "/blog/codit/elasticsearch"
-date: "2025-07-25"
+date: "2025-07-14"
 title: "왜 ElasticSearch를 사용할까?"
 categories:
   - mainCategory: "Area"

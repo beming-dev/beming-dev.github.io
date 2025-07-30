@@ -1,7 +1,7 @@
 ---
 thumbnail: default.jpg
 slug: "/blog/codit/sql"
-date: "2025-07-13"
+date: "2025-06-13"
 title: "Bulk insert를 이용한 MySQL 쿼리 최적화"
 categories:
   - mainCategory: "Area"
