@@ -1338,19 +1338,6 @@ const ResumePage = () => {
             </div>
           </section>
 
-          {/* 공부중인것 섹션 */}
-          <section className="mb-8 w-full">
-            <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
-              {lang === "ko" ? "공부중인것" : "Studying"}
-            </h2>
-            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4">
-              <ul className="text-sm text-gray-700">
-                <li className="text-black text-md">Redis</li>
-                <li className="text-black text-md">Kafka</li>
-              </ul>
-            </div>
-          </section>
-
           {/* 기타 섹션 */}
           <section className="w-full">
             <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
