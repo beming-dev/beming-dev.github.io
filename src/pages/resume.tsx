@@ -793,7 +793,7 @@ const ResumePage = () => {
                           파이프라인 구축
                         </li>
                         <li>
-                          kubernetes와 argoCD를 이용하여 배포를 자동화하고,
+                          kubernetes와 argoCD를 이용한 배포 자동화를 적용해보고,
                           서비스의 가용성을 높였습니다.
                         </li>
                       </>
