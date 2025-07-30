@@ -44,4 +44,5 @@ module.exports = {
     require("tailwind-scrollbar-hide"),
     require("@tailwindcss/typography"),
   ],
+  safelist: [{ pattern: /^language-/ }, { pattern: /^token-/ }],
 };

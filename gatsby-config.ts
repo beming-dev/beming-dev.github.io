@@ -52,10 +52,16 @@ const config: GatsbyConfig = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800, // 이미지 최대 너비
-              linkImagesToOriginal: false, // 이미지 클릭 시 원본 링크로 이동하지 않음
-              showCaptions: true, // 캡션 표시
-              markdownCaptions: true, // Markdown에서 캡션 활성화
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              markdownCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              // Prism 테마나 플러그인 옵션을 여기에
             },
           },
         ],
