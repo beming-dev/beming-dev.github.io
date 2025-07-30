@@ -161,8 +161,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9f8d2741c9bc173f",
+  "active": "11f1d488c5517a9b",
   "lastOpenFiles": [
+    "Area/codit",
     "Area/stock-simulator/React 최적화.md",
     "Area/stock-simulator/WebSocket.md",
     "면접준비/1자기소개.md",
@@ -193,7 +194,6 @@
     "zz네면/대규모.md",
     "면접준비/Typescript.md",
     "면접준비/Redis pubsub.md",
-    "면접준비/ELK.md",
     "images/20250407232258.png",
     "zz네면",
     "images/20250329105503.png",
