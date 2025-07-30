@@ -174,7 +174,7 @@ const ResumePage = () => {
                 {/* 기여도(Contributions) */}
                 <div>
                   <h4 className="text-lg font-semibold border-b pb-1">
-                    {lang === "ko" ? "배운것" : "What I learn"}
+                    {lang === "ko" ? "배운것" : "What I learned"}
                   </h4>
                   <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mt-2">
                     {lang === "ko" ? (
@@ -183,6 +183,10 @@ const ResumePage = () => {
                           애자일 개발 프로세스 하에서 2~3주 단위의 스프린트를
                           운영하고, 매일 스크럼 회의를 통해 진행 상황을 공유하며
                           신속하게 이슈를 해결하는 방법을 경헙했습니다.
+                        </li>
+                        <li>
+                          Jira, Confluence, Slack 등 다양한 협업 도구를 활용하여
+                          팀원들과의 원활한 소통과 협업을 경험했습니다.
                         </li>
                         <li>
                           실제 운영 중인 프로덕션 코드베이스를 직접 다루며 코드
@@ -788,6 +792,10 @@ const ResumePage = () => {
                         <li>
                           Oracle cloud와 Jenkins, Gitlab webhook을 이용한 CI/CD
                           파이프라인 구축
+                        </li>
+                        <li>
+                          kubernetes와 argoCD를 이용하여 배포를 자동화하고,
+                          서비스의 가용성을 높였습니다.
                         </li>
                       </>
                     ) : (
