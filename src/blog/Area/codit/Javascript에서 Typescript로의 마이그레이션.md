@@ -1,3 +1,13 @@
+---
+thumbnail: default.jpg
+slug: /blog/codit/typescript
+date: 2025-06-01
+title: Javascript에서 Typescript로의 마이그레이션
+categories:
+  - mainCategory: Area
+    subCategory: codit
+---
+
 코딧의 서비스는 여전히 Javascript를 사용하고 있는 곳이 많습니다.
 api서버는 typescript로의 마이그레이션을 마쳤지만, 크롤러, 인덱서, admin등 나머지 코드는 전부 javascript를 사용하고 있습니다.
 
@@ -78,7 +88,7 @@ npx tsc --noEmit
 ```
 
 위 명령으로 파일을 컴파일하며 오류를 해결합니다.
---noEmit옵션으로 
+--noEmit옵션으로 타입검사 만을 수행합니다.
 
 ### 2) 빌드 스크립트 수정
 
@@ -120,4 +130,4 @@ function isString(x: unknown): x is string {
 
 ## 결론
 
-JavaScript 프로젝트를 TypeScript로 마이그레이션하면 초기 학습·설정 비용이 소폭 발생하지만, 장기적으로 코드 품질·안정성·협업 효율이 크게 향상됩니다. 위 단계별 전략과 설정 예시를 참고하여, 점진적이고 체계적으로 마이그레이션을 진행해 보세요. TypeScript 도입 후에는 IDE 지원·정적 분석 도구(ESLint·Prettier)와 함께 사용하여 최적의 개발 환경을 구성할 수 있습니다.
+위 단계들을 적용하며 파일을 하나씩 typescript로 변환하면, 큰 오류 없이 모든 파일을 typescript로 
