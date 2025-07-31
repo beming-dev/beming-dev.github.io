@@ -5,21 +5,7 @@ api서버는 typescript로의 마이그레이션을 마쳤지만, 크롤러, 인
 
 그래서 이번 기회에 javascript코드를 typescript로 점진적으로 마이그레이션하며 개발을 진행하기로 했습니다.
 
-Javascript를 Typescript로 마이그레이션 할 때는 모든 파일을 이동할 필요 없이 점진적으로 적용할 수 있기 때문에, 실제 운영중인 서비스에서도 무리없이 진행할 수 있었습니다.
-
----
-
-## 목차
-
-1. [왜 TypeScript인가?](#왜-typescript인가)  
-2. [사전 준비](#사전-준비)  
-3. [`tsconfig.json` 설정하기](#tsconfigjson-설정하기)  
-4. [점진적 파일 확장자 변경](#점진적-파일-확장자-변경)  
-5. [타입 정의 추가 전략](#타입-정의-추가-전략)  
-6. [마이그레이션 단계별 가이드](#마이그레이션-단계별-가이드)  
-7. [주요 고려사항 및 팁](#주요-고려사항-및-팁)  
-8. [테스트와 빌드 파이프라인 통합](#테스트와-빌드-파이프라인-통합)  
-9. [결론](#결론)  
+Javascript를 Typescript로 마이그레이션 할 때는 모든 파일을 이동할 필요 없이 점진적으로 적용할 수 있기 때문에, 실제 운영 중인 서비스에서도 무리 없이 진행할 수 있었습니다.
 
 ---
 
@@ -83,170 +69,52 @@ typescript는 결국 javascript로 컴파일 되기 때문에, allowJS 옵션을
 
 ---
 
-## 타입 정의 추가 전략
-
-1. **자동 생성 JSDoc → TS**
-    
-    js
-    
-    복사편집
-    
-    ``/** @param {string} name */ function greet(name) {   return `Hello, ${name}!`; }``
-    
-    ↓
-    
-    ts
-    
-    복사편집
-    
-    ``function greet(name: string): string {   return `Hello, ${name}!`; }``
-    
-2. **타입 별칭(Type Alias)**
-    
-    ts
-    
-    복사편집
-    
-    `type User = {   id: number;   name: string;   email?: string; // optional };`
-    
-3. **인터페이스(Interface)**
-    
-    ts
-    
-    복사편집
-    
-    `interface ApiResponse<T> {   data: T;   error?: string; }`
-    
-4. **타사 라이브러리**
-    
-    - 공식 제공 `@types/` 있으면 설치
-        
-        bash
-        
-        복사편집
-        
-        `npm install --save-dev @types/lodash`
-        
-    - 직접 `.d.ts` 작성
-        
-        ts
-        
-        복사편집
-        
-        `// src/types/globals.d.ts declare module 'my-untyped-lib';`
-        
-
----
-
 ## 마이그레이션 단계별 가이드
 
 ### 1) 컴파일러 테스트
 
-bash
+```bash
+npx tsc --noEmit
+```
 
-복사편집
-
-`npx tsc --noEmit`
-
-- 타입 오류를 확인하고 하나씩 해결
-    
+위 명령으로 파일을 컴파일하며 오류를 해결합니다.
+--noEmit옵션으로 
 
 ### 2) 빌드 스크립트 수정
 
 - `package.json` 예시
-    
-    jsonc
-    
-    복사편집
-    
-    `{   "scripts": {     "build": "tsc",     "start": "node dist/index.js",     "dev": "ts-node-dev --respawn src/index.ts"   } }`
-    
+
+```json
+{   
+  "scripts": {     
+    "build": "tsc",     
+    "start": "node dist/index.js",     
+    "dev": "ts-node-dev --respawn src/index.ts"   
+  } 
+}
+```
 
 ### 3) 코드 수정 및 타입 추가
 
 - **`any` 남용 지양**
-    
 - **타입 가드** 활용
-    
-    ts
-    
-    복사편집
-    
-    `function isString(x: unknown): x is string {   return typeof x === 'string'; }`
-    
+```typescript
+function isString(x: unknown): x is string {   
+	return typeof x === 'string'; 
+}
+```
 
-### 4) 테스트 통합
-
-- Jest 설정 예시 (`jest.config.js`)
-    
-    js
-    
-    복사편집
-    
-    `module.exports = {   preset: 'ts-jest',   testEnvironment: 'node',   roots: ['<rootDir>/src'],   moduleFileExtensions: ['ts','tsx','js'],   transform: {     '^.+\\.tsx?$': 'ts-jest'   }, };`
-    
-
-### 5) CI/CD 파이프라인 업데이트
-
-- GitHub Actions 예시
-    
-    yaml
-    
-    복사편집
-    
-    `name: Build & Test on: [push, pull_request] jobs:   build:     runs-on: ubuntu-latest     steps:       - uses: actions/checkout@v3       - name: Setup Node.js         uses: actions/setup-node@v3         with: node-version: '18'       - run: npm ci       - run: npm run build       - run: npm test`
-    
 
 ---
 
 ## 주요 고려사항 및 팁
 
 - **`strictNullChecks`**: 널 안전성을 확보하려면 반드시 활성화
-    
 - **`esModuleInterop`**: CommonJS 모듈과의 호환성
-    
 - **파일간 순환 참조**: 타입만 분리된 `*.d.ts`로 순환 방지
-    
 - **`skipLibCheck`**: 빌드 속도 vs. 타입 안전성 균형
-    
 - **점진적 마이그레이션**: 작은 단위로 PR 생성, 코드 리뷰 강화
-    
-- **VSCode 설정**
-    
-    jsonc
-    
-    복사편집
-    
-    `// .vscode/settings.json {   "editor.formatOnSave": true,   "typescript.tsdk": "node_modules/typescript/lib" }`
-    
 
----
-
-## 테스트와 빌드 파이프라인 통합
-
-1. **Type-Only Import** (TS 3.8+)
-    
-    ts
-    
-    복사편집
-    
-    `import type { User } from './models';`
-    
-2. **프로덕션 빌드 최적화**
-    
-    - `declarationMap` 활성화로 디버깅 편의성 향상
-        
-    
-    jsonc
-    
-    복사편집
-    
-    `{   "compilerOptions": {     "declarationMap": true   } }`
-    
-3. **코드 커버리지**
-    
-    - `nyc` + `ts-node` 조합으로 커버리지 확보
-        
 
 ---
 
