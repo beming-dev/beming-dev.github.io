@@ -8,12 +8,14 @@ categories:
     subCategory: codit
 ---
 
+# 개요
+
 코딧의 서비스는 여전히 Javascript를 사용하고 있는 곳이 많습니다.
 api서버는 typescript로의 마이그레이션을 마쳤지만, 크롤러, 인덱서, admin등 나머지 코드는 전부 javascript를 사용하고 있습니다.
 
 서비스 자체가 데이터 요구사항, 기획 변경등에 따라 수정이 잦고, 여러명이 관리하기 때문에 javascript로 작성된 코드를 유지보수 하는것이 디버깅, 개발 속도 면에서 불리했습니다.
 
-그래서 이번 기회에 javascript코드를 typescript로 점진적으로 마이그레이션하며 개발을 진행하기로 했습니다.
+그래서 이번 기회에 javascript코드를 typescript로 점진적으로 마이그레이션 하며 개발을 진행하기로 했습니다.
 
 Javascript를 Typescript로 마이그레이션 할 때는 모든 파일을 이동할 필요 없이 점진적으로 적용할 수 있기 때문에, 실제 운영 중인 서비스에서도 무리 없이 진행할 수 있었습니다.
 
