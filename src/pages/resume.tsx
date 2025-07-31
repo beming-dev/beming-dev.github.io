@@ -341,7 +341,7 @@ const ResumePage = () => {
                 </h3>
                 <p className="text-md text-gray-500">
                   {lang === "ko"
-                    ? "2022.06 ~ 현재 | 백엔드 개발자"
+                    ? "2023.01 ~ 현재 | 백엔드 개발자"
                     : "Jun 2022 ~ Present | Backend Developer"}
                 </p>
                 <br />
