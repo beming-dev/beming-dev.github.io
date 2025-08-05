@@ -1343,7 +1343,7 @@ const ResumePage = () => {
             <h2 className="text-2xl font-semibold mb-2 border-b border-gray-300 pb-1">
               {lang === "ko" ? "기타" : "Etc."}
             </h2>
-            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-6">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-2">
               <h3 className="font-semibold text-base">
                 {lang === "ko" ? "교환학생" : "Exchange Student"} | The Hague
                 University of Applied Sciences
@@ -1367,11 +1367,11 @@ const ResumePage = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-6">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-2">
               <h3 className="font-semibold text-base">TOEIC (875/990)</h3>
               <p className="text-sm text-gray-500">2023.02</p>
             </div>
-            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-6">
+            <div className="bg-white shadow-sm border border-gray-200 rounded-md p-4 mb-2">
               <h3 className="font-semibold text-base">
                 {lang === "ko" ? "정보처리기사" : "Exchange Student"}
               </h3>
