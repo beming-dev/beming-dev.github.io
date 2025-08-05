@@ -1,6 +1,6 @@
 @page {
   size: A4;
-  margin: 0;
+  margin: 15mm 10mm 15mm 10mm; /* 상단 15mm, 좌우 10mm, 하단 15mm 여백 */
 }
 
 @media print {
