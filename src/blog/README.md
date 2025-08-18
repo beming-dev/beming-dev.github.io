@@ -8,10 +8,11 @@ reservation에 status 필드를 추가하고 예약 생성, 변경 시 겹치는
 ### ISSUE #2. 회의실 예약 알림 기능 추가
 
 /server/src/modules/notifications에 구현해 두었습니다.
+회의 10분전 알림을 위한 스케줄러와, 이메일, 전화번호 알림을 보낼 수 있는 코드가 포함되어 있습니다.
 ### ISSUE #3. API Key 인증 방식 지원
 
 /server/src/modules/apiKeys에 구현해 두었습니다.
-프론트 페이지의 "api key 생성" 버튼을 클릭하여 사용 가능합니다.
+프론트 페이지의 "api key 관리" 버튼을 클릭하여 사용 가능합니다.
 
 ### ISSUE #4. 회의실 예약 수정/취소 권한 처리
 
@@ -32,12 +33,13 @@ Person테이블의 name에 index를 설정하였습니다.
 ## 리팩토링
 
 각 모듈을 분리하고, 모듈별로 아래와 같이 구분했습니다.
-- service (~.service.ts)
-- controller (~.controller.ts)
+
+- service (~.service.ts): 비즈니스 로직 처리
+- controller (~.controller.ts) : HTTP 요청 받기, 응답
 - module (~.module.ts)
-- repository interface (~Repository.interface.ts)
-- repository (~Repository.ts)
-- domain entity (~.entity.ts)
+- repository interface (~Repository.interface.ts) : DB의존성 분리를 위한 인터페이스 정의(Domain entity로 변환 로직 포함)
+- repository (~Repository.ts): DB에 접근
+- domain entity (~.entity.ts): Domain entity 정의. 비즈니스 로직 포함
 
 ## 테스트
 
