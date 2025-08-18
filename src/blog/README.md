@@ -4,7 +4,7 @@
 setNextWaitingReservation를 사용해 구현했습니다.
 
 reservation에 status 필드를 추가하고 예약 생성, 변경 시 겹치는 경우 대기 상태로 만들었습니다.
-특정 예약이 취소, 변경되는 경우 대기 상태에 있는 예약 중 처리할 수 있는 것을 처리하도록 했습니다.
+특정 예약이 취소, 변경되는 경우 대기 상태에 있는 예약 중 처리할 수 있는 것들을 처리하도록 했습니다.
 ### ISSUE #2. 회의실 예약 알림 기능 추가
 
 /server/src/modules/notifications에 구현해 두었습니다.
