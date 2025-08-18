@@ -27,3 +27,5 @@ Person테이블의 name에 index를 설정하였습니다.
 ## 리팩토링
 
 ## 테스트
+
+/server/src/modules의 각 폴더 하위
