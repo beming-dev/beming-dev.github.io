@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "면접준비.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "면접준비"
             }
           }
         ],
@@ -196,8 +196,14 @@
   },
   "active": "23bdab2d6048bcfd",
   "lastOpenFiles": [
-    "Untitled.md",
+    "면접.md",
     "README.md",
+    "Plan.md",
+    "면접준비.md",
+    "zz네면/자료구조.md",
+    "zz네면/운영체제.md",
+    "zz네면/알고리즘.md",
+    "zz네면/대규모.md",
     "면접준비/6협업에 관한 질문.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/4서울도서이음.md",
@@ -212,7 +218,6 @@
     "면접준비/7기술스택.md",
     "면접준비/1자클린아키텍처.md",
     "Area/codit/Javascript에서 Typescript로의 마이그레이션.md",
-    "2025-06-13.md",
     "Area/codit/Bulk insert를 이용한 MySQL 쿼리 최적화.md",
     "Area/codit/ElasticSearch.md",
     "Area/codit/결제 시스템 개발.md",
@@ -222,12 +227,7 @@
     "images/Pasted image 20250714114029.png",
     "images/Pasted image 20250627113727.png",
     "images/Pasted image 20250625160011.png",
-    "Area/stock-simulator/MSA Kubernetes 배포자동화.md",
-    "Area/stock-simulator/beam.md",
     "Area/codit",
-    "Area/stock-simulator/React 최적화.md",
-    "Area/stock-simulator/WebSocket.md",
-    "zz네면/프로젝트.md",
     "Pasted image 20250723102932.png",
     "Pasted image 20250714134954.png",
     "Pasted image 20250714114029.png",
