@@ -11,10 +11,14 @@
             "id": "60dc8d57696c5d23",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "면접 - 협업.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "면접 - 협업"
             }
           }
         ]
@@ -164,10 +168,10 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
+    "면접 - 포트폴리오.md",
+    "면접 - 자기.md",
     "면접준비/6협업에 관한 질문.md",
     "면접 - 협업.md",
-    "면접 - 자기.md",
-    "면접 - 포트폴리오.md",
     "README.md",
     "Plan.md",
     "zz네면/자료구조.md",
