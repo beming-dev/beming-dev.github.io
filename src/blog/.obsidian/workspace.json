@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "면접 - 과제"
             }
+          },
+          {
+            "id": "aa72560a80b3ba4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "한국투자저축은행.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "한국투자저축은행"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,11 +181,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "60dc8d57696c5d23",
+  "active": "aa72560a80b3ba4b",
   "lastOpenFiles": [
+    "면접 - 과제.md",
+    "한국투자저축은행.md",
     "면접 - 포트폴리오.md",
     "면접 - 협업.md",
-    "면접 - 과제.md",
     "면접준비/6협업에 관한 질문.md",
     "README.md",
     "Plan.md",
@@ -193,7 +209,6 @@
     "Area/codit/Javascript에서 Typescript로의 마이그레이션.md",
     "Area/codit/Bulk insert를 이용한 MySQL 쿼리 최적화.md",
     "Area/codit/ElasticSearch.md",
-    "Area/codit/결제 시스템 개발.md",
     "images/Pasted image 20250723102932.png",
     "images/Pasted image 20250714134954.png",
     "images/Pasted image 20250714114029.png",
