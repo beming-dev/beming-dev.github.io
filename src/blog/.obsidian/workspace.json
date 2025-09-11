@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "한국투자 저축은행"
             }
+          },
+          {
+            "id": "50b141485d9c5fd8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,7 +193,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa72560a80b3ba4b",
+  "active": "50b141485d9c5fd8",
   "lastOpenFiles": [
     "면접 - 과제.md",
     "한국투자 저축은행.md",
