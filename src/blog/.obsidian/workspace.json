@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "면접준비/5주식 시뮬레이션.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "한국투자 저축은행"
+              "title": "5주식 시뮬레이션"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -169,6 +168,7 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
+    "한국투자 저축은행.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/7기술스택.md",
     "면접준비/Typescript.md",
@@ -183,7 +183,6 @@
     "면접준비/1자클린아키텍처.md",
     "면접준비/1자기소개.md",
     "면접 - 협업.md",
-    "한국투자 저축은행.md",
     "면접 - 포트폴리오.md",
     "면접 - 과제.md",
     "Untitled 2.base",
