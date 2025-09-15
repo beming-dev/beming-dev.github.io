@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "면접준비/6협업에 관한 질문.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "한국투자 저축은행"
+              "title": "6협업에 관한 질문"
             }
           }
         ]
@@ -168,9 +168,9 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
+    "한국투자 저축은행.md",
     "면접준비/6협업에 관한 질문.md",
     "면접준비/5주식 시뮬레이션.md",
-    "한국투자 저축은행.md",
     "면접준비/7기술스택.md",
     "면접준비/Typescript.md",
     "면접준비/Redis pubsub.md",
