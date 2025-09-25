@@ -6,6 +6,7 @@
       {
         "id": "74359c78cce53cb6",
         "type": "tabs",
+        "dimension": 73.20916905444126,
         "children": [
           {
             "id": "60dc8d57696c5d23",
@@ -19,7 +20,31 @@
               },
               "icon": "lucide-file",
               "title": "한국투자 저축은행"
-            }
+            },
+            "group": "b78a0bff72d40004"
+          }
+        ]
+      },
+      {
+        "id": "6ee3d0ae57fe6c84",
+        "type": "tabs",
+        "dimension": 26.790830945558742,
+        "children": [
+          {
+            "id": "0a4c6e4acdbd339b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "한국투자 저축은행.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 한국투자 저축은행"
+            },
+            "group": "b78a0bff72d40004"
           }
         ]
       }
@@ -78,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -169,13 +193,15 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
+    "면접준비/6협업에 관한 질문.md",
+    "한국투자 저축은행.md",
+    "Untitled.base",
+    "Untitled 6.base",
+    "Untitled 5.base",
     "README.md",
     "Untitled 1.base",
-    "Untitled.base",
     "Untitled 4.base",
     "Untitled 3.base",
-    "한국투자 저축은행.md",
-    "면접준비/6협업에 관한 질문.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/7기술스택.md",
     "면접준비/Typescript.md",
@@ -211,8 +237,6 @@
     "Pasted image 20250627113727.png",
     "Pasted image 20250625160011.png",
     "zz네면",
-    "면접준비",
-    "redis.io",
-    "Area/stock-simulator"
+    "면접준비"
   ]
 }
