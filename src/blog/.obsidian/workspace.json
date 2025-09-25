@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -168,8 +169,13 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
-    "면접준비/6협업에 관한 질문.md",
+    "README.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Untitled 4.base",
+    "Untitled 3.base",
     "한국투자 저축은행.md",
+    "면접준비/6협업에 관한 질문.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/7기술스택.md",
     "면접준비/Typescript.md",
@@ -186,9 +192,6 @@
     "면접 - 포트폴리오.md",
     "면접 - 과제.md",
     "Untitled 2.base",
-    "Untitled 1.base",
-    "Untitled.base",
-    "README.md",
     "Plan.md",
     "zz네면/자료구조.md",
     "zz네면/운영체제.md",
@@ -210,8 +213,6 @@
     "zz네면",
     "면접준비",
     "redis.io",
-    "Area/stock-simulator",
-    "Resource/Spring",
-    "Resource/Express"
+    "Area/stock-simulator"
   ]
 }
