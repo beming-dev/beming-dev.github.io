@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "면접준비/1자클린아키텍처.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "한국투자 저축은행"
+              "title": "1자클린아키텍처"
             },
             "group": "b78a0bff72d40004"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "면접준비/1자클린아키텍처.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 한국투자 저축은행"
+              "title": "Outline of 1자클린아키텍처"
             },
             "group": "b78a0bff72d40004"
           }
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -194,8 +193,8 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
-    "면접준비/6협업에 관한 질문.md",
     "한국투자 저축은행.md",
+    "면접준비/6협업에 관한 질문.md",
     "Untitled.base",
     "Untitled 6.base",
     "Untitled 5.base",
