@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "한국투자 저축은행.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1자클린아키텍처"
+              "title": "한국투자 저축은행"
             },
             "group": "b78a0bff72d40004"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "한국투자 저축은행.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1자클린아키텍처"
+              "title": "Outline of 한국투자 저축은행"
             },
             "group": "b78a0bff72d40004"
           }
@@ -191,8 +191,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "60dc8d57696c5d23",
+  "active": "11f1d488c5517a9b",
   "lastOpenFiles": [
+    "Plan.md",
+    "면접준비/1자클린아키텍처.md",
     "한국투자 저축은행.md",
     "면접준비/6협업에 관한 질문.md",
     "Untitled.base",
@@ -212,13 +214,11 @@
     "면접준비/4서울도서이음.md",
     "면접준비/3About 기술 스택.md",
     "면접준비/2당근.md",
-    "면접준비/1자클린아키텍처.md",
     "면접준비/1자기소개.md",
     "면접 - 협업.md",
     "면접 - 포트폴리오.md",
     "면접 - 과제.md",
     "Untitled 2.base",
-    "Plan.md",
     "zz네면/자료구조.md",
     "zz네면/운영체제.md",
     "zz네면/알고리즘.md",
