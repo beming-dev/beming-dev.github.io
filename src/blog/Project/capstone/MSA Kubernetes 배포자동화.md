@@ -230,27 +230,24 @@ infra-repo/
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-
-# 1) 공통 리소스(base)를 import
 resources:
-  - ../../base
+  - ../../../base/backend
   - sealedsecret-backend-env.yaml
-
-# 2) 프로덕션 전용 패치 파일들
 patches:
-  - path: patches/backend-replicas.yaml
+  - path: backend-replicas.yaml
     target:
       kind: Deployment
-      name: backend
-  - path: patches/backend-env.yaml
+      name: spring-backend
+  - path: backend-env.yaml
     target:
       kind: Deployment
-      name: backend
+      name: spring-backend
+
 ```
 
 이 파일을 로드하면서
 
-- `resources` 로 지정된 `../../base` 디렉토리와
+- `resources` 로 지정된 `../../../base` 디렉토리와
 - `sealedsecret-backend-env.yaml` 을 순서대로 가져옵니다.
 
 그런 다음, /base/kustomization.yaml에 있는 파일을 읽습니다.
@@ -294,26 +291,26 @@ spec:
       containers:
         - name: spring-backend
           # CI에서 placeholder-backend를 실제 SHA/tag로 교체합니다
-          image: beming/stock-simulator-back:placeholder-backend
-          envFrom:
-            - secretRef:
-                name: backend-env
+          image: beming/chat-irumae-backend:placeholder-backend
+          # envFrom:
+          #   - secretRef:
+          #       name: backend-env
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
               name: http
           # 선택: 헬스체크
-          readinessProbe:
-            httpGet:
-              path: /actuator/health
-              port: http
-            initialDelaySeconds: 20
-            periodSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /actuator/health
-              port: http
-            initialDelaySeconds: 60
-            periodSeconds: 20
+          # readinessProbe:
+          #   httpGet:
+          #     path: /actuator/health
+          #     port: http
+          #   initialDelaySeconds: 20
+          #   periodSeconds: 10
+          # livenessProbe:
+          #   httpGet:
+          #     path: /actuator/health
+          #     port: http
+          #   initialDelaySeconds: 60
+          #   periodSeconds: 20
           # 선택: 리소스 요청·제한
           resources:
             requests:
@@ -322,6 +319,7 @@ spec:
             limits:
               cpu: "500m"
               memory: "512Mi"
+
 ```
 
 /base/spring-svc.yml
@@ -330,16 +328,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-backend
+  name: spring-backend-service
 spec:
   type: NodePort
   selector:
     app: spring-backend
   ports:
-    - name: http
-      port: 80
-      targetPort: 3000
-      nodePort: 30080
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
+      nodePort: 30081
 ```
 
 /base/namespace.yaml
