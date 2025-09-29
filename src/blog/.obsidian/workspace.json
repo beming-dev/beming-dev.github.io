@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/capstone/MSA Kubernetes 배포자동화.md",
+                "file": "한국투자 저축은행.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MSA Kubernetes 배포자동화"
+              "title": "한국투자 저축은행"
             },
             "group": "b78a0bff72d40004"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project/capstone/MSA Kubernetes 배포자동화.md",
+                "file": "한국투자 저축은행.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MSA Kubernetes 배포자동화"
+              "title": "Outline of 한국투자 저축은행"
             },
             "group": "b78a0bff72d40004"
           }
@@ -193,8 +193,9 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
-    "한국투자 저축은행.md",
+    "면접 - 포트폴리오.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
+    "한국투자 저축은행.md",
     "Project/capstone",
     "Plan.md",
     "면접준비/1자클린아키텍처.md",
@@ -218,7 +219,6 @@
     "면접준비/2당근.md",
     "면접준비/1자기소개.md",
     "면접 - 협업.md",
-    "면접 - 포트폴리오.md",
     "면접 - 과제.md",
     "Untitled 2.base",
     "zz네면/자료구조.md",
