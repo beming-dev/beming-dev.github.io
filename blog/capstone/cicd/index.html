@@ -1,0 +1,456 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.7"/><meta name="description" content="Simple and clean blog post layout" data-gatsby-head="true"/><style data-href="/styles.f2355448305c4471c0c0.css" data-identity="gatsby-global-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
+*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{font-feature-settings:inherit;color:inherit;font-family:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}.prose{color:var(--tw-prose-body);max-width:65ch}.prose :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em;margin-top:1.25em}.prose :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-lead);font-size:1.25em;line-height:1.6;margin-bottom:1.2em;margin-top:1.2em}.prose :where(a):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-links);font-weight:500;text-decoration:underline}.prose :where(strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-bold);font-weight:600}.prose :where(a strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(blockquote strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(thead th strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal;margin-bottom:1.25em;margin-top:1.25em;padding-inline-start:1.625em}.prose :where(ol[type=A]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=A s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-alpha}.prose :where(ol[type=a s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-alpha}.prose :where(ol[type=I]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type=I s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:upper-roman}.prose :where(ol[type=i s]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:lower-roman}.prose :where(ol[type="1"]):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:decimal}.prose :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){list-style-type:disc;margin-bottom:1.25em;margin-top:1.25em;padding-inline-start:1.625em}.prose :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-counters);font-weight:400}.prose :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *))::marker{color:var(--tw-prose-bullets)}.prose :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;margin-top:1.25em}.prose :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){border-color:var(--tw-prose-hr);border-top-width:1px;margin-bottom:3em;margin-top:3em}.prose :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){border-inline-start-color:var(--tw-prose-quote-borders);border-inline-start-width:.25rem;color:var(--tw-prose-quotes);font-style:italic;font-weight:500;margin-bottom:1.6em;margin-top:1.6em;padding-inline-start:1em;quotes:"\201C""\201D""\2018""\2019"}.prose :where(blockquote p:first-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:open-quote}.prose :where(blockquote p:last-of-type):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:close-quote}.prose :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:2.25em;font-weight:700;line-height:1.1111111;margin-bottom:.8888889em;margin-top:50px}.prose :where(h1 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:900}.prose :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.75em;font-weight:600;line-height:1.3333333;margin-bottom:1em;margin-top:30px}.prose :where(h2 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:800}.prose :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.5em;font-weight:500;line-height:1.6;margin-bottom:.6em;margin-top:1.6em}.prose :where(h3 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:700}.prose :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-size:1.25em;font-weight:500;line-height:1.5;margin-bottom:.5em;margin-top:1.5em}.prose :where(h4 strong):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-weight:700}.prose :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){display:block;margin-bottom:2em;margin-top:2em}.prose :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.3125rem;box-shadow:0 0 0 1px rgb(var(--tw-prose-kbd-shadows)/10%),0 3px 0 rgb(var(--tw-prose-kbd-shadows)/10%);color:var(--tw-prose-kbd);font-family:inherit;font-size:.875em;font-weight:500;padding-inline-end:.375em;padding-bottom:.1875em;padding-top:.1875em;padding-inline-start:.375em}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-code);font-size:.875em;font-weight:600}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:"`"}.prose :where(code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:"`"}.prose :where(a code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(h1 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.875em}.prose :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit;font-size:.9em}.prose :where(h4 code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(blockquote code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(thead th code):not(:where([class~=not-prose],[class~=not-prose] *)){color:inherit}.prose :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:var(--tw-prose-pre-bg);border-radius:.375rem;color:var(--tw-prose-pre-code);font-size:.875em;font-weight:400;line-height:1.7142857;margin-bottom:1.7142857em;margin-top:1.7142857em;overflow-x:auto;padding-inline-end:1.1428571em;padding-bottom:.8571429em;padding-top:.8571429em;padding-inline-start:1.1428571em}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)){background-color:transparent;border-radius:0;border-width:0;color:inherit;font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;padding:0}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):before{content:none}.prose :where(pre code):not(:where([class~=not-prose],[class~=not-prose] *)):after{content:none}.prose :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.875em;line-height:1.7142857;margin-bottom:2em;margin-top:2em;table-layout:auto;width:100%}.prose :where(thead):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-color:var(--tw-prose-th-borders);border-bottom-width:1px}.prose :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-headings);font-weight:600;padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-inline-start:.5714286em;vertical-align:bottom}.prose :where(tbody tr):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-color:var(--tw-prose-td-borders);border-bottom-width:1px}.prose :where(tbody tr:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){border-bottom-width:0}.prose :where(tbody td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:baseline}.prose :where(tfoot):not(:where([class~=not-prose],[class~=not-prose] *)){border-top-color:var(--tw-prose-th-borders);border-top-width:1px}.prose :where(tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){vertical-align:top}.prose :where(th,td):not(:where([class~=not-prose],[class~=not-prose] *)){text-align:start}.prose :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){color:var(--tw-prose-captions);font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.prose{--tw-prose-body:#374151;--tw-prose-headings:#111827;--tw-prose-lead:#4b5563;--tw-prose-links:#111827;--tw-prose-bold:#111827;--tw-prose-counters:#6b7280;--tw-prose-bullets:#d1d5db;--tw-prose-hr:#e5e7eb;--tw-prose-quotes:#111827;--tw-prose-quote-borders:#e5e7eb;--tw-prose-captions:#6b7280;--tw-prose-kbd:#111827;--tw-prose-kbd-shadows:17 24 39;--tw-prose-code:#111827;--tw-prose-pre-code:#e5e7eb;--tw-prose-pre-bg:#1f2937;--tw-prose-th-borders:#d1d5db;--tw-prose-td-borders:#e5e7eb;--tw-prose-invert-body:#d1d5db;--tw-prose-invert-headings:#fff;--tw-prose-invert-lead:#9ca3af;--tw-prose-invert-links:#fff;--tw-prose-invert-bold:#fff;--tw-prose-invert-counters:#9ca3af;--tw-prose-invert-bullets:#4b5563;--tw-prose-invert-hr:#374151;--tw-prose-invert-quotes:#f3f4f6;--tw-prose-invert-quote-borders:#374151;--tw-prose-invert-captions:#9ca3af;--tw-prose-invert-kbd:#fff;--tw-prose-invert-kbd-shadows:255 255 255;--tw-prose-invert-code:#fff;--tw-prose-invert-pre-code:#d1d5db;--tw-prose-invert-pre-bg:rgba(0,0,0,.5);--tw-prose-invert-th-borders:#4b5563;--tw-prose-invert-td-borders:#374151;font-size:1rem;line-height:1.75}.prose :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.5em;margin-top:.5em}.prose :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.prose :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.375em}.prose :where(.prose>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose :where(.prose>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.prose :where(.prose>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.prose :where(.prose>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.25em}.prose :where(.prose>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em}.prose :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.75em;margin-top:.75em}.prose :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.25em;margin-top:1.25em}.prose :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.5em;padding-inline-start:1.625em}.prose :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.5714286em;padding-bottom:.5714286em;padding-top:.5714286em;padding-inline-start:.5714286em}.prose :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:2em;margin-top:2em}.prose :where(.prose>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose :where(.prose>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.prose-lg{font-size:1.125rem;line-height:1.7777778}.prose-lg :where(p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em}.prose-lg :where([class~=lead]):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.2222222em;line-height:1.4545455;margin-bottom:1.0909091em;margin-top:1.0909091em}.prose-lg :where(blockquote):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.6666667em;margin-top:1.6666667em;padding-inline-start:1em}.prose-lg :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:2.6666667em;line-height:1;margin-bottom:.8333333em;margin-top:0}.prose-lg :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.6666667em;line-height:1.3333333;margin-bottom:1.0666667em;margin-top:1.8666667em}.prose-lg :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:1.3333333em;line-height:1.5;margin-bottom:.6666667em;margin-top:1.6666667em}.prose-lg :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)){line-height:1.5555556;margin-bottom:.4444444em;margin-top:1.7777778em}.prose-lg :where(img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(picture):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(picture>img):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose-lg :where(video):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(kbd):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.3125rem;font-size:.8888889em;padding-inline-end:.4444444em;padding-bottom:.2222222em;padding-top:.2222222em;padding-inline-start:.4444444em}.prose-lg :where(code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em}.prose-lg :where(h2 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8666667em}.prose-lg :where(h3 code):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.875em}.prose-lg :where(pre):not(:where([class~=not-prose],[class~=not-prose] *)){border-radius:.375rem;font-size:.8888889em;line-height:1.75;margin-bottom:2em;margin-top:2em;padding-inline-end:1.5em;padding-bottom:1em;padding-top:1em;padding-inline-start:1.5em}.prose-lg :where(ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em;padding-inline-start:1.5555556em}.prose-lg :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em;padding-inline-start:1.5555556em}.prose-lg :where(li):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.6666667em;margin-top:.6666667em}.prose-lg :where(ol>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4444444em}.prose-lg :where(ul>li):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:.4444444em}.prose-lg :where(.prose-lg>ul>li p):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg :where(.prose-lg>ul>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(.prose-lg>ul>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg :where(.prose-lg>ol>li>p:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(.prose-lg>ol>li>p:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em}.prose-lg :where(ul ul,ul ol,ol ul,ol ol):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:.8888889em;margin-top:.8888889em}.prose-lg :where(dl):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.3333333em;margin-top:1.3333333em}.prose-lg :where(dt):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:1.3333333em}.prose-lg :where(dd):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:.6666667em;padding-inline-start:1.5555556em}.prose-lg :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:3.1111111em;margin-top:3.1111111em}.prose-lg :where(hr+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h2+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h3+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(h4+*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(table):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em;line-height:1.5}.prose-lg :where(thead th):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.75em;padding-bottom:.75em;padding-inline-start:.75em}.prose-lg :where(thead th:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose-lg :where(thead th:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose-lg :where(tbody td,tfoot td):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:.75em;padding-bottom:.75em;padding-top:.75em;padding-inline-start:.75em}.prose-lg :where(tbody td:first-child,tfoot td:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-start:0}.prose-lg :where(tbody td:last-child,tfoot td:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){padding-inline-end:0}.prose-lg :where(figure):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:1.7777778em;margin-top:1.7777778em}.prose-lg :where(figure>*):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0;margin-top:0}.prose-lg :where(figcaption):not(:where([class~=not-prose],[class~=not-prose] *)){font-size:.8888889em;line-height:1.5;margin-top:1em}.prose-lg :where(.prose-lg>:first-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-top:0}.prose-lg :where(.prose-lg>:last-child):not(:where([class~=not-prose],[class~=not-prose] *)){margin-bottom:0}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-left-6{left:-1.5rem}.left-0{left:0}.left-4{left:1rem}.left-\[-82\.5px\]{left:-82.5px}.right-0{right:0}.top-0{top:0}.z-0{z-index:0}.z-10{z-index:10}.m-0{margin:0}.mx-2{margin-left:.5rem;margin-right:.5rem}.mx-5{margin-left:1.25rem;margin-right:1.25rem}.mx-auto{margin-left:auto;margin-right:auto}.my-5{margin-bottom:1.25rem;margin-top:1.25rem}.my-6{margin-bottom:1.5rem;margin-top:1.5rem}.my-9{margin-bottom:2.25rem;margin-top:2.25rem}.mb-0{margin-bottom:0}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:.5rem}.mb-20{margin-bottom:5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.ml-3{margin-left:.75rem}.mr-2{margin-right:.5rem}.mr-5{margin-right:1.25rem}.mt-1{margin-top:.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-20{margin-top:5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.box-border{box-sizing:border-box}.line-clamp-2{-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box;overflow:hidden}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-2{height:.5rem}.h-28{height:7rem}.h-32{height:8rem}.h-4{height:1rem}.h-52{height:13rem}.h-8{height:2rem}.h-full{height:100%}.h-screen{height:100vh}.min-h-\[120px\]{min-height:120px}.min-h-\[297mm\]{min-height:297mm}.min-h-\[320px\]{min-height:320px}.min-h-\[70px\]{min-height:70px}.min-h-full{min-height:100%}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-1\/2{width:50%}.w-10{width:2.5rem}.w-11\/12{width:91.666667%}.w-16{width:4rem}.w-2{width:.5rem}.w-24{width:6rem}.w-28{width:7rem}.w-4{width:1rem}.w-72{width:18rem}.w-8{width:2rem}.w-\[210mm\]{width:210mm}.w-\[calc\(100\%-62\.5px\)\]{width:calc(100% - 62.5px)}.w-full{width:100%}.min-w-\[70px\]{min-width:70px}.min-w-\[calc\(100\%-62\.5px\)\]{min-width:calc(100% - 62.5px)}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-fit{max-width:-moz-fit-content;max-width:fit-content}.max-w-none{max-width:none}.max-w-screen-lg{max-width:1024px}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-10{gap:2.5rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1rem*var(--tw-space-x-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.25rem*var(--tw-space-y-reverse));margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)))}.space-y-12>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(3rem*var(--tw-space-y-reverse));margin-top:calc(3rem*(1 - var(--tw-space-y-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.5rem*var(--tw-space-y-reverse));margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(1.5rem*var(--tw-space-y-reverse));margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(2rem*var(--tw-space-y-reverse));margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-scroll{overflow-x:scroll}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}.break-words{overflow-wrap:break-word}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94/var(--tw-border-opacity))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241/var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8/var(--tw-border-opacity))}.bg-\[\#FAE100\]{--tw-bg-opacity:1;background-color:rgb(250 225 0/var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219/var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94/var(--tw-bg-opacity))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgba(79,70,229,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-indigo-500{--tw-gradient-to:#6366f1 var(--tw-gradient-to-position)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-10{padding:2.5rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-20{padding-left:5rem;padding-right:5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-10{padding-bottom:2.5rem;padding-top:2.5rem}.py-2{padding-bottom:.5rem;padding-top:.5rem}.py-4{padding-bottom:1rem;padding-top:1rem}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.py-8{padding-bottom:2rem;padding-top:2rem}.pb-1{padding-bottom:.25rem}.pl-24{padding-left:6rem}.pl-6{padding-left:1.5rem}.pl-8{padding-left:2rem}.pr-5{padding-right:1.25rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.leading-relaxed{line-height:1.625}.text-\[\#371D1E\]{--tw-text-opacity:1;color:rgb(55 29 30/var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity))}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255/var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.underline{text-decoration-line:underline}.no-underline{text-decoration-line:none}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-transform{transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-1000{transition-duration:1s}.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}.scrollbar-hide::-webkit-scrollbar{display:none}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;word-wrap:break-word;-ms-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt";color:rgba(0,0,0,.8);font-family:Roboto,Noto Sans KR;font-kerning:normal;font-weight:400;height:100%;margin:0;word-break:keep-all}.nav{li{color:inherit;list-style:none;padding-left:20px;text-indent:-20px}}.toc :is(ul,ol){list-style:none!important;padding-left:0!important}.gatsby-resp-image-wrapper{border:1px solid grey;margin:15px 0!important}.post{h1{font-size:2.5rem;margin-bottom:30px;margin-top:50px}h2{font-size:2rem;margin-bottom:20px;margin-top:30px}h3{font-size:1.5rem}}.blog-link{color:#3b82f6;text-decoration:underline}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241/var(--tw-bg-opacity))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:top-4{top:1rem}.sm\:mb-5{margin-bottom:1.25rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:p-3{padding:.75rem}}@media (min-width:768px){.md\:sticky{position:sticky}.md\:top-20{top:5rem}.md\:m-10{margin:2.5rem}.md\:block{display:block}.md\:hidden{display:none}.md\:w-1\/3{width:33.333333%}.md\:w-1\/4{width:25%}.md\:w-3\/4{width:75%}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media print{.print\:hidden{display:none}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}@page{size:A4;margin:15mm 10mm 15mm 10mm}@media print{.bg-gradient-to-r{background:linear-gradient(90deg,#4f46e5,#3b82f6)!important}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{margin:0;padding:0}.a4-container{height:auto;overflow:hidden;padding:20px;width:210mm}.print-hide{display:none!important}}.resume{ul li{list-style:disc inside}li>a{color:#3b82f6;margin:0 5px;text-decoration:underline}}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Noto+Sans+KR:300,400,500,700&amp;display=swap" rel="stylesheet"/><title data-gatsby-head="true">Blog Post</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="nav flex w-full flex-col items-center z-10 transition duration-1000 flex "><span class="text-3xl font-bold my-9"><a href="/">Beming-dev</a></span><div class="w-full max-w-fit mx-auto mt-7 flex overflow-x-scroll scrollbar-hide"><li class="mx-5"><a href="/mainCategory/archive/">Archive</a></li><li class="mx-5"><a href="/mainCategory/area/">Area</a></li><li class="mx-5"><a href="/mainCategory/project/">Project</a></li><li class="mx-5"><a href="/mainCategory/resource/">Resource</a></li></div></div><div class="post min-h-screen text-gray-800 bg-white"><div class="container mx-auto px-4 py-8 max-w-5xl"><div class="flex flex-col justify-center md:flex-row gap-8"><main class="w-full md:w-3/4"><h1 class="text-3xl md:text-4xl font-bold text-center mb-4 mt-20">MSA - Kubernetes, ArgoCD 배포자동화</h1><p class="text-sm text-gray-500 text-center mb-20">July 30, 2025</p><div class="prose prose-lg max-w-none mx-auto"><h1>Argo CD</h1>
+<p>ArgoCD는 애플리케이션의 선언적 메니페스트를 Git 저장소에 두고, 클러스터 상태를 Git에 저장된 상태와 실시간으로 비교하고 동기화 해 주는 도구입니다. Git commit만으로 배포, 롤백, 드리프트 감지 등의 기능을 제공합니다.</p>
+<p>Kubernetes 애플리케이션의 자동 배포를 위한 CD 툴로, Helm또는 Kustomize방식을 사용합니다.</p>
+<p>Git저장소를 단일 출처로 삼아, 매니페스트 파일을 Git에 두면, ArgoCD가 주기적으로 Git에서 desired state를 가져와 클러스터의 live state와 비교하고, 차이가 있다면 kubectl apply, kubectl delete와 같은 명령으로 자동 동기화를 합니다.</p>
+<hr>
+<h1>과정 기록</h1>
+<p>아래는 제가 git, ArgoCD를 이용해 CI/CD 파이프라인을 구성한 방법입니다.
+Spring backend 배포를 기준으로 작성하였습니다.</p>
+<h2>Git Repository 준비</h2>
+<p>먼저, 두가지의 Git Repository가 준비돼야 합니다.</p>
+<ul>
+<li>백엔드 Repository</li>
+</ul>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">backend<span class="token operator">-</span>repo<span class="token operator">/</span>
+├── <span class="token punctuation">.</span>github<span class="token operator">/</span>
+│	└── workflows<span class="token operator">/</span>
+│		└── ci<span class="token operator">-</span>cd<span class="token punctuation">.</span>yml
+├── src<span class="token operator">/</span>…           # Spring Boot 소스
+├── pom<span class="token punctuation">.</span>xml
+└── Dockerfile</code></pre></div>
+<p>Docker image가 빌드 되는 Dockerfile과, github action을 실행할 수 있는 yaml파일이 필요합니다.</p>
+<ul>
+<li>ci/cd용 repo</li>
+</ul>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">infra<span class="token operator">-</span>repo<span class="token operator">/</span>
+├── argocd<span class="token operator">/</span>
+│   ├── backend<span class="token operator">-</span>app<span class="token punctuation">.</span>yaml
+├── <span class="token keyword">base</span><span class="token operator">/</span>
+│   ├── backend<span class="token operator">-</span>deployment<span class="token punctuation">.</span>yaml
+│   ├── backend<span class="token operator">-</span>service<span class="token punctuation">.</span>yaml
+│   └── kustomization<span class="token punctuation">.</span>yaml
+│   └── <span class="token keyword">namespace</span><span class="token punctuation">.</span>yaml
+└── overlays<span class="token operator">/</span>
+    └── production<span class="token operator">/</span>
+	    └── patches<span class="token operator">/</span>
+		│   └── backend<span class="token operator">-</span>env<span class="token punctuation">.</span>yaml
+		│   └── backend<span class="token operator">-</span>replicas<span class="token punctuation">.</span>yaml
+        └── kustomization<span class="token punctuation">.</span>yaml
+        └── sealedsecret<span class="token operator">-</span>backend<span class="token operator">-</span>env<span class="token punctuation">.</span>yaml</code></pre></div>
+<h2>먼저, CI 파이프라인을 설정해봅시다.</h2>
+<p>backend repository의 ci-cd.yaml파일에 아래와 같이 작성합니다.</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token comment"># .github/workflows/backend-deploy.yml</span>
+
+<span class="token key atrule">name</span><span class="token punctuation">:</span> Backend CI/CD Pipeline
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>main<span class="token punctuation">]</span>
+    <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token string">"backend/**"</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build-and-deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token comment"># 1. 소스 코드 체크아웃</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout code
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v4
+
+      <span class="token comment"># 2. Docker Buildx 설정 (최신 버전 사용)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Docker Buildx
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/setup<span class="token punctuation">-</span>buildx<span class="token punctuation">-</span>action@v3
+
+      <span class="token comment"># 3. Docker Hub 로그인 (시크릿 이름은 실제 설정에 맞게 확인)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Login to Docker Hub
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/login<span class="token punctuation">-</span>action@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">username</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.DOCKERHUB_USERNAME <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment"># 또는 secrets.DOCKER_USER</span>
+          <span class="token key atrule">password</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.DOCKERHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment"># 또는 secrets.DOCKER_TOKEN</span>
+
+      <span class="token comment"># 4. Docker 이미지 빌드 및 푸시 (context 경로 수정)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build &amp; Push image
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> docker/build<span class="token punctuation">-</span>push<span class="token punctuation">-</span>action@v5
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">context</span><span class="token punctuation">:</span> ./backend/chatirumae <span class="token comment"># &lt;-- backend 디렉토리를 빌드 컨텍스트로 명시</span>
+          <span class="token key atrule">push</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+          <span class="token key atrule">tags</span><span class="token punctuation">:</span> beming/chat<span class="token punctuation">-</span>irumae<span class="token punctuation">-</span>backend<span class="token punctuation">:</span>$<span class="token punctuation">{</span><span class="token punctuation">{</span> github.sha <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+      <span class="token comment"># 5. GitOps(Infra) 리포지토리 체크아웃</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout infra repo
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v4
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">repository</span><span class="token punctuation">:</span> ChatIrumae/gitops
+          <span class="token key atrule">token</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.INFRA_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token comment"># GitOps 리포지토리에 push 권한이 있는 토큰</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> infra
+
+      <span class="token comment"># 6. yq 설치 (매우 중요!)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install yq
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> mikefarah/yq@v4.34.1 <span class="token comment"># yq 설치 액션 사용</span>
+
+      <span class="token comment"># 7. Kustomize 이미지 태그 업데이트 (yq 실행)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Update Kustomize image tag
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          cd infra/base/backend</span>
+
+          REPO_NAME=$<span class="token punctuation">{</span><span class="token punctuation">{</span> github.event.repository.name <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          IMAGE_NAME="beming/chat<span class="token punctuation">-</span>irumae<span class="token punctuation">-</span>backend"
+          NEW_TAG=$<span class="token punctuation">{</span><span class="token punctuation">{</span> github.sha <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+          echo "🔧 Updating image $IMAGE_NAME to tag $NEW_TAG"
+
+          <span class="token comment"># yq를 사용하여 이미지 태그 업데이트</span>
+          yq e '(.images<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">|</span> select(.name == "'"$IMAGE_NAME"'") ).newTag = "'"$NEW_TAG"'"' <span class="token punctuation">-</span>i kustomization.yaml
+
+          echo "✅ Diff after update<span class="token punctuation">:</span>"
+          git <span class="token punctuation">-</span>C ../../.. diff <span class="token comment"># infra 루트에서 diff 실행</span>
+
+      <span class="token comment"># 8. 변경사항 커밋 및 푸시 (git add 경로 수정)</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Commit &amp; Push infra changes
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          cd infra
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add base/backend/kustomization.yaml # &lt;-- 수정한 파일만 명시적으로 add</span>
+
+          <span class="token comment"># 변경사항이 있을 때만 커밋</span>
+          if <span class="token tag">!</span> git diff <span class="token punctuation">-</span><span class="token punctuation">-</span>staged <span class="token punctuation">-</span><span class="token punctuation">-</span>quiet; then
+            <span class="token key atrule">git commit -m "chore(backend)</span><span class="token punctuation">:</span> Bump $<span class="token punctuation">{</span><span class="token punctuation">{</span> github.repository <span class="token punctuation">}</span><span class="token punctuation">}</span> image to $<span class="token punctuation">{</span><span class="token punctuation">{</span> github.sha <span class="token punctuation">}</span><span class="token punctuation">}</span>"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+</code></pre></div>
+<p>위 yaml파일을 간단히 설명하면, main 브랜치에 코드가 push 되면, Dockerfile을 build하여 Docker hub에 push합니다.</p>
+<p>그런 다음, ci-cd repository로 이동한 후, 방금 push한 이미지의 태그값을 kustomization.yaml파일에 알려주며 해당 repository에 커밋을 넣습니다.</p>
+<p>이 커밋은 나중에 argoCD를 트리거하는 역할을 할 것입니다.</p>
+<p>이 과정에서 세가지 환경변수를 git backend repository에 등록해야 합니다.</p>
+<ul>
+<li>DOCKER_USER: Docker hub username</li>
+<li>DOCKER_TOKEN: Docker hub에서 발급해주는 토큰</li>
+<li>INFRA_TOKEN: git에서 발급받은 ci-cd repository에 접근 가능한 토큰</li>
+</ul>
+<p>INFRA_TOKEN은 git profile 클릭 -> settings -> developer settings -> personal access tokens -> Tokens(classic)에서 발급받을 수 있습니다.</p>
+<p>환경변수는 backend repository에 접속 후, setting -> Secrets and Variables -> actions 에서 등록 가능합니다.</p>
+<h2>ArgoCD를 설정해봅시다.</h2>
+<p>이제 kubernetes가 설치돼있는, kubectl 명령을 사용할 수 있는 인스턴스에 접속합니다.</p>
+<p>kubernetes에 argoCD를 설치해줍시다.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># 1) Argo CD 네임스페이스 생성</span>
+kubectl create namespace argocd
+
+<span class="token comment"># 2) Argo CD 컨트롤러 설치</span>
+kubectl apply <span class="token parameter variable">-n</span> argocd <span class="token punctuation">\</span>
+  <span class="token parameter variable">-f</span> https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+<span class="token comment"># 3) 서버 접근을 위해 포트포워딩 (로컬 테스트용)</span>
+kubectl <span class="token parameter variable">-n</span> argocd port-forward svc/argocd-server <span class="token number">8080</span>:443</code></pre></div>
+<p>이제 public_ip:8080 번 포트로 접속하면 argoCD의 로그인 창을 볼 수 있습니다.
+물론 인스턴스의 방화벽에서 8080번 포트가 허용돼있어야 합니다.</p>
+<p>초기 ID값은 admin이고,
+비밀번호는 아래의 명령으로 확인할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># admin 비밀번호 = Argo CD server Pod 이름</span>
+kubectl <span class="token parameter variable">-n</span> argocd get pods <span class="token parameter variable">-l</span> app.kubernetes.io/name<span class="token operator">=</span>argocd-server <span class="token parameter variable">-o</span> name <span class="token punctuation">\</span>
+  <span class="token operator">|</span> <span class="token function">cut</span> -d<span class="token string">'/'</span> <span class="token parameter variable">-f2</span>
+
+<span class="token comment"># 안되면 아래의 방법을 사용</span>
+argocd admin initial-password <span class="token parameter variable">-n</span> argocd</code></pre></div>
+<p>로그인에 성공했다면, 아래와 같은 화면을 볼 수 있습니다.
+![[Pasted image 20250714114029.png]]</p>
+<h2>이제 cicd repository의 스크립트 설정을 해봅시다.</h2>
+<p>아까전에 아래와 같이 꽤 복잡한 구조를 구성해뒀습니다.</p>
+<div class="gatsby-highlight" data-language="csharp"><pre class="language-csharp"><code class="language-csharp">infra<span class="token operator">-</span>repo<span class="token operator">/</span>
+├── argocd<span class="token operator">/</span>
+│   ├── backend<span class="token operator">-</span>app<span class="token punctuation">.</span>yaml
+├── <span class="token keyword">base</span><span class="token operator">/</span>
+│   ├── backend<span class="token operator">-</span>deployment<span class="token punctuation">.</span>yaml
+│   ├── backend<span class="token operator">-</span>service<span class="token punctuation">.</span>yaml
+│   └── kustomization<span class="token punctuation">.</span>yaml
+│   └── <span class="token keyword">namespace</span><span class="token punctuation">.</span>yaml
+└── overlays<span class="token operator">/</span>
+    └── production<span class="token operator">/</span>
+	    └── patches<span class="token operator">/</span>
+		│   └── backend<span class="token operator">-</span>env<span class="token punctuation">.</span>yaml
+		│   └── backend<span class="token operator">-</span>replicas<span class="token punctuation">.</span>yaml
+        └── kustomization<span class="token punctuation">.</span>yaml
+        └── sealedsecret<span class="token operator">-</span>backend<span class="token operator">-</span>env<span class="token punctuation">.</span>yaml</code></pre></div>
+<p>먼저, argoCD의 진입점은 /overlays/production/kustomization.yaml 파일입니다.</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> kustomize.config.k8s.io/v1beta1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Kustomization
+<span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> ../../../base/backend
+  <span class="token punctuation">-</span> sealedsecret<span class="token punctuation">-</span>backend<span class="token punctuation">-</span>env.yaml
+<span class="token key atrule">patches</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> backend<span class="token punctuation">-</span>replicas.yaml
+    <span class="token key atrule">target</span><span class="token punctuation">:</span>
+      <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+  <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> backend<span class="token punctuation">-</span>env.yaml
+    <span class="token key atrule">target</span><span class="token punctuation">:</span>
+      <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+</code></pre></div>
+<p>이 파일을 로드하면서</p>
+<ul>
+<li><code class="language-text">resources</code> 로 지정된 <code class="language-text">../../../base</code> 디렉토리와</li>
+<li><code class="language-text">sealedsecret-backend-env.yaml</code> 을 순서대로 가져옵니다.</li>
+</ul>
+<p>그런 다음, /base/kustomization.yaml에 있는 파일을 읽습니다.</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> backend<span class="token punctuation">-</span>deploy.yaml
+  <span class="token punctuation">-</span> backend<span class="token punctuation">-</span>svc.yaml
+  <span class="token punctuation">-</span> namespace.yaml
+
+<span class="token key atrule">images</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> beming/stock<span class="token punctuation">-</span>simulator<span class="token punctuation">-</span>back
+    <span class="token key atrule">newTag</span><span class="token punctuation">:</span> placeholder<span class="token punctuation">-</span>backend
+
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> kustomize.config.k8s.io/v1beta1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Kustomization</code></pre></div>
+<ul>
+<li><code class="language-text">backend-deploy.yaml</code>, <code class="language-text">backend-svc.yaml</code>, <code class="language-text">namespace.yaml</code> 을 차례로 읽습니다.</li>
+<li><code class="language-text">images</code> 블록에 따라 Deployment의 <code class="language-text">image:</code> 필드를 치환하는데, 이 때 tag값은 아까전의 github action에서 치환하여 commit을 넣어줍니다.</li>
+</ul>
+<p>/base/backend-deploy.yml</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token comment"># base에서는 1로 두고, overlays에서 프로덕션/스테이징 복제 수 조정</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+          <span class="token comment"># CI에서 placeholder-backend를 실제 SHA/tag로 교체합니다</span>
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> beming/chat<span class="token punctuation">-</span>irumae<span class="token punctuation">-</span>backend<span class="token punctuation">:</span>placeholder<span class="token punctuation">-</span>backend
+          <span class="token comment"># envFrom:</span>
+          <span class="token comment">#   - secretRef:</span>
+          <span class="token comment">#       name: backend-env</span>
+          <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">containerPort</span><span class="token punctuation">:</span> <span class="token number">3001</span>
+              <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+          <span class="token comment"># 선택: 헬스체크</span>
+          <span class="token comment"># readinessProbe:</span>
+          <span class="token comment">#   httpGet:</span>
+          <span class="token comment">#     path: /actuator/health</span>
+          <span class="token comment">#     port: http</span>
+          <span class="token comment">#   initialDelaySeconds: 20</span>
+          <span class="token comment">#   periodSeconds: 10</span>
+          <span class="token comment"># livenessProbe:</span>
+          <span class="token comment">#   httpGet:</span>
+          <span class="token comment">#     path: /actuator/health</span>
+          <span class="token comment">#     port: http</span>
+          <span class="token comment">#   initialDelaySeconds: 60</span>
+          <span class="token comment">#   periodSeconds: 20</span>
+          <span class="token comment"># 선택: 리소스 요청·제한</span>
+          <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+            <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">"100m"</span>
+              <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">"128Mi"</span>
+            <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">"500m"</span>
+              <span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token string">"512Mi"</span>
+</code></pre></div>
+<p>/base/spring-svc.yml</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend<span class="token punctuation">-</span>service
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">3001</span>
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">3001</span>
+      <span class="token key atrule">nodePort</span><span class="token punctuation">:</span> <span class="token number">30081</span></code></pre></div>
+<p>/base/namespace.yaml</p>
+<div class="gatsby-highlight" data-language="apiversion:v1"><pre class="language-apiversion:v1"><code class="language-apiversion:v1">kind: Namespace
+metadata:
+  name: backend-namespace</code></pre></div>
+<p>/patches/backend-env.yaml</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-backend # base/backend-deploy.yaml 의 metadata.name 과 반드시 일치
+spec:
+  template:
+    metadata:
+      # (선택) 프로덕션 환경을 나타내는 라벨 추가
+      labels:
+        environment: production
+    spec:
+      containers:
+        - name: spring-backend # base 의 container name 과 일치
+          # 1) 프로덕션 프로파일 활성화를 위한 환경변수
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: production
+            - name: JAVA_OPTS
+              value: "-Xms512m -Xmx1g"
+          # 2) 리소스 요청(requests) / 제한(limits)
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"</code></pre></div>
+<p>/patches/backend-replicas.yaml</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-backend # base/backend-deploy.yaml 에 정의된 Deployment 이름과 동일해야 합니다
+spec:
+  replicas: 3 # 프로덕션에서 원하는 복제본 수
+</code></pre></div>
+<p>아래는 GPT가 그려준 대략적인 과정입니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">┌────────────────────────────────────┐
+│ 1. Git 클론 및 overlays/production 로 진입
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 2. Kustomize load overlays/...    │
+│    ├── import base/ (resources)    │
+│    └── import sealedsecret...      │
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 3. base/kustomization.yaml 적용   │
+│    ├─ backend-deploy.yaml      │
+│    ├─ backend-svc.yaml         │
+│    └─ namespace.yaml               │
+│    + images.newTag 치환            │
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 4. overlays/sealedsecret 추가     │
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 5. patches 병합                   │
+│    - replicas 변경                │
+│    - envFrom secretRef 추가       │
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 6. 최종 매니페스트 출력            │
+└────────────────────────────────────┘
+             ↓
+┌────────────────────────────────────┐
+│ 7. Argo CD가 kubectl apply (sync) │
+└────────────────────────────────────┘
+</code></pre></div>
+<h2>환경변수 지정</h2>
+<p>제가 가장 애먹었던 부분은 바로 환경변수를 지정하는 방법입니다.
+환경변수가 public repository에 노출되지 않으면서, ArgoCD에 알려줄 수 있는 그런 방법이 필요했습니다.</p>
+<p>위의 고민을 해결하기 위해, Sealed Secret Controller를 사용했습니다.
+먼저 아래와 같이 Sealed Secret Controller를 설치해줍니다.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">kubectl apply <span class="token punctuation">\</span>
+  <span class="token parameter variable">-f</span> https://github.com/bitnami-labs/sealed-secrets/releases/latest/download/controller.yaml</code></pre></div>
+<p>아래와 같은 명령으로 secret파일을 생성해줍니다.</p>
+<p>secret-plain.yaml</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Secret
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> backend<span class="token punctuation">-</span>env
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> backend<span class="token punctuation">-</span>namespace
+<span class="token key atrule">stringData</span><span class="token punctuation">:</span>
+  <span class="token key atrule">FRONT_BASE_URL</span><span class="token punctuation">:</span> <span class="token string">"https://beming-stock.kro.kr"</span>
+  <span class="token key atrule">JWT_SECRET</span><span class="token punctuation">:</span> <span class="token string">"randomstrlongerthan32fortestdonotusethisvalue"</span></code></pre></div>
+<p>아래 명령으로 Sealed Secret을 생성합니다.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">kubeseal <span class="token parameter variable">--format</span> yaml <span class="token punctuation">\</span>
+  <span class="token operator">&lt;</span> secret-plain.yaml <span class="token operator">></span> sealedsecret.yaml</code></pre></div>
+<p>이제 결과로 암호화된 sealedsecret파일을 얻을 수 있습니다.
+해당파일을 프로젝트의 /overlays/production 밑에 위치시켜줍니다.</p>
+<p>그 후, /overlays/production/kustomization.yaml의 resources에,
+sealedsecret.yaml 과 같이 등록해줍니다.</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> ../../base
+  <span class="token punctuation">-</span> sealedsecret<span class="token punctuation">-</span>backend<span class="token punctuation">-</span>env.yaml</code></pre></div>
+<p>마지막으로, backend-env.yaml파일에 secret 이름을 추가해줍니다.</p>
+<div class="gatsby-highlight" data-language="yaml"><pre class="language-yaml"><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>backend
+          <span class="token comment"># CI에서 placeholder-backend를 실제 SHA/tag로 교체합니다</span>
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> beming/stock<span class="token punctuation">-</span>simulator<span class="token punctuation">-</span>back<span class="token punctuation">:</span>placeholder<span class="token punctuation">-</span>backend
+          <span class="token key atrule">envFrom</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">secretRef</span><span class="token punctuation">:</span>
+                <span class="token key atrule">name</span><span class="token punctuation">:</span> backend<span class="token punctuation">-</span>env</code></pre></div>
+<p>이제 컨테이너 내부에서 환경변수에 접근할 수 있게 됩니다.</p>
+<p>모든 과정이 성공적으로 완료되면, 아래와 같은 화면을 볼 수 있습니다.
+![[Pasted image 20250714134954.png]]</p>
+<h2>배포 확인</h2>
+<p>성공적으로 배포됐다면 api로 요청을 보낼 수 있어야겠죠?</p>
+<p>저희는 service를 생성하는 backend.svc.yaml 파일에서, 30080번 포트를 외부에 노출시켰습니다.</p>
+<p>아래 명령으로 EXTERNAL_IP값을 확인해줍시다.</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">kubectl get services <span class="token parameter variable">-n</span> backend-namespace
+
+<span class="token comment"># 아래와 같은 결과가 나옵니다.</span>
+NAME TYPE CLUSTER-IP EXTERNAL-IP PORT<span class="token punctuation">(</span>S<span class="token punctuation">)</span> AGE
+spring-backend NodePort <span class="token number">10.107</span>.223.38 <span class="token operator">&lt;</span>none<span class="token operator">></span> <span class="token number">80</span>:30080/TCP 3h31m</code></pre></div>
+<p>저의 경우는 EXTERNAL_IP가 비어있는데, 이런 경우는 인스턴스의 publicIP로 요청을 보내면 됩니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">curl http://${EXTERNAL_IP}:30080/actuator/health</code></pre></div>
+<p>위의 결과로 제대로 된 응답이 온다면 성공입니다. 이제 백엔드를 kubernetes에 자동으로 배포하는 CI/C파이프라인이 구성됐습니다.</p>
+<h1>트러블 슈팅</h1>
+<h2>ArgoCD가 접속이 되지 않음</h2>
+<p>처음에 ArgoCD로 포트포워딩이 제대로 되지 않아 접속이 불가했습니다.</p>
+<p>해결방법은 다음과 같습니다.</p>
+<ul>
+<li>인스턴스의 방화벽 설정을 열어준다</li>
+<li>아래와 같이 모든 인터페이스에 대해 포트 포워딩을 걸어준다.</li>
+</ul>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">kubectl port-forward \
+  --address 0.0.0.0 \
+  svc/argocd-server -n argocd 8080:443</code></pre></div>
+<p>이제 http://&#x3C;EC2 퍼블릭IP>:8080
+으로 접속이 가능합니다.</p>
+<p>아래와 같이 백그라운드에서 실행하면 좀 더 편리합니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">nohup kubectl -n argocd port-forward svc/argocd-server 8080:443 --address 0.0.0.0 \
+  > ./argocd-port-forward.log 2>&amp;1 &amp;</code></pre></div>
+<h2>이미지 pull이 실패하는 경우</h2>
+<p>argoCD UI에서 sync버튼을 눌러 backend deploy를 하면, Docker image pull 이 실패합니다.</p>
+<p>그 이유는 저희가 Docker image의 tag값을 git에서 커밋으로 올려주도록 해뒀기 때문입니다.</p>
+<p>이 상황을 피하고 싶다면, tag값을 latest로 해서 항상 이미지를 가져올 수 있게 하던가,
+github action을 트리거 시켜서 argoCD를 작동시키면 됩니다.</p>
+<p>태그값이 잘 들어갔는지는 argoCD의 UI log에서 확인 가능합니다.</p>
+<h2>배포에 성공했는데 ArgoCD에서 오류가 뜨는 경우</h2>
+<p>저희는 앱이 살아있다는 신호를 /actuator/health 라우트에서 신호를 받도록 yaml파일에 설정해뒀습니다.</p>
+<p>이 신호를 받기 위해서는, actuator 의존성을 Spring에 추가해둬야 합니다.</p>
+<p>gradle 기준 아래 명령을 build.gradle에 추가합니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">implementation 'org.springframework.boot:spring-boot-starter-actuator'</code></pre></div>
+<p>application.properties에서 endpoint를 노출시킵니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">server.port=3000
+management.server.port=${server.port}
+management.endpoints.web.exposure.include=health,info
+management.endpoint.health.show-details=always</code></pre></div>
+<p>이렇게 하고 Docker image를 다시 빌드하면 해당 라우트가 잘 작동합니다.</p>
+<p>참고로 server.port값은 Dockerfile의 Expose값과도 일치해야 하고, yaml파일에서도 포트 번호를 잘 신경써줘야 제대로 동작합니다.</p></div></main></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/capstone/cicd/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7de622672c15b99c8cda.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-224caf4155cc10b4ef1a.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-1a23609920535c67e829.js\"],\"component---src-pages-markdown-remark-frontmatter-slug-tsx\":[\"/component---src-pages-markdown-remark-frontmatter-slug-tsx-fb5dca623078fb024a8b.js\"],\"component---src-pages-portfolio-tsx\":[\"/component---src-pages-portfolio-tsx-0dc736fb0bcf9d8c9020.js\"],\"component---src-pages-resume-tsx\":[\"/component---src-pages-resume-tsx-2910fe2b35f5b9401a93.js\"],\"component---src-pages-resumev-tsx\":[\"/component---src-pages-resumev-tsx-8b9e51d3e2786c4d4dd6.js\"],\"component---src-pages-self-tsx\":[\"/component---src-pages-self-tsx-d2a8858bf2e0c3eca244.js\"],\"component---src-templates-main-category-tsx\":[\"/component---src-templates-main-category-tsx-84062609accac9584420.js\"],\"component---src-templates-sub-category-tsx\":[\"/component---src-templates-sub-category-tsx-48d1a2f71cb86a561bec.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="dc93c45679cb5cc60169";</script><script src="/webpack-runtime-891b9dc478c815e75e75.js" async></script><script src="/framework-106eaf75e588fec2b76f.js" async></script><script src="/app-7de622672c15b99c8cda.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
