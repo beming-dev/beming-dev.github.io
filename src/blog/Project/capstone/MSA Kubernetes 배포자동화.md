@@ -1,11 +1,11 @@
 ---
 thumbnail: default.jpg
-slug: "/blog/stock-simulator/cicd"
+slug: "/blog/capstone/cicd"
 date: "2025-07-30"
 title: "MSA - Kubernetes, ArgoCD 배포자동화"
 categories:
-  - mainCategory: "Area"
-    subCategory: "stock-simulator"
+  - mainCategory: "Project"
+    subCategory: "capstone"
 ---
 
 # Argo CD
@@ -66,59 +66,89 @@ infra-repo/
 backend repository의 ci-cd.yaml파일에 아래와 같이 작성합니다.
 
 ```yaml
-name: CI/CD Pipeline
+# .github/workflows/backend-deploy.yml
+
+name: Backend CI/CD Pipeline
 
 on:
   push:
     branches: [main]
+    paths:
+      - "backend/**"
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. 소스 코드 체크아웃
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
+      # 2. Docker Buildx 설정 (최신 버전 사용)
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
-      - name: Login to Docker Registry
-        uses: docker/login-action@v2
+      # 3. Docker Hub 로그인 (시크릿 이름은 실제 설정에 맞게 확인)
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }} # 또는 secrets.DOCKER_USER
+          password: ${{ secrets.DOCKERHUB_TOKEN }} # 또는 secrets.DOCKER_TOKEN
 
+      # 4. Docker 이미지 빌드 및 푸시 (context 경로 수정)
       - name: Build & Push image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./backend/chatirumae # <-- backend 디렉토리를 빌드 컨텍스트로 명시
           push: true
-          tags: beming/${{ github.event.repository.name }}:${{ github.sha }}
+          tags: beming/chat-irumae-backend:${{ github.sha }}
 
+      # 5. GitOps(Infra) 리포지토리 체크아웃
       - name: Checkout infra repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          repository: beming-dev/stock-simulator-cicd
-          token: ${{ secrets.INFRA_TOKEN }}
+          repository: ChatIrumae/gitops
+          token: ${{ secrets.INFRA_TOKEN }} # GitOps 리포지토리에 push 권한이 있는 토큰
           path: infra
-          persist-credentials: true
 
+      # 6. yq 설치 (매우 중요!)
+      - name: Install yq
+        uses: mikefarah/yq@v4.34.1 # yq 설치 액션 사용
+
+      # 7. Kustomize 이미지 태그 업데이트 (yq 실행)
       - name: Update Kustomize image tag
         run: |
-          cd infra/base
-          yq e '.images[] 
-            |= select(.name=="beming/'${{ github.repository }}'") 
-            .newTag = "'${{ github.sha }}'"' -i kustomization.yaml
+          cd infra/base/backend
 
+          REPO_NAME=${{ github.event.repository.name }}
+          IMAGE_NAME="beming/chat-irumae-backend"
+          NEW_TAG=${{ github.sha }}
+
+          echo "🔧 Updating image $IMAGE_NAME to tag $NEW_TAG"
+
+          # yq를 사용하여 이미지 태그 업데이트
+          yq e '(.images[] | select(.name == "'"$IMAGE_NAME"'") ).newTag = "'"$NEW_TAG"'"' -i kustomization.yaml
+
+          echo "✅ Diff after update:"
+          git -C ../../.. diff # infra 루트에서 diff 실행
+
+      # 8. 변경사항 커밋 및 푸시 (git add 경로 수정)
       - name: Commit & Push infra changes
         run: |
           cd infra
           git config user.name "github-actions[bot]"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "chore: bump ${{ github.repository }} to ${{ github.sha }}"
-          git push
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add base/backend/kustomization.yaml # <-- 수정한 파일만 명시적으로 add
+
+          # 변경사항이 있을 때만 커밋
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(backend): Bump ${{ github.repository }} image to ${{ github.sha }}"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
 ```
 
 위 yaml파일을 간단히 설명하면, main 브랜치에 코드가 push 되면, Dockerfile을 build하여 Docker hub에 push합니다.
