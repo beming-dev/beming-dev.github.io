@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "한국투자저축은행 핵심.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "한국투자 저축은행"
+              "title": "한국투자저축은행 핵심"
             },
             "group": "b78a0bff72d40004"
           },
@@ -50,13 +50,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "한국투자 저축은행.md",
+                "file": "한국투자저축은행 핵심.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 한국투자 저축은행"
+              "title": "Outline of 한국투자저축은행 핵심"
             },
             "group": "b78a0bff72d40004"
           }
@@ -207,8 +207,9 @@
   },
   "active": "60dc8d57696c5d23",
   "lastOpenFiles": [
-    "한국투자저축은행 핵심.md",
     "한국투자 저축은행.md",
+    "한국투자저축은행 핵심.md",
+    "면접 - 협업.md",
     "면접준비/6협업에 관한 질문.md",
     "README.md",
     "면접 - 포트폴리오.md",
@@ -233,7 +234,6 @@
     "면접준비/3About 기술 스택.md",
     "면접준비/2당근.md",
     "면접준비/1자기소개.md",
-    "면접 - 협업.md",
     "면접 - 과제.md",
     "Untitled 2.base",
     "zz네면/자료구조.md",
