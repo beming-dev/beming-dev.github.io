@@ -71,6 +71,8 @@ MSA를 구성하는 패턴(API Gateway, Service Discovery 등)
 
 **Docker:** 컨테이너가 무엇인지, 가상머신(VM)과 어떻게 다른지 알아야 합니다.
 
+컨테이너란 
+
 **Kubernetes (K8s):** '왜' K8s가 필요한지(컨테이너 오케스트레이션), 주요 구성 요소(Pod, Service, Deployment 등)는 무엇인지 준비해야 합니다.
 
 # 데이터베이스
