@@ -6,7 +6,6 @@
       {
         "id": "74359c78cce53cb6",
         "type": "tabs",
-        "dimension": 73.20916905444126,
         "children": [
           {
             "id": "60dc8d57696c5d23",
@@ -20,8 +19,7 @@
               },
               "icon": "lucide-file",
               "title": "한국투자저축은행 핵심"
-            },
-            "group": "b78a0bff72d40004"
+            }
           },
           {
             "id": "6f91bd29f67acd43",
@@ -53,29 +51,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "6ee3d0ae57fe6c84",
-        "type": "tabs",
-        "dimension": 26.790830945558742,
-        "children": [
-          {
-            "id": "0a4c6e4acdbd339b",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "한국투자저축은행 핵심.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 한국투자저축은행 핵심"
-            },
-            "group": "b78a0bff72d40004"
-          }
-        ]
       }
     ],
     "direction": "vertical"
