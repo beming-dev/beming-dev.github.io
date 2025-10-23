@@ -6,6 +6,7 @@
       {
         "id": "74359c78cce53cb6",
         "type": "tabs",
+        "dimension": 75.45045045045045,
         "children": [
           {
             "id": "bfc826aedf4e2b2f",
@@ -15,11 +16,36 @@
               "state": {
                 "file": "한국투자 저축은행.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
               "title": "한국투자 저축은행"
-            }
+            },
+            "group": "f4600c3ea2ccd29f"
+          }
+        ]
+      },
+      {
+        "id": "51ac177abc9b5e89",
+        "type": "tabs",
+        "dimension": 24.54954954954955,
+        "children": [
+          {
+            "id": "c9b82356bcd4a800",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "한국투자 저축은행.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 한국투자 저축은행"
+            },
+            "group": "f4600c3ea2ccd29f"
           }
         ]
       }
