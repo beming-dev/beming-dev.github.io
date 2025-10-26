@@ -450,6 +450,6 @@ keyword
 ELB와 ASG
 인스턴스를 2대 이상 운영하고, ASG을 사용해 여러개의 인스턴스를 관리합니다. 
 또한 ELB를 추가하여 트래픽을 ASG내의 EC2인스턴스에게 분산으로 넣겠습니다. 
-
+또한 데이터베이스는 따로 운영하기 위해 RDS같은 서비스를 사용하거나, 새로운 인스턴스에 구성해두겠습니다. 
 
 ## "Nest.js에서 '전역 에러 핸들러'를 구현했다고 하셨습니다. **어떤 방식(예: Exception Filter, Interceptor)**을 사용하셨나요? 그리고 '일관된 JSON 포맷'에는 **어떤 정보들(예: timestamp, error code, stack trace, request URL)**을 담도록 설계했는지 궁금합니다."
