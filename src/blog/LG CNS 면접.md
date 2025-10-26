@@ -378,8 +378,10 @@ vfork는 fork의 레거시 방식입니다. copy on write가 일어나지 않고
 
 ## "대용량 `nginx`의 `access.log` 파일이 있습니다. 이 파일에서 **'404 Not Found' 에러**를 발생시킨 **클라이언트 IP**를 **중복 없이** 세어서, **가장 많이 요청한 순서(Top 10)**로 정렬하는 셸 명령어 한 줄을 만들어 보시겠어요?"
 
-awk '$9 == "404" {print $1}' access.log | sort | uniq -c | sort -nr | head -n
+awk '$9 == "404" {print $1}' access.log | sort | uniq -c | sort -nr | head -n 10
 cat access.log | grep | sort
+
+grep " 404 " access.log | cut -d' ' -f1 | sort | uniq -c | sort -nr | head -n 10
 
 ## "방금 말씀하신 `sort`와 `uniq` 명령어의 순서를 바꾸면 (즉, `sort` 전에 `uniq`를 먼저 쓰면) 왜 원하는 결과가 나오지 않는지 설명해 주세요."
 
