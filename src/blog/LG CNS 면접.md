@@ -455,3 +455,8 @@ ELB와 ASG
 ## "Nest.js에서 '전역 에러 핸들러'를 구현했다고 하셨습니다. **어떤 방식(예: Exception Filter, Interceptor)**을 사용하셨나요? 그리고 '일관된 JSON 포맷'에는 **어떤 정보들(예: timestamp, error code, stack trace, request URL)**을 담도록 설계했는지 궁금합니다."
 
 ## AA, DA, TA, DBA
+AA: Application Architecture는 시스템 특징에 적합한 프로그램의 아키텍처를 설계하고, 개발팀 전원이 파악할 수 있기 UML 등으로 공유하는 사람. 표준안, 프레임웤, 테스트, 테크니션 교육 등 총괄
+
+TA: Technical Architecture. 시스템의 기술적 토대를 설계. 서버, 네트워크, 클라우드 환경같은 인프라를 설꼐하고 최적화하는 역할. 부하 분산, 오토스케일링, 재해 복구
+
+DA: Data Architecture 
