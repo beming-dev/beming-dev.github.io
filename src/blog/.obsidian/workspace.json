@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "면접준비/5주식 시뮬레이션.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1자클린아키텍처"
+              "title": "5주식 시뮬레이션"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "면접준비/5주식 시뮬레이션.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1자클린아키텍처"
+              "title": "Outline of 5주식 시뮬레이션"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -194,8 +194,10 @@
   "active": "bfc826aedf4e2b2f",
   "lastOpenFiles": [
     "면접준비/AWS CICD.md",
-    "면접준비/7기술스택.md",
+    "면접준비/DBSCAN.md",
     "면접준비/6협업에 관한 질문.md",
+    "면접준비/7기술스택.md",
+    "면접준비/1자클린아키텍처.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/4서울도서이음.md",
     "면접준비/3About 기술 스택.md",
@@ -211,7 +213,6 @@
     "면접 - 협업.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Project/capstone",
-    "면접준비/1자클린아키텍처.md",
     "Untitled 6.base",
     "Untitled 5.base",
     "Untitled 4.base",
@@ -219,7 +220,6 @@
     "면접준비/Typescript.md",
     "면접준비/Redis pubsub.md",
     "면접준비/ELK.md",
-    "면접준비/DBSCAN.md",
     "면접준비/2당근.md",
     "면접준비/1자기소개.md",
     "Untitled 2.base",
