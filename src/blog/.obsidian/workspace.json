@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "면접준비/6협업에 관한 질문.md",
+                "file": "LG CNS 면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6협업에 관한 질문"
+              "title": "LG CNS 면접"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접준비/6협업에 관한 질문.md",
+                "file": "LG CNS 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 6협업에 관한 질문"
+              "title": "Outline of LG CNS 면접"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -193,11 +193,11 @@
   },
   "active": "bfc826aedf4e2b2f",
   "lastOpenFiles": [
+    "면접준비/6협업에 관한 질문.md",
     "면접준비/7기술스택.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/AWS CICD.md",
     "면접준비/DBSCAN.md",
-    "면접준비/6협업에 관한 질문.md",
     "면접준비/1자클린아키텍처.md",
     "면접준비/4서울도서이음.md",
     "면접준비/3About 기술 스택.md",
