@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LG CNS 면접.md",
+                "file": "면접준비/5주식 시뮬레이션.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LG CNS 면접"
+              "title": "5주식 시뮬레이션"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LG CNS 면접.md",
+                "file": "면접준비/5주식 시뮬레이션.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of LG CNS 면접"
+              "title": "Outline of 5주식 시뮬레이션"
             },
             "group": "f4600c3ea2ccd29f"
           }
@@ -103,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -194,16 +193,18 @@
   },
   "active": "bfc826aedf4e2b2f",
   "lastOpenFiles": [
+    "면접준비/4서울도서이음.md",
+    "면접준비/3About 기술 스택.md",
+    "면접 - 포트폴리오.md",
+    "면접 - 과제.md",
+    "LG CNS 면접.md",
     "Plan.md",
     "Untitled 1.base",
     "Untitled.base",
     "README.md",
     "한국투자저축은행 핵심.md",
-    "LG CNS 면접.md",
     "한국투자 저축은행.md",
     "면접 - 협업.md",
-    "면접 - 포트폴리오.md",
-    "면접 - 과제.md",
     "면접준비/6협업에 관한 질문.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Project/capstone",
@@ -219,8 +220,6 @@
     "면접준비/ELK.md",
     "면접준비/DBSCAN.md",
     "면접준비/AWS CICD.md",
-    "면접준비/4서울도서이음.md",
-    "면접준비/3About 기술 스택.md",
     "면접준비/2당근.md",
     "면접준비/1자기소개.md",
     "Untitled 2.base",
