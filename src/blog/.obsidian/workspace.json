@@ -6,7 +6,7 @@
       {
         "id": "74359c78cce53cb6",
         "type": "tabs",
-        "dimension": 75.44910179640719,
+        "dimension": 63.03142329020333,
         "children": [
           {
             "id": "67cef9f4fa5ade4f",
@@ -27,7 +27,7 @@
       {
         "id": "51ac177abc9b5e89",
         "type": "tabs",
-        "dimension": 24.55089820359281,
+        "dimension": 36.96857670979667,
         "children": [
           {
             "id": "c9b82356bcd4a800",
@@ -101,8 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -192,11 +191,14 @@
   },
   "active": "67cef9f4fa5ade4f",
   "lastOpenFiles": [
-    "기업은행 면접준비.md",
+    "면접 - 과제.md",
     "농협 면접준비.md",
-    "한국투자 저축은행.md",
-    "한국투자저축은행 핵심.md",
+    "기업은행 면접준비.md",
     "LG CNS 면접.md",
+    "한국투자 저축은행.md",
+    "면접 - 협업.md",
+    "한국투자저축은행 핵심.md",
+    "면접 - 포트폴리오.md",
     "면접준비/6협업에 관한 질문.md",
     "면접준비/7기술스택.md",
     "면접준비/5주식 시뮬레이션.md",
@@ -205,13 +207,10 @@
     "면접준비/1자클린아키텍처.md",
     "면접준비/4서울도서이음.md",
     "면접준비/3About 기술 스택.md",
-    "면접 - 포트폴리오.md",
-    "면접 - 과제.md",
     "Plan.md",
     "Untitled 1.base",
     "Untitled.base",
     "README.md",
-    "면접 - 협업.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Project/capstone",
     "Untitled 6.base",
