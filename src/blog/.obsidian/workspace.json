@@ -101,8 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -192,11 +191,11 @@
   },
   "active": "67cef9f4fa5ade4f",
   "lastOpenFiles": [
-    "농협 면접준비.md",
-    "LG CNS 면접.md",
     "한국투자저축은행 핵심.md",
-    "한국투자 저축은행.md",
+    "LG CNS 면접.md",
     "기업은행 면접준비.md",
+    "농협 면접준비.md",
+    "한국투자 저축은행.md",
     "면접 - 포트폴리오.md",
     "면접 - 협업.md",
     "면접 - 과제.md",
