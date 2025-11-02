@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "기업은행 면접준비.md",
+                "file": "한국투자 저축은행.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "기업은행 면접준비"
+              "title": "한국투자 저축은행"
             }
           }
         ]
@@ -35,13 +35,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "기업은행 면접준비.md",
+                "file": "한국투자 저축은행.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 기업은행 면접준비"
+              "title": "Outline of 한국투자 저축은행"
             }
           }
         ]
@@ -192,8 +192,8 @@
   "active": "67cef9f4fa5ade4f",
   "lastOpenFiles": [
     "한국투자저축은행 핵심.md",
-    "한국투자 저축은행.md",
     "기업은행 면접준비.md",
+    "한국투자 저축은행.md",
     "LG CNS 면접.md",
     "면접 - 포트폴리오.md",
     "면접 - 협업.md",
