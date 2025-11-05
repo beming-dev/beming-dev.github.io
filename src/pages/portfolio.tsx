@@ -1,486 +1,310 @@
 import React from "react";
+// 아이콘 사용 시: import { FiMail, FiPhone, FiGithub, FiLinkedin, FiMapPin } from 'react-icons/fi';
 
-const Portfolio: React.FC = () => {
-  interface Tech {
-    name: string;
-    description: string;
-  }
+// 이력서 데이터 (About, Skills 제외)
+const resumeData = {
+  name: "채민관",
+  title: "풀스택 개발자 (Full-Stack Developer)",
+  location: "서울, 대한민국",
+  email: "mingfordev@gmail.com",
+  phone: "010-7107-9301",
+  github: "github.com/beming-dev",
+  linkedin: "linkedin.com/in/beming-dev",
+  experiences: [
+    {
+      company: "네덜란드 교환학생",
+      title: "Becoming the Next successful online startup",
+      period: "2023년 8월 - 2024년 2월",
+      description: [
+        "다양한 문화의 프로젝트를 진행하며, 의사소통 역량 향상",
+        "사용자 인터뷰, SWOT 분석, 프로토타입 개발 등 온라인 스타트업을 시작하기 위해 거쳐야하는 과정들을 경험",
+        "LLM을 활용한 사용자 맞춤형 운동 루틴 추천 서비스 개발",
+      ],
+    },
+    {
+      company: "주식회사코딧",
+      title: "백엔드 개발자 (인턴)",
+      period: "2025년 3월 - 2025년 7월",
+      description: [
+        "Node.js 기반의 RESTful API 개발",
+        "AirFlow를 활용한 ETL 워크플로우 구축",
+        "MySQL을 활용한 데이터베이스 설계 및 최적화",
+        "AWS를 활용한 인프라 배포 및 관리",
+        "데이터 크롤링 및 OpenSearch 인덱싱",
+      ],
+    },
+  ],
+  projects: {
+    team: [
+      {
+        name: "About",
+        description: `
+        대학생 스터디 동아리에서 시작한 대학생 모임 플랫폼입니다.
+        스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 google analytics 기준 400명 정도의 DAU(Daily Active User)를 유지하고 있습니다.
+        `,
+        stack: "React, Nest.js, MySQL, AWS",
+        link: "github.com/beming-dev/portfolio",
+      },
+      {
+        name: "학교 졸업학점 관리 시스템",
+        description: "학교 졸업학점 관리 시스템 개발 (팀 프로젝트)",
+        stack: "React, Spring Boot, Nest.js, MySQL, AWS",
+        link: "github.com/beming-dev/graduation-credit-system",
+      },
+    ],
+    personal: [
+      {
+        name: "개인 블로그",
+        description:
+          "개발 트러블슈팅과 간단한 경험을 기록하는 블로그입니다. Gatsby를 활용하여 자체제작했습니다.",
+        stack: "Gatsby, tailwindcss",
+        link: "github.com/beming-dev/stock-simulator",
+      },
+      {
+        name: "주식 시뮬레이션",
+        description:
+          "주식 가상매매 서비스입니다. 한국투자증권 API를 활용해, WebSocket기반으로 실시간 주식 데이터를 받아오고 가상매매를 할 수 있습니다.",
+        stack: "React, Spring Boot, MySQL, AWS",
+        link: "github.com/beming-dev/stock-simulator",
+      },
+    ],
+  },
+  education: [
+    {
+      school: "동원고등학교",
+      degree: "인문계",
+      period: "2016년 3월 - 2019년 2월",
+    },
+    {
+      school: "서울시립대학교",
+      degree: "컴퓨터과학부 학사",
+      period: "2019년 3월 - 2026년 2월",
+    },
+  ],
+  certifications: [
+    {
+      name: "정보처리기사",
+      issuer: "한국산업인력공단",
+      date: "2025년 6월",
+    },
+  ],
+  languages: [
+    {
+      lang: "영어",
+      level: "일상 회화 가능 (Opic IM2)",
+    },
+  ],
+};
 
-  interface TechCategory {
-    category: string;
-    techs: Tech[];
-  }
+// 섹션 제목 컴포넌트
+const SectionTitle = ({ children }) => (
+  <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">
+    {children}
+  </h2>
+);
 
-  const techCategories: TechCategory[] = [
-    {
-      category: "Backend",
-      techs: [
-        {
-          name: "JavaScript",
-          description: "ES6+ 문법, 비동기 처리, Node.js 환경",
-        },
-        {
-          name: "TypeScript",
-          description: "정적 타이핑, Generics, 인터페이스 활용",
-        },
-        { name: "Node.js", description: "Express, 서버 로직 구현" },
-        {
-          name: "NestJS",
-          description: "모듈 기반 아키텍처, DI, 마이크로서비스",
-        },
-        { name: "Spring Boot", description: "REST API 개발, 스프링 시큐리티" },
-      ],
-    },
-    {
-      category: "Frontend",
-      techs: [
-        { name: "Tailwind CSS", description: "유틸리티 클래스 기반 UI 개발" },
-      ],
-    },
-    {
-      category: "Infrastructure",
-      techs: [
-        { name: "MySQL", description: "스키마 설계, 복잡 쿼리 최적화" },
-        {
-          name: "MongoDB",
-          description: "NoSQL 데이터 모델링, Aggregation 프레임워크",
-        },
-        { name: "Docker", description: "컨테이너 이미지 작성 및 배포" },
-        { name: "Kubernetes", description: "클러스터 구성 및 오케스트레이션" },
-      ],
-    },
-    {
-      category: "Etc",
-      techs: [
-        { name: "Git", description: "버전 관리 및 협업 워크플로우" },
-        { name: "CI/CD", description: "Jenkins, GitLab CI 파이프라인 구축" },
-      ],
-    },
-  ];
-  const certifications: string[] = [
-    "정보처리기사 (2024)",
-    "AWS Certified Solutions Architect – Associate (2025)",
-  ];
+// 스킬 태그 컴포넌트 (프로젝트 섹션에서 사용)
+const SkillTag = ({ skill }) => (
+  <span className="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full">
+    {skill}
+  </span>
+);
+
+const Resume = () => {
   return (
-    <>
-      <style>{`@media print {
-        .page-break { page-break-after: always; }
-        .avoid-break { break-inside: avoid; }
-      }`}</style>
-      <div className="bg-gray-50 text-gray-800 font-inter">
-        {/* Header */}
-        <header className="bg-white shadow-md">
-          <div className="max-w-4xl mx-auto px-6 py-6">
-            <h1 className="text-4xl font-extrabold text-gray-900">채민관</h1>
-            <p className="mt-2 text-xl text-gray-600">Fullstack Developer</p>
+    // --- [변경] ---
+    // 전체 배경 div에 relative 클래스 추가 (버튼 위치 조정을 위해)
+    <div className="bg-gray-100 min-h-screen p-4 sm:p-8 md:p-12 print:p-0 relative">
+      {/* --- [추가] 인쇄 버튼 --- */}
+      <button
+        onClick={() => window.print()}
+        className="
+          absolute top-4 right-4 sm:top-8 sm:right-8 md:top-12 md:right-12 
+          bg-blue-600 text-white font-bold py-2 px-4 rounded-lg 
+          shadow-lg hover:bg-blue-700 transition-colors 
+          duration-200 print:hidden
+        "
+      >
+        PDF로 저장 (인쇄)
+      </button>
+      {/* --- [추가] 끝 --- */}
+
+      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden print:shadow-none print:rounded-none">
+        {/* === 헤더 섹션 === */}
+        <header className="bg-blue-700 text-white p-8 md:p-12 print:bg-white print:text-black">
+          <h1 className="text-4xl md:text-5xl font-bold">{resumeData.name}</h1>
+          <h2 className="text-2xl md:text-3xl font-light text-blue-100 print:text-gray-700">
+            {resumeData.title}
+          </h2>
+
+          <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-blue-50 print:text-gray-600">
+            <a href={`mailto:${resumeData.email}`} className="hover:underline">
+              Email: {resumeData.email}
+            </a>
+            <a href={`tel:${resumeData.phone}`} className="hover:underline">
+              Phone: {resumeData.phone}
+            </a>
+            <span className="hidden sm:inline">
+              Location: {resumeData.location}
+            </span>
+            <a
+              href={`https://${resumeData.github}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              GitHub: {resumeData.github}
+            </a>
           </div>
         </header>
 
-        {/* Main Content */}
-        <main className="max-w-4xl mx-auto px-6 py-10 space-y-8">
-          <section className="py-8 flex items-center gap-6">
-            <div>
-              <h2 className="text-3xl font-extrabold text-indigo-600 mb-2">
-                About Me
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                사용자의 요구사항과 의사소통을 우선시하며,
-                <br />
-                유지 보수와 협업이 쉬운 아키텍처에 대해 고민하는 개발자
-                채민관입니다.
-              </p>
-            </div>
-          </section>
-
-          {/* Internship Experience */}
-          <section id="internships" className="py-8">
-            <h2 className="text-3xl font-extrabold text-indigo-600">
-              Internship Experience
-            </h2>
-            <p className="text-lg my-6">주식회사 코딧 | 2025.03 ~ 2025.09</p>
-            <div className="grid grid-cols-1 gap-8">
-              {/* Card */}
-              <div className="bg-white border-l-4 border-indigo-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">Api Server</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>REST API 설계 및 구현</li>
-                  <li>MySQL 데이터베이스 모델링 & 성능 튜닝</li>
-                  <li>신규 기능 개발 및 코드 리뷰 참여</li>
-                </ul>
-              </div>
-
-              <div className="bg-white border-l-4 border-green-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">DevOps</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>
-                    Api 판매를 위해 AWS Gateway 연동, plan설계 및 사용량 추적
-                  </li>
-                  <li>Container로 배포되던 서비스를 kubernetes로 래핑</li>
-                  <li>모니터링 및 로깅 설정 (ELK)</li>
-                </ul>
-              </div>
-
-              <div className="bg-white border-l-4 border-yellow-500 rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-3">Data Eng.</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-700">
-                  <li>국내외 정부 부처 법령, 의안등 크롤링</li>
-                  <li>ElasticSearch 인덱스 설계 및 데이터 인덱싱</li>
-                  <li>데이터 분석 및 시각화 대시보드 제작</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Projects */}
-          <section id="projects" className="py-8">
-            <h2 className="text-4xl font-bold text-indigo-600 mb-6">
-              Projects
-            </h2>
-            <div className="grid grid-cols-1 gap-10 py-4">
-              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition-transform min-h-[320px]">
-                <h3 className="text-3xl font-semibold mb-4">About</h3>
-                <p className="text-lg text-gray-600 mb-8">
-                  2022.06 – Present | 백엔드 개발자
-                </p>
-                <p className="text-gray-700 mb-6">
-                  대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임,
-                  소모임 등의 기능을 제공하며, Google Analytics 기준 약 400
-                  DAU(Daily Active User)를 유지하고 있습니다.
-                </p>
-                <div className="space-y-2 mb-6">
-                  <a
-                    href="https://study-about.club/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    사이트: study-about.club (게스트 로그인 가능)
-                  </a>
-                  <br />
-                  <a
-                    href="https://github.com/AboutClan/nest-back"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    Backend Repo
-                  </a>
-                  <br />
-                  <a
-                    href="https://github.com/AboutClan/About"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    Frontend Repo
-                  </a>
-                </div>
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">
-                      My Contribution
-                    </h4>
-                    <ul className="list-disc list-inside space-y-1 text-gray-700">
-                      <li>
-                        NestJS로 클린 아키텍처 적용
-                        <a
-                          href="https://beming-dev.github.io/blog/about/clean/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>
-                        ELK & Filebeat 파이프라인 Docker-Compose 구성
-                        <a
-                          href="https://beming-dev.github.io/blog/about/elk/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>AWS CodePipeline 통한 CI/CD 배포</li>
-                      <li>
-                        DBSCAN 기반 스터디 매칭 알고리즘 구현
-                        <a
-                          href="https://beming-dev.github.io/blog/about/clustering/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>
-                        Redis 캐싱 및 메시지 큐 활용
-                        <a
-                          href="https://beming-dev.github.io/blog/about/pubsub/"
-                          className="ml-2 text-blue-501 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">Tech Stack</h4>
-                    <p className="text-gray-700">
-                      NestJS, TypeScript, MySQL, Redis, AWS
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">
-                      Troubleshooting
-                    </h4>
-                    <div className="space-y-6">
-                      {[
-                        {
-                          problem: "서버 예기치 않은 오류 및 중단",
-                          solution:
-                            "예외 타입 명시 및 전역 예외 처리 정비, ELK 스택 도입을 통한 중앙 로그 관리",
-                        },
-                        {
-                          problem: "초기 페이지 로딩 속도 저하",
-                          solution:
-                            "불필요한 populate 제거, 인덱싱 최적화, Redis 캐싱 도입 (응답 속도 50% 향상)",
-                        },
-                        {
-                          problem: "Heroku 비용·RAM 이슈",
-                          solution:
-                            "AWS EC2로 이전 및 Docker CI/CD 구성, 비용 100달러 절감",
-                        },
-                      ].map(({ problem, solution }) => (
-                        <div
-                          key={problem}
-                          className="bg-white border border-gray-200 rounded-lg shadow p-6 hover:shadow-lg transition"
-                        >
-                          <div className="flex items-center mb-1">
-                            <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                            <h5 className="font-semibold text-gray-800">
-                              Issue
-                            </h5>
-                          </div>
-                          <p className="text-gray-700 mb-4">{problem}</p>
-                          <div className="flex items-center mb-1">
-                            <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <h5 className="font-semibold text-gray-800">
-                              Solution
-                            </h5>
-                          </div>
-                          <p className="text-gray-700">{solution}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-10 py-4">
-              <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transform transition-transform min-h-[320px]">
-                <h3 className="text-3xl font-semibold mb-4">About</h3>
-                <p className="text-lg text-gray-600 mb-8">
-                  2022.06 – Present | 백엔드 개발자
-                </p>
-                <p className="text-gray-700 mb-6">
-                  대학생을 위한 모임 플랫폼 서비스입니다. 스터디, 번개 모임,
-                  소모임 등의 기능을 제공하며, Google Analytics 기준 약 400
-                  DAU(Daily Active User)를 유지하고 있습니다.
-                </p>
-                <div className="space-y-2 mb-6">
-                  <a
-                    href="https://study-about.club/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    사이트: study-about.club (게스트 로그인 가능)
-                  </a>
-                  <br />
-                  <a
-                    href="https://github.com/AboutClan/nest-back"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    Backend Repo
-                  </a>
-                  <br />
-                  <a
-                    href="https://github.com/AboutClan/About"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-blue-500 underline hover:text-blue-700"
-                  >
-                    Frontend Repo
-                  </a>
-                </div>
-                <div className="space-y-8">
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">
-                      My Contribution
-                    </h4>
-                    <ul className="list-disc list-inside space-y-1 text-gray-700">
-                      <li>
-                        NestJS로 클린 아키텍처 적용
-                        <a
-                          href="https://beming-dev.github.io/blog/about/clean/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>
-                        ELK & Filebeat 파이프라인 Docker-Compose 구성
-                        <a
-                          href="https://beming-dev.github.io/blog/about/elk/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>AWS CodePipeline 통한 CI/CD 배포</li>
-                      <li>
-                        DBSCAN 기반 스터디 매칭 알고리즘 구현
-                        <a
-                          href="https://beming-dev.github.io/blog/about/clustering/"
-                          className="ml-2 text-blue-500 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                      <li>
-                        Redis 캐싱 및 메시지 큐 활용
-                        <a
-                          href="https://beming-dev.github.io/blog/about/pubsub/"
-                          className="ml-2 text-blue-501 underline hover:text-blue-700"
-                        >
-                          [블로그]
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">Tech Stack</h4>
-                    <p className="text-gray-700">
-                      NestJS, TypeScript, MySQL, Redis, AWS
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-medium mb-2">
-                      Troubleshooting
-                    </h4>
-                    <div className="space-y-6">
-                      {[
-                        {
-                          problem: "서버 예기치 않은 오류 및 중단",
-                          solution:
-                            "예외 타입 명시 및 전역 예외 처리 정비, ELK 스택 도입을 통한 중앙 로그 관리",
-                        },
-                        {
-                          problem: "초기 페이지 로딩 속도 저하",
-                          solution:
-                            "불필요한 populate 제거, 인덱싱 최적화, Redis 캐싱 도입 (응답 속도 50% 향상)",
-                        },
-                        {
-                          problem: "Heroku 비용·RAM 이슈",
-                          solution:
-                            "AWS EC2로 이전 및 Docker CI/CD 구성, 비용 100달러 절감",
-                        },
-                      ].map(({ problem, solution }) => (
-                        <div
-                          key={problem}
-                          className="bg-white border border-gray-200 rounded-lg shadow p-6 hover:shadow-lg transition"
-                        >
-                          <div className="flex items-center mb-1">
-                            <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                            <h5 className="font-semibold text-gray-800">
-                              Issue
-                            </h5>
-                          </div>
-                          <p className="text-gray-700 mb-4">{problem}</p>
-                          <div className="flex items-center mb-1">
-                            <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            <h5 className="font-semibold text-gray-800">
-                              Solution
-                            </h5>
-                          </div>
-                          <p className="text-gray-700">{solution}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Tech Stack */}
-          <section id="tech-stack" className="py-8">
-            <h2 className="text-3xl font-extrabold text-indigo-600 mb-6">
-              Tech Stack
-            </h2>
-            <div className="space-y-12">
-              {techCategories.map((category) => (
-                <div key={category.category}>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-                    {category.category}
+        {/* === 메인 컨텐츠 (1단 레이아웃) === */}
+        <main className="p-8 md:p-12 space-y-10">
+          {/* === 1. 학력 === */}
+          <section>
+            <SectionTitle>Education</SectionTitle>
+            {resumeData.education.map((edu, index) => (
+              <div key={index} className="mb-4 last:mb-0">
+                <div className="flex justify-between items-baseline">
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {edu.school}
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {category.techs.map((tech) => (
-                      <div
-                        key={tech.name}
-                        className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition min-h-[120px]"
-                      >
-                        <h4 className="text-xl font-semibold mb-2 text-gray-900">
-                          {tech.name}
-                        </h4>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {tech.description}
-                        </p>
-                      </div>
-                    ))}
+                  <p className="text-gray-500 text-sm">{edu.period}</p>
+                </div>
+                <p className="text-gray-600">{edu.degree}</p>
+              </div>
+            ))}
+          </section>
+
+          {/* === 2. 자격증 === */}
+          <section>
+            <SectionTitle>Certifications</SectionTitle>
+            <ul className="space-y-3">
+              {resumeData.certifications.map((cert, index) => (
+                <li key={index}>
+                  <h3 className="font-semibold text-gray-800">{cert.name}</h3>
+                  <p className="text-gray-600 text-sm">
+                    {cert.issuer} ({cert.date})
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* === 3. 어학 === */}
+          <section>
+            <SectionTitle>Languages</SectionTitle>
+            <ul className="space-y-2">
+              {resumeData.languages.map((lang, index) => (
+                <li key={index} className="flex justify-between">
+                  <span className="font-semibold text-gray-800">
+                    {lang.lang}
+                  </span>
+                  <span className="text-gray-600">{lang.level}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* === 4. 경험 === */}
+          <section>
+            <SectionTitle>Experience</SectionTitle>
+            <div className="space-y-8">
+              {resumeData.experiences.map((exp, index) => (
+                <div key={index}>
+                  <div className="flex justify-between items-baseline">
+                    <h3 className="text-xl font-bold text-gray-800">
+                      {exp.company}
+                    </h3>
+                    <span className="text-sm font-medium text-gray-500">
+                      {exp.period}
+                    </span>
                   </div>
+                  <h4 className="text-lg font-semibold text-blue-600 mb-2">
+                    {exp.title}
+                  </h4>
+                  <ul className="list-disc list-outside ml-5 space-y-1 text-gray-700">
+                    {exp.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </section>
-          {/* Etc Section */}
-          <section id="etc" className="py-8">
-            <h2 className="text-3xl font-extrabold text-indigo-600 mb-6">
-              Etc.
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-                  Certifications
-                </h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  {certifications.map((cert) => (
-                    <li key={cert}>{cert}</li>
-                  ))}
-                </ul>
+
+          {/* === 5. 프로젝트 (팀/개인 분리) === */}
+          <section>
+            <SectionTitle>Projects</SectionTitle>
+
+            {/* --- 팀 프로젝트 --- */}
+            <div className="mb-10">
+              <h3 className="text-xl font-semibold text-gray-700 mb-5 border-b pb-2">
+                팀 프로젝트
+              </h3>
+              <div className="space-y-8">
+                {resumeData.projects.team.map((proj, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between items-baseline">
+                      <h4 className="text-xl font-bold text-gray-800">
+                        {proj.name}
+                      </h4>
+                      <a
+                        href={`https://${proj.link}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:underline print:hidden"
+                      >
+                        GitHub Link
+                      </a>
+                    </div>
+                    <p className="text-gray-700 my-2">{proj.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {proj.stack.split(", ").map((tech) => (
+                        <SkillTag key={tech} skill={tech} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">
-                  Exchange Program
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  교환학생 프로그램 참여: Entrepreneurship 과정을 수강하고,
-                  다양한 국가의 국제 학생들과 협업하며 커뮤니케이션 역량을
-                  강화했습니다.
-                </p>
+            </div>
+
+            {/* --- 개인 프로젝트 --- */}
+            <div>
+              <h3 className="text-xl font-semibold text-gray-700 mb-5 border-b pb-2">
+                개인 프로젝트
+              </h3>
+              <div className="space-y-8">
+                {resumeData.projects.personal.map((proj, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between items-baseline">
+                      <h4 className="text-xl font-bold text-gray-800">
+                        {proj.name}
+                      </h4>
+                      <a
+                        href={`https://${proj.link}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-600 hover:underline print:hidden"
+                      >
+                        GitHub Link
+                      </a>
+                    </div>
+                    <p className="text-gray-700 my-2">{proj.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {proj.stack.split(", ").map((tech) => (
+                        <SkillTag key={tech} skill={tech} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
         </main>
-
-        {/* Footer */}
-        <footer className="bg-white border-t mt-16">
-          <div className="max-w-4xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-            &copy; 2025 채민관. All rights reserved.
-          </div>
-        </footer>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Portfolio;
+export default Resume;
