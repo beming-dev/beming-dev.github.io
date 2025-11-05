@@ -29,7 +29,6 @@ const resumeData = {
         "Node.js 기반의 RESTful API 개발",
         "AirFlow를 활용한 ETL 워크플로우 구축",
         "MySQL을 활용한 데이터베이스 설계 및 최적화",
-        "AWS를 활용한 인프라 배포 및 관리",
         "데이터 크롤링 및 OpenSearch 인덱싱",
       ],
     },
@@ -37,19 +36,19 @@ const resumeData = {
   projects: {
     team: [
       {
-        name: "About",
+        name: "About (백엔드 개발자)",
         description: `
         대학생 스터디 동아리에서 시작한 대학생 모임 플랫폼입니다.
         스터디, 번개 모임, 소모임 등의 기능을 제공하며, 현재 google analytics 기준 400명 정도의 DAU(Daily Active User)를 유지하고 있습니다.
         `,
-        stack: "React, Nest.js, MySQL, AWS",
-        link: "github.com/beming-dev/portfolio",
+        stack: "Next.js, Nest.js, MongoDB, AWS, Docker",
+        link: "https://study-about.club",
       },
       {
-        name: "학교 졸업학점 관리 시스템",
-        description: "학교 졸업학점 관리 시스템 개발 (팀 프로젝트)",
+        name: "학교 졸업학점 관리 시스템 (프론트엔드 개발자)",
+        description:
+          "소프트웨어 공학 수업에서, 학교 학생들이 졸업 학점을 확인할 수 있는 서비스를 개발했습니다.",
         stack: "React, Spring Boot, Nest.js, MySQL, AWS",
-        link: "github.com/beming-dev/graduation-credit-system",
       },
     ],
     personal: [
@@ -58,14 +57,14 @@ const resumeData = {
         description:
           "개발 트러블슈팅과 간단한 경험을 기록하는 블로그입니다. Gatsby를 활용하여 자체제작했습니다.",
         stack: "Gatsby, tailwindcss",
-        link: "github.com/beming-dev/stock-simulator",
+        link: "https://beming-dev.github.io",
       },
       {
         name: "주식 시뮬레이션",
         description:
           "주식 가상매매 서비스입니다. 한국투자증권 API를 활용해, WebSocket기반으로 실시간 주식 데이터를 받아오고 가상매매를 할 수 있습니다.",
-        stack: "React, Spring Boot, MySQL, AWS",
-        link: "github.com/beming-dev/stock-simulator",
+        stack: "React, Spring Boot, MySQL, AWS, ArgoCD, kubernetes",
+        link: "https://beming-stock.kro.kr",
       },
     ],
   },
@@ -249,14 +248,16 @@ const Resume = () => {
                       <h4 className="text-xl font-bold text-gray-800">
                         {proj.name}
                       </h4>
-                      <a
-                        href={`https://${proj.link}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:underline print:hidden"
-                      >
-                        GitHub Link
-                      </a>
+                      {proj.link && (
+                        <a
+                          href={`${proj.link}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-600 hover:underline"
+                        >
+                          Link
+                        </a>
+                      )}
                     </div>
                     <p className="text-gray-700 my-2">{proj.description}</p>
                     <div className="flex flex-wrap gap-2">
@@ -281,14 +282,16 @@ const Resume = () => {
                       <h4 className="text-xl font-bold text-gray-800">
                         {proj.name}
                       </h4>
-                      <a
-                        href={`https://${proj.link}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-blue-600 hover:underline print:hidden"
-                      >
-                        GitHub Link
-                      </a>
+                      {proj.link && (
+                        <a
+                          href={`${proj.link}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-600 hover:underline"
+                        >
+                          Link
+                        </a>
+                      )}
                     </div>
                     <p className="text-gray-700 my-2">{proj.description}</p>
                     <div className="flex flex-wrap gap-2">
