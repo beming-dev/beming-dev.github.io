@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Area/algorithm/동적계획 - 와일드카드.md",
+                "file": "LG CNS 2차 면접.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "동적계획 - 와일드카드의 백링크"
+              "title": "Backlinks for LG CNS 2차 면접"
             }
           },
           {
@@ -151,12 +151,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Area/algorithm/동적계획 - 와일드카드.md",
+                "file": "LG CNS 2차 면접.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "동적계획 - 와일드카드의 나가는 링크"
+              "title": "Outgoing links from LG CNS 2차 면접"
             }
           },
           {
@@ -184,11 +184,12 @@
               "title": "동적계획 - 와일드카드 개요"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -204,7 +205,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdc2790b076420b7",
+  "active": "c9b82356bcd4a800",
   "lastOpenFiles": [
     "LG CNS 면접.md",
     "LG CNS 2차 면접.md",
