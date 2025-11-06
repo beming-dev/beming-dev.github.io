@@ -116,7 +116,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -205,7 +206,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c9b82356bcd4a800",
+  "active": "fdc2790b076420b7",
   "lastOpenFiles": [
     "LG CNS 면접.md",
     "LG CNS 2차 면접.md",
