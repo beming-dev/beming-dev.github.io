@@ -36,7 +36,8 @@
               "title": "LG CNS 2차 면접"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "51ac177abc9b5e89",
@@ -204,7 +205,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4ef47511e7deeb31",
+  "active": "fdc2790b076420b7",
   "lastOpenFiles": [
     "LG CNS 면접.md",
     "LG CNS 2차 면접.md",
