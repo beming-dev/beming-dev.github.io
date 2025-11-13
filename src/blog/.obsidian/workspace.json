@@ -35,21 +35,8 @@
               "icon": "lucide-file",
               "title": "LG CNS 2차 면접"
             }
-          },
-          {
-            "id": "d8d419bdaff1c48f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "51ac177abc9b5e89",
@@ -62,12 +49,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "LG CNS 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of LG CNS 면접"
             }
           }
         ]
@@ -217,10 +205,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d8d419bdaff1c48f",
+  "active": "fdc2790b076420b7",
   "lastOpenFiles": [
-    "LG CNS 면접.md",
     "LG CNS 2차 면접.md",
+    "LG CNS 면접.md",
     "한국투자저축은행 핵심.md",
     "한국투자 저축은행.md",
     "기업은행 면접준비.md",
