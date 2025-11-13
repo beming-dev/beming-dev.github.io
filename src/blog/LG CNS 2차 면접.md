@@ -338,3 +338,4 @@ Application Modernization 직무와 아키텍처 직무가 나뉘어져 있는 �
 
 
 
+## LG CNS만의 차별점
