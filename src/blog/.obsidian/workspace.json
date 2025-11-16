@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "면접 - 포트폴리오.md",
+                "file": "카카오 면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "면접 - 포트폴리오"
+              "title": "카카오 면접"
             }
           }
         ]
@@ -35,13 +35,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접 - 포트폴리오.md",
+                "file": "카카오 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 면접 - 포트폴리오"
+              "title": "Outline of 카카오 면접"
             }
           }
         ]
@@ -192,6 +192,7 @@
   },
   "active": "fdc2790b076420b7",
   "lastOpenFiles": [
+    "면접 - 포트폴리오.md",
     "농협 면접준비.md",
     "LG CNS 2차 면접.md",
     "면접준비/1자클린아키텍처.md",
@@ -209,7 +210,6 @@
     "한국투자저축은행 핵심.md",
     "README.md",
     "한국투자 저축은행.md",
-    "면접 - 포트폴리오.md",
     "면접 - 과제.md",
     "면접준비/7기술스택.md",
     "면접준비/AWS CICD.md",
