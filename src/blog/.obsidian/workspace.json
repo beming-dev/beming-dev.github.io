@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "카카오 면접.md",
+                "file": "면접준비/3About 기술 스택.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "카카오 면접"
+              "title": "3About 기술 스택"
             }
           },
           {
@@ -64,13 +64,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "카카오 면접.md",
+                "file": "면접준비/3About 기술 스택.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 카카오 면접"
+              "title": "Outline of 3About 기술 스택"
             }
           }
         ]
@@ -221,9 +221,10 @@
   },
   "active": "b973bafde5707ba4",
   "lastOpenFiles": [
+    "면접준비/2당근.md",
+    "카카오 면접.md",
     "네이버면접.md",
     "농협 면접.md",
-    "카카오 면접.md",
     "한국투자저축은행 핵심.md",
     "한국투자 저축은행.md",
     "농협 면접준비.md",
@@ -254,7 +255,6 @@
     "Untitled 4.base",
     "Untitled 3.base",
     "면접준비/Typescript.md",
-    "면접준비/Redis pubsub.md",
     "Untitled 2.base",
     "images/Pasted image 20250723102932.png",
     "images/Pasted image 20250714134954.png",
