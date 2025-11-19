@@ -51,7 +51,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "51ac177abc9b5e89",
@@ -64,13 +64,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접준비/3About 기술 스택.md",
+                "file": "농협 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 3About 기술 스택"
+              "title": "Outline of 농협 면접"
             }
           }
         ]
@@ -219,8 +219,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b973bafde5707ba4",
+  "active": "63bf7677bd8de70a",
   "lastOpenFiles": [
+    "면접준비/3About 기술 스택.md",
     "면접준비/2당근.md",
     "카카오 면접.md",
     "네이버면접.md",
@@ -247,7 +248,6 @@
     "면접준비/AWS CICD.md",
     "면접준비/DBSCAN.md",
     "면접준비/4서울도서이음.md",
-    "면접준비/3About 기술 스택.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Project/capstone",
     "Untitled 6.base",
