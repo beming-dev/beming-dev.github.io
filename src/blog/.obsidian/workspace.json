@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "네이버면접.md",
+                "file": "농협 면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "네이버면접"
+              "title": "농협 면접"
             }
           },
           {
@@ -63,13 +63,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "네이버면접.md",
+                "file": "농협 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 네이버면접"
+              "title": "Outline of 농협 면접"
             }
           }
         ]
@@ -220,11 +220,11 @@
   },
   "active": "fdc2790b076420b7",
   "lastOpenFiles": [
+    "네이버면접.md",
     "LG CNS 면접.md",
     "면접준비/3About 기술 스택.md",
     "농협 면접.md",
     "Plan.md",
-    "네이버면접.md",
     "zz네면/대규모.md",
     "면접 - 포트폴리오.md",
     "면접준비/AWS CICD.md",
