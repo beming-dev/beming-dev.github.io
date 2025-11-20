@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "zz네면/대규모.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1자클린아키텍처"
+              "title": "대규모"
             }
           },
           {
@@ -63,13 +63,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "면접준비/1자클린아키텍처.md",
+                "file": "zz네면/대규모.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1자클린아키텍처"
+              "title": "Outline of 대규모"
             }
           }
         ]
@@ -218,42 +218,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdc2790b076420b7",
+  "active": "11f1d488c5517a9b",
   "lastOpenFiles": [
+    "면접 - 포트폴리오.md",
+    "면접준비/AWS CICD.md",
+    "면접준비/Typescript.md",
+    "면접준비/Redis pubsub.md",
+    "면접준비/ELK.md",
+    "면접준비/DBSCAN.md",
+    "면접준비/6협업에 관한 질문.md",
+    "면접준비/7기술스택.md",
+    "면접준비/5주식 시뮬레이션.md",
+    "면접준비/4서울도서이음.md",
+    "면접준비/3About 기술 스택.md",
+    "면접준비/1자클린아키텍처.md",
     "LG CNS 면접.md",
     "카카오 면접.md",
     "네이버면접.md",
     "기업은행 면접준비.md",
-    "면접준비/3About 기술 스택.md",
     "농협 면접.md",
     "한국투자 저축은행.md",
     "한국투자저축은행 핵심.md",
     "농협 면접준비.md",
     "면접 - 과제.md",
-    "면접 - 포트폴리오.md",
     "면접 - 협업.md",
     "LG CNS 2차 면접.md",
     "면접준비/2당근.md",
-    "면접준비/1자클린아키텍처.md",
     "Untitled 1.base",
     "Untitled.base",
     "카카오 면접",
     "Plan.md",
-    "면접준비/6협업에 관한 질문.md",
-    "면접준비/5주식 시뮬레이션.md",
     "면접준비/1자기소개.md",
-    "README.md",
-    "면접준비/7기술스택.md",
-    "면접준비/AWS CICD.md",
-    "면접준비/DBSCAN.md",
-    "면접준비/4서울도서이음.md",
-    "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Project/capstone",
     "Untitled 6.base",
     "Untitled 5.base",
     "Untitled 4.base",
     "Untitled 3.base",
-    "면접준비/Typescript.md",
     "Untitled 2.base",
     "images/Pasted image 20250723102932.png",
     "images/Pasted image 20250714134954.png",
