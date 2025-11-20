@@ -50,7 +50,8 @@
               "title": "농협 면접"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "51ac177abc9b5e89",
@@ -63,13 +64,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "기업은행 면접준비.md",
+                "file": "농협 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 기업은행 면접준비"
+              "title": "Outline of 농협 면접"
             }
           }
         ]
@@ -218,8 +219,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdc2790b076420b7",
+  "active": "63bf7677bd8de70a",
   "lastOpenFiles": [
+    "기업은행 면접준비.md",
     "농협 면접.md",
     "네이버면접.md",
     "LG CNS 면접.md",
@@ -238,7 +240,6 @@
     "면접준비/4서울도서이음.md",
     "면접준비/1자클린아키텍처.md",
     "카카오 면접.md",
-    "기업은행 면접준비.md",
     "한국투자 저축은행.md",
     "한국투자저축은행 핵심.md",
     "농협 면접준비.md",
