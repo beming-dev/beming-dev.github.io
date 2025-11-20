@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "카카오 면접.md",
+                "file": "LG CNS 면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "카카오 면접"
+              "title": "LG CNS 면접"
             }
           },
           {
@@ -63,13 +63,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "카카오 면접.md",
+                "file": "LG CNS 면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 카카오 면접"
+              "title": "Outline of LG CNS 면접"
             }
           }
         ]
@@ -220,8 +220,8 @@
   },
   "active": "fdc2790b076420b7",
   "lastOpenFiles": [
-    "네이버면접.md",
     "카카오 면접.md",
+    "네이버면접.md",
     "기업은행 면접준비.md",
     "면접준비/3About 기술 스택.md",
     "농협 면접.md",
