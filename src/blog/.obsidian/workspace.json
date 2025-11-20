@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LG CNS 면접.md",
+                "file": "네이버면접.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LG CNS 면접"
+              "title": "네이버면접"
             }
           },
           {
@@ -63,13 +63,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LG CNS 면접.md",
+                "file": "네이버면접.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of LG CNS 면접"
+              "title": "Outline of 네이버면접"
             }
           }
         ]
@@ -220,6 +220,9 @@
   },
   "active": "fdc2790b076420b7",
   "lastOpenFiles": [
+    "LG CNS 면접.md",
+    "면접준비/3About 기술 스택.md",
+    "농협 면접.md",
     "Plan.md",
     "네이버면접.md",
     "zz네면/대규모.md",
@@ -233,12 +236,9 @@
     "면접준비/7기술스택.md",
     "면접준비/5주식 시뮬레이션.md",
     "면접준비/4서울도서이음.md",
-    "면접준비/3About 기술 스택.md",
     "면접준비/1자클린아키텍처.md",
-    "LG CNS 면접.md",
     "카카오 면접.md",
     "기업은행 면접준비.md",
-    "농협 면접.md",
     "한국투자 저축은행.md",
     "한국투자저축은행 핵심.md",
     "농협 면접준비.md",
