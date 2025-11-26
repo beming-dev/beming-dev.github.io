@@ -35,21 +35,9 @@
               "icon": "lucide-file",
               "title": "카카오 면접 2차"
             }
-          },
-          {
-            "id": "866eb07aa7026cd6",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.6"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.6"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "51ac177abc9b5e89",
@@ -62,12 +50,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "카카오 면접 2차.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 카카오 면접 2차"
             }
           }
         ]
@@ -216,7 +205,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "866eb07aa7026cd6",
+  "active": "19399592688ba0fe",
   "lastOpenFiles": [
     "카카오 면접.md",
     "카카오 면접 2차.md",
