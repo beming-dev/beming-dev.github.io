@@ -36,7 +36,8 @@
               "title": "카카오 면접 2차"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "51ac177abc9b5e89",
@@ -49,13 +50,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "카카오 면접.md",
+                "file": "카카오 면접 2차.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 카카오 면접"
+              "title": "Outline of 카카오 면접 2차"
             }
           }
         ]
@@ -205,10 +206,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fdc2790b076420b7",
+  "active": "19399592688ba0fe",
   "lastOpenFiles": [
-    "카카오 면접 2차.md",
     "카카오 면접.md",
+    "카카오 면접 2차.md",
     "기업은행 면접준비.md",
     "농협 면접.md",
     "네이버면접.md",
