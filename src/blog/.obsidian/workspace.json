@@ -6,7 +6,7 @@
       {
         "id": "74359c78cce53cb6",
         "type": "tabs",
-        "dimension": 74.39180537772087,
+        "dimension": 74.41558441558442,
         "children": [
           {
             "id": "fdc2790b076420b7",
@@ -42,7 +42,7 @@
       {
         "id": "51ac177abc9b5e89",
         "type": "tabs",
-        "dimension": 25.60819462227913,
+        "dimension": 25.58441558441558,
         "children": [
           {
             "id": "c9b82356bcd4a800",
@@ -116,8 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "14357fc326fa2d45",
@@ -209,12 +208,12 @@
   "active": "19399592688ba0fe",
   "lastOpenFiles": [
     "LG CNS 2차 면접.md",
-    "카카오 면접 2차.md",
     "LG CNS 면접.md",
     "카카오 면접.md",
-    "기업은행 면접준비.md",
-    "농협 면접.md",
     "네이버면접.md",
+    "농협 면접.md",
+    "카카오 면접 2차.md",
+    "기업은행 면접준비.md",
     "면접준비/3About 기술 스택.md",
     "Plan.md",
     "zz네면/대규모.md",
