@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "리팩토링.md",
+                "file": "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "리팩토링"
+              "title": "메모리와 디스크의 핵심 - 순차 논리"
             }
           }
         ]
@@ -35,13 +35,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "리팩토링.md",
+                "file": "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 리팩토링"
+              "title": "Outline of 메모리와 디스크의 핵심 - 순차 논리"
             }
           }
         ]
@@ -190,36 +190,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "11f1d488c5517a9b",
+  "active": "19399592688ba0fe",
   "lastOpenFiles": [
-    "LG CNS 면접.md",
-    "리팩토링.md",
+    "Project/capstone/MSA Kubernetes 배포자동화.md",
+    "Resource/Kafka/Kafka CLI.md",
+    "redis.io/commands.md",
+    "Resource/Kafka/Kafka 개념.md",
+    "zz네면/CS지식.md",
+    "zz네면/ETC.md",
+    "zz네면/프로젝트.md",
+    "zz네면/자료구조.md",
+    "zz네면/운영체제.md",
+    "zz네면/알고리즘.md",
+    "zz네면/대규모.md",
+    "면접준비/기업은행 면접준비.md",
+    "면접준비/네이버면접.md",
+    "면접준비/리팩토링.md",
+    "면접준비/LG CNS 면접.md",
     "Untitled.base",
     "Untitled 1.base",
-    "카카오 면접 2차.md",
-    "LG CNS 2차 면접.md",
-    "카카오 면접.md",
-    "면접 - 포트폴리오.md",
-    "면접 - 과제.md",
-    "농협 면접준비.md",
-    "농협 면접.md",
-    "네이버면접.md",
-    "한국투자저축은행 핵심.md",
-    "기업은행 면접준비.md",
+    "면접준비/카카오 면접 2차.md",
+    "면접준비/LG CNS 2차 면접.md",
+    "면접준비/카카오 면접.md",
+    "면접준비/면접 - 포트폴리오.md",
+    "면접준비/면접 - 과제.md",
+    "면접준비/농협 면접준비.md",
+    "면접준비/농협 면접.md",
+    "면접준비/한국투자저축은행 핵심.md",
     "면접준비/3About 기술 스택.md",
-    "Plan.md",
-    "zz네면/대규모.md",
+    "면접준비/Plan.md",
     "면접준비/AWS CICD.md",
-    "면접준비/Typescript.md",
-    "면접준비/Redis pubsub.md",
-    "면접준비/ELK.md",
-    "면접준비/DBSCAN.md",
-    "면접준비/6협업에 관한 질문.md",
-    "면접준비/7기술스택.md",
-    "면접준비/5주식 시뮬레이션.md",
-    "면접준비/4서울도서이음.md",
-    "면접준비/1자클린아키텍처.md",
-    "한국투자 저축은행.md",
     "카카오 면접",
     "Project/capstone",
     "Untitled 6.base",
