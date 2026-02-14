@@ -4,44 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "74359c78cce53cb6",
+        "id": "fad4a4bbd289537d",
         "type": "tabs",
-        "dimension": 63.24324324324324,
         "children": [
           {
-            "id": "19399592688ba0fe",
+            "id": "41e02bee41b7538d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
+                "file": "Area/주식/Untitled.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "메모리와 디스크의 핵심 - 순차 논리"
-            }
-          }
-        ]
-      },
-      {
-        "id": "51ac177abc9b5e89",
-        "type": "tabs",
-        "dimension": 36.75675675675676,
-        "children": [
-          {
-            "id": "c9b82356bcd4a800",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 메모리와 디스크의 핵심 - 순차 논리"
+              "title": "Untitled"
             }
           }
         ]
@@ -190,8 +167,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19399592688ba0fe",
+  "active": "41e02bee41b7538d",
   "lastOpenFiles": [
+    "Area/주식/Untitled.md",
+    "Area/주식",
+    "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
     "Resource/Kafka/Kafka CLI.md",
     "redis.io/commands.md",
@@ -218,8 +198,6 @@
     "면접준비/농협 면접.md",
     "면접준비/한국투자저축은행 핵심.md",
     "면접준비/3About 기술 스택.md",
-    "면접준비/Plan.md",
-    "면접준비/AWS CICD.md",
     "카카오 면접",
     "Project/capstone",
     "Untitled 6.base",
@@ -232,7 +210,6 @@
     "images/Pasted image 20250714114029.png",
     "images/Pasted image 20250627113727.png",
     "images/Pasted image 20250625160011.png",
-    "Area/codit",
     "Pasted image 20250723102932.png",
     "Pasted image 20250714134954.png",
     "Pasted image 20250714114029.png",
