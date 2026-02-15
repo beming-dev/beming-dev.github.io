@@ -25,12 +25,14 @@
             "id": "2b433febd3f034d3",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.7"
+                "file": "Area/주식/IRP 운용.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
+              "icon": "lucide-file",
+              "title": "IRP 운용"
             }
           }
         ],
@@ -183,6 +185,7 @@
   "active": "2b433febd3f034d3",
   "lastOpenFiles": [
     "Area/주식/(종목분석) Clear Street Group, CLRS.md",
+    "Area/주식/IRP 운용.md",
     "Area/주식",
     "Project/cs/메모리와 디스크의 핵심 - 순차 논리.md",
     "Project/capstone/MSA Kubernetes 배포자동화.md",
@@ -210,7 +213,6 @@
     "면접준비/농협 면접준비.md",
     "면접준비/농협 면접.md",
     "면접준비/한국투자저축은행 핵심.md",
-    "면접준비/3About 기술 스택.md",
     "카카오 면접",
     "Project/capstone",
     "Untitled 6.base",
