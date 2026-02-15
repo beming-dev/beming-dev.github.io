@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "(종목분석) Clear Street Group, CLRS"
             }
+          },
+          {
+            "id": "2b433febd3f034d3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -167,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "41e02bee41b7538d",
+  "active": "2b433febd3f034d3",
   "lastOpenFiles": [
     "Area/주식/(종목분석) Clear Street Group, CLRS.md",
     "Area/주식",
