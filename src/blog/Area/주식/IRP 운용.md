@@ -16,3 +16,98 @@
 
 환율 변동을 그대로 수익률에 반영.
 환율이 앞으로 오를 것 같다면 사용
+
+# 국내 로봇
+
+## KODEX 로봇액티브
+
+- 순자산 총액: 11,362억원
+- 상장일: 2022.11.15
+### 구성종목
+- 삼성전자
+- 레인보우로보틱스
+- 로보티즈
+- 현대오토에버
+- 두산로보틱스
+- 현대차
+
+# 미국 로봇
+
+## KB RISE 미국휴머노이드로봇
+- 순자산: 112,086,568,744
+- 상장일: 2025.04.15
+
+### 구성종목
+- Teradyne
+- Tesla
+- Intel
+- NVIDIA
+- Rockwell
+
+# 중국 로봇
+## TIGER 차이나휴머노이드로봇
+순자산: 4,449억원
+상장일: 2025.05.27
+
+### 구성종목
+- UBTech
+- Shenzhen
+- Zhejiang
+- XPeng
+
+# 미국 반도체
+## TIGER 미국필라델피아반도체나스닥
+순자산: 37,532억원
+상장일: 2021.04.09
+
+### 구성종목
+- NVIDIA(11)
+- Broadcom(7)
+- Advanced Micro Devices(6.5)
+- Micron(6)
+- Lam Resaerch
+
+## 삼성 KODEX 미국반도체
+순자산: 8,451억원
+상장일: 2021.06.30
+
+### 구성종목
+- NVIDIA(18.5)
+- TSMC(11)
+- BROADCOM(7)
+- MICRON(6.5)
+- ASML(5.7)
+
+# 일본반도체
+순자산: 108억 원
+상장일: 2023.10.17
+
+### 구성종목
+- Kioxia Holdings Corp (17.6)
+- ADVANTEST CORP (5.7)
+- Kokusai Electric Corp (4.7)
+- Tokyo Seimitsu Co Ltd (4.5)
+
+# 해외원자력
+
+## RISE 글로벌원자력
+
+순자산: 3,817억
+상장일: 2022.10.13
+
+### 구성종목
+- Constellation Energy Corp (25)
+- Cameco Corp (20)
+- 두산에너빌리티 (11.5)
+- BMX Technologies (7)
+- HD현대일렉트릭 (6)
+
+# 한국 조선
+
+## HANARO Fn조선해운
+순자산: **1,111.97**억
+상장일: 2022.09.15
+
+
+일본반도체, RISE 글로벌원자력, Fn수소경제테마, HANARO Fn조선해운
+KODEX 200 미국채혼합
